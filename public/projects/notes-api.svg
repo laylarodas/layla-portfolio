@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <pattern id="grid1" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#8b7394" stroke-width="0.5" opacity="0.1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg1)"/>
+  <rect width="800" height="450" fill="url(#grid1)"/>
+  <circle cx="650" cy="100" r="150" fill="#8b7394" opacity="0.05"/>
+  <circle cx="150" cy="350" r="100" fill="#8b7394" opacity="0.03"/>
+  
+  <!-- Code brackets icon -->
+  <g transform="translate(350, 160)">
+    <text x="50" y="40" font-family="monospace" font-size="80" fill="#8b7394" opacity="0.6">{ }</text>
+  </g>
+  
+  <!-- Project name -->
+  <text x="400" y="320" font-family="system-ui, sans-serif" font-size="28" fill="#e8e6e3" text-anchor="middle" font-weight="600">Notes API</text>
+  <text x="400" y="355" font-family="monospace" font-size="16" fill="#8b7394" text-anchor="middle">Spring Boot · REST</text>
+</svg>

@@ -8,53 +8,37 @@ export default {
   theme: {
     extend: {
       colors: {
-        dark: {
-          900: '#09090b',
-          800: '#0f0f12',
-          700: '#18181b',
-          600: '#27272a',
-          500: '#3f3f46',
+        surface: {
+          900: '#0c0c0e',
+          800: '#131316',
+          700: '#1a1a1f',
+          600: '#232329',
+          500: '#2d2d35',
+          400: '#3d3d47',
+        },
+        text: {
+          primary: '#f0f0f3',
+          secondary: '#a0a0ab',
+          muted: '#6b6b76',
         },
         accent: {
-          50: '#faf7f5',
-          100: '#f0e9e4',
-          200: '#e0d1c8',
-          300: '#c9b3a4',
-          400: '#b08d78',
-          500: '#9a7461',
-          600: '#8a6454',
-          700: '#735346',
-          800: '#60463d',
-          900: '#503c35',
+          DEFAULT: '#9d7bb0',
+          light: '#b794c6',
+          dark: '#7a5f8a',
+          glow: 'rgba(157, 123, 176, 0.4)',
         },
-        light: {
-          50: '#fafafa',
-          100: '#f4f4f5',
-          200: '#e4e4e7',
-          300: '#d4d4d8',
-          400: '#a1a1aa',
-        }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
-      },
-      fontSize: {
-        'xs': ['0.75rem', { lineHeight: '1rem' }],
-        'sm': ['0.875rem', { lineHeight: '1.25rem' }],
-        'base': ['1rem', { lineHeight: '1.6' }],
-        'lg': ['1.125rem', { lineHeight: '1.5' }],
-        'xl': ['1.25rem', { lineHeight: '1.4' }],
-        '2xl': ['1.5rem', { lineHeight: '1.35' }],
-        '3xl': ['1.875rem', { lineHeight: '1.25' }],
-        '4xl': ['2.25rem', { lineHeight: '1.2' }],
-        '5xl': ['3rem', { lineHeight: '1.1' }],
-        '6xl': ['3.75rem', { lineHeight: '1.05' }],
+        sans: ['Space Grotesk', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
       },
       animation: {
-        'fade-in': 'fadeIn 0.5s ease-out forwards',
-        'slide-up': 'slideUp 0.5s ease-out forwards',
+        'fade-in': 'fadeIn 0.8s ease-out forwards',
+        'slide-up': 'slideUp 0.8s ease-out forwards',
+        'slide-in-left': 'slideInLeft 0.8s ease-out forwards',
+        'glow-pulse': 'glowPulse 3s ease-in-out infinite',
+        'typing': 'typing 3s steps(40) forwards',
+        'blink': 'blink 1s step-end infinite',
       },
       keyframes: {
         fadeIn: {
@@ -62,9 +46,34 @@ export default {
           '100%': { opacity: '1' },
         },
         slideUp: {
-          '0%': { opacity: '0', transform: 'translateY(16px)' },
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+        slideInLeft: {
+          '0%': { opacity: '0', transform: 'translateX(-20px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        glowPulse: {
+          '0%, 100%': { boxShadow: '0 0 20px rgba(157, 123, 176, 0.2)' },
+          '50%': { boxShadow: '0 0 30px rgba(157, 123, 176, 0.4)' },
+        },
+        typing: {
+          '0%': { width: '0' },
+          '100%': { width: '100%' },
+        },
+        blink: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0' },
+        },
+      },
+      backgroundImage: {
+        'grid-pattern': 'linear-gradient(rgba(157, 123, 176, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(157, 123, 176, 0.03) 1px, transparent 1px)',
+        'dot-pattern': 'radial-gradient(rgba(157, 123, 176, 0.15) 1px, transparent 1px)',
+        'gradient-radial': 'radial-gradient(ellipse at center, var(--tw-gradient-stops))',
+      },
+      backgroundSize: {
+        'grid': '50px 50px',
+        'dot': '20px 20px',
       },
     },
   },

@@ -1,51 +1,83 @@
-import SectionTitle from '../components/SectionTitle'
+import { useEffect, useRef } from 'react'
 
 function About() {
+  const sectionRef = useRef(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible')
+          }
+        })
+      },
+      { threshold: 0.1 }
+    )
+
+    const elements = sectionRef.current?.querySelectorAll('.scroll-animate')
+    elements?.forEach((el) => observer.observe(el))
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <section id="about" className="py-20 md:py-24 bg-light-100 dark:bg-dark-800/50">
-      <div className="section-container">
-        <SectionTitle
-          title="Sobre mí"
-          subtitle="Un poco sobre mi trayectoria y lo que me motiva."
-        />
+    <section id="about" className="py-24 md:py-32 relative" ref={sectionRef}>
+      {/* Background accent */}
+      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-accent/3 rounded-full blur-3xl pointer-events-none" />
+      
+      <div className="section-container relative z-10">
+        {/* Section header */}
+        <div className="mb-16 scroll-animate">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="text-accent font-mono text-sm">{'<sobre-mi>'}</span>
+            <div className="h-px flex-1 bg-gradient-to-r from-accent/30 to-transparent max-w-32" />
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-text-primary tracking-tight">
+            Sobre Mí
+          </h2>
+        </div>
         
-        <div className="max-w-2xl mx-auto">
-          <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
-            <p>
-              Soy <span className="text-gray-900 dark:text-white font-medium">Layla</span>, desarrolladora junior 
-              de Palma de Mallorca, actualmente cursando el segundo año de DAM (Desarrollo de Aplicaciones Multiplataforma).
+        {/* Content */}
+        <div className="grid lg:grid-cols-5 gap-12">
+          {/* Text */}
+          <div className="lg:col-span-3 space-y-6 scroll-animate" style={{ transitionDelay: '100ms' }}>
+            <p className="text-text-secondary text-lg leading-relaxed">
+              Soy desarrolladora junior de <span className="text-text-primary">Palma de Mallorca, España</span>, 
+              actualmente cursando el segundo año de DAM (Desarrollo de Aplicaciones Multiplataforma).
             </p>
-            <p>
-              Mi enfoque principal es el <span className="text-gray-900 dark:text-white font-medium">desarrollo backend</span> con 
-              Java y Spring Boot, aunque también tengo experiencia en proyectos full-stack con Node.js y React, 
-              así como en desarrollo mobile con Android.
+            <p className="text-text-secondary leading-relaxed">
+              Mi enfoque principal es el <span className="text-text-primary">desarrollo backend</span>: 
+              construir APIs, trabajar con bases de datos y crear aplicaciones orientadas a datos. 
+              Abordo los problemas de forma metódica: primero entender, luego planificar la arquitectura, 
+              y después escribir código limpio.
             </p>
-            <p>
-              Me apasiona construir aplicaciones orientadas a datos, APIs bien estructuradas y código limpio. 
-              Busco seguir creciendo en un entorno donde pueda aprender, aportar y consolidar buenas prácticas.
+            <p className="text-text-secondary leading-relaxed">
+              Además del backend, tengo experiencia en desarrollo Android y proyectos full-stack. 
+              Busco un entorno donde pueda crecer técnicamente mientras contribuyo a proyectos con impacto.
             </p>
           </div>
           
-          {/* Quick facts */}
-          <div className="mt-8 pt-8 border-t border-light-200 dark:border-dark-600">
-            <ul className="grid sm:grid-cols-2 gap-3 text-sm">
-              <li className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
-                <span className="w-1 h-1 rounded-full bg-accent-500" />
-                Palma de Mallorca, España
-              </li>
-              <li className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
-                <span className="w-1 h-1 rounded-full bg-accent-500" />
-                Estudiante de DAM (2º año)
-              </li>
-              <li className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
-                <span className="w-1 h-1 rounded-full bg-accent-500" />
-                Español (nativo), Inglés (B2)
-              </li>
-              <li className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
-                <span className="w-1 h-1 rounded-full bg-accent-500" />
-                Buscando prácticas / primer empleo
-              </li>
-            </ul>
+          {/* Details card */}
+          <div className="lg:col-span-2 scroll-animate" style={{ transitionDelay: '200ms' }}>
+            <div className="card p-6 space-y-6">
+              <div>
+                <p className="text-xs font-mono text-text-muted uppercase tracking-wider mb-2">Ubicación</p>
+                <p className="text-text-primary">Palma de Mallorca, España</p>
+              </div>
+              <div>
+                <p className="text-xs font-mono text-text-muted uppercase tracking-wider mb-2">Formación</p>
+                <p className="text-text-primary">DAM · 2º Año</p>
+              </div>
+              <div>
+                <p className="text-xs font-mono text-text-muted uppercase tracking-wider mb-2">Idiomas</p>
+                <p className="text-text-primary">Español (nativo), Inglés (B2)</p>
+              </div>
+              <div>
+                <p className="text-xs font-mono text-text-muted uppercase tracking-wider mb-2">Estado</p>
+                <p className="text-accent">Abierta a oportunidades</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,53 +1,85 @@
-import SectionTitle from '../components/SectionTitle'
+import { useEffect, useRef } from 'react'
 
 const skillCategories = [
   {
     name: 'Backend',
-    skills: ['Java', 'Spring Boot', 'Node.js', 'Express', 'REST APIs', 'JPA/Hibernate'],
-  },
-  {
-    name: 'Frontend',
-    skills: ['React', 'JavaScript', 'TypeScript', 'Tailwind CSS', 'HTML', 'CSS'],
+    icon: '{ }',
+    skills: ['Java', 'Spring Boot', 'Node.js', 'Express', 'REST APIs', 'JPA'],
   },
   {
     name: 'Mobile',
-    skills: ['Android', 'Java', 'Kotlin', 'MVVM', 'Retrofit', 'Room'],
+    icon: '📱',
+    skills: ['Android', 'Kotlin', 'MVVM', 'Retrofit', 'Room'],
   },
   {
-    name: 'Bases de datos',
-    skills: ['MySQL', 'MongoDB', 'H2', 'Mongoose', 'SQL'],
+    name: 'Bases de Datos',
+    icon: '◈',
+    skills: ['MySQL', 'MongoDB', 'PostgreSQL', 'H2', 'SQL'],
+  },
+  {
+    name: 'Frontend',
+    icon: '</>',
+    skills: ['React', 'TypeScript', 'JavaScript', 'Tailwind CSS'],
   },
   {
     name: 'Herramientas',
-    skills: ['Git', 'GitHub', 'Maven', 'Gradle', 'Postman', 'Vite'],
+    icon: '⚙',
+    skills: ['Git', 'GitHub', 'Docker', 'Maven', 'Postman'],
   },
 ]
 
 function Skills() {
+  const sectionRef = useRef(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible')
+          }
+        })
+      },
+      { threshold: 0.1 }
+    )
+
+    const elements = sectionRef.current?.querySelectorAll('.scroll-animate')
+    elements?.forEach((el) => observer.observe(el))
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <section id="skills" className="py-20 md:py-24">
+    <section id="skills" className="py-24 md:py-32 relative" ref={sectionRef}>
       <div className="section-container">
-        <SectionTitle
-          title="Tecnologías"
-          subtitle="Stack técnico con el que trabajo habitualmente."
-        />
+        {/* Section header */}
+        <div className="mb-16 scroll-animate">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="text-accent font-mono text-sm">{'<skills>'}</span>
+            <div className="h-px flex-1 bg-gradient-to-r from-accent/30 to-transparent max-w-32" />
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-text-primary tracking-tight">
+            Tecnologías
+          </h2>
+        </div>
         
-        <div className="max-w-4xl mx-auto space-y-8">
+        {/* Skills grid */}
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {skillCategories.map((category, index) => (
             <div
               key={category.name}
-              className="animate-fade-in"
-              style={{ animationDelay: `${index * 75}ms` }}
+              className="scroll-animate"
+              style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <h3 className="text-sm font-medium text-gray-500 dark:text-gray-500 uppercase tracking-wider mb-3">
-                {category.name}
-              </h3>
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-accent font-mono text-lg">{category.icon}</span>
+                <h3 className="text-sm font-mono text-text-muted uppercase tracking-wider">
+                  {category.name}
+                </h3>
+              </div>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1.5 text-sm bg-light-100 dark:bg-dark-700 text-gray-700 dark:text-gray-300 rounded-lg border border-light-200 dark:border-dark-600 hover:border-accent-400/50 hover:text-accent-700 dark:hover:text-accent-400 transition-colors cursor-default"
-                  >
+                  <span key={skill} className="tech-badge">
                     {skill}
                   </span>
                 ))}
@@ -56,10 +88,13 @@ function Skills() {
           ))}
         </div>
         
-        {/* Learning note */}
-        <div className="mt-12 text-center">
-          <p className="text-sm text-gray-500 dark:text-gray-500">
-            Actualmente aprendiendo: <span className="text-gray-700 dark:text-gray-300">AWS</span>, <span className="text-gray-700 dark:text-gray-300">Machine Learning</span>
+        {/* Currently learning */}
+        <div className="mt-20 pt-8 border-t border-surface-700/30 scroll-animate" style={{ transitionDelay: '500ms' }}>
+          <p className="text-sm text-text-muted">
+            <span className="text-accent font-mono mr-2">{'//'}</span>
+            Actualmente aprendiendo:{' '}
+            <span className="text-text-secondary">AWS</span>,{' '}
+            <span className="text-text-secondary">Machine Learning</span>
           </p>
         </div>
       </div>

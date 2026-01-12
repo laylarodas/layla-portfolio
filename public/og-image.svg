@@ -1,57 +1,52 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- Background -->
-  <rect width="1200" height="630" fill="#09090b"/>
+  <rect width="1200" height="630" fill="#121214"/>
   
-  <!-- Subtle gradient overlay -->
-  <rect width="1200" height="630" fill="url(#gradient)" opacity="0.5"/>
-  
-  <!-- Grid pattern -->
-  <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
-    <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1a1a1d" stroke-width="1"/>
-  </pattern>
-  <rect width="1200" height="630" fill="url(#grid)" opacity="0.5"/>
-  
-  <!-- Accent circle -->
-  <circle cx="1000" cy="150" r="200" fill="#9a7461" opacity="0.1"/>
-  <circle cx="200" cy="500" r="150" fill="#9a7461" opacity="0.08"/>
+  <!-- Subtle gradient -->
+  <rect width="1200" height="630" fill="url(#grad)" opacity="0.4"/>
   
   <!-- Content -->
-  <!-- Name -->
-  <text x="100" y="260" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="700" fill="white">
-    Layla Rodas
+  <!-- Status -->
+  <text x="100" y="200" font-family="ui-monospace, monospace" font-size="16" fill="#71717a">
+    Estudiante DAM · Buscando prácticas
   </text>
   
-  <!-- Title -->
-  <text x="100" y="330" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="400" fill="#a1a1aa">
+  <!-- Role -->
+  <text x="100" y="260" font-family="system-ui, sans-serif" font-size="28" font-weight="500" fill="#8b7394">
     Junior Backend Developer
   </text>
   
-  <!-- Tech stack -->
-  <text x="100" y="400" font-family="monospace" font-size="24" fill="#9a7461">
-    Java · Spring Boot · Node.js · Android
+  <!-- Name -->
+  <text x="100" y="330" font-family="system-ui, sans-serif" font-size="56" font-weight="600" fill="#e4e4e7">
+    Layla Rodas
+  </text>
+  
+  <!-- Description -->
+  <text x="100" y="400" font-family="system-ui, sans-serif" font-size="20" fill="#a1a1aa">
+    Building data-driven applications and APIs with Java, Spring Boot and Node.js
   </text>
   
   <!-- Location -->
-  <text x="100" y="480" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#71717a">
-    📍 Palma de Mallorca, España
+  <text x="100" y="480" font-family="system-ui, sans-serif" font-size="16" fill="#71717a">
+    Palma de Mallorca, Spain
   </text>
   
-  <!-- Website URL -->
-  <text x="100" y="560" font-family="monospace" font-size="18" fill="#52525b">
+  <!-- URL -->
+  <text x="100" y="560" font-family="ui-monospace, monospace" font-size="14" fill="#3f3f45">
     layla-portfolio-zeta.vercel.app
   </text>
   
-  <!-- Logo/Initials -->
-  <rect x="1000" y="450" width="100" height="100" rx="20" fill="#18181b" stroke="#9a7461" stroke-width="2"/>
-  <text x="1050" y="515" font-family="system-ui, -apple-system, sans-serif" font-size="40" font-weight="700" fill="#9a7461" text-anchor="middle">
+  <!-- Logo -->
+  <rect x="1020" y="480" width="80" height="80" rx="12" fill="#18181b" stroke="#27272b" stroke-width="1"/>
+  <text x="1060" y="532" font-family="system-ui, sans-serif" font-size="32" font-weight="500" fill="#8b7394" text-anchor="middle">
     LR
   </text>
   
   <!-- Gradient definition -->
   <defs>
-    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#9a7461;stop-opacity:0.1" />
-      <stop offset="100%" style="stop-color:#09090b;stop-opacity:0" />
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b7394;stop-opacity:0.05" />
+      <stop offset="100%" style="stop-color:#121214;stop-opacity:0" />
     </linearGradient>
   </defs>
 </svg>
