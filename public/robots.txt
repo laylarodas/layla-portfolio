@@ -1,0 +1,11 @@
+# Robots.txt for Layla Rodas Portfolio
+# https://layla-portfolio-zeta.vercel.app/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://layla-portfolio-zeta.vercel.app/sitemap.xml
+
+# Crawl-delay (optional, for polite crawling)
+Crawl-delay: 1
