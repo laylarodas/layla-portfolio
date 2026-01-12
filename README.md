@@ -1,162 +1,66 @@
-# Layla Rodas - Personal Portfolio
+# Layla Rodas - Portfolio Personal
 
-A modern, responsive single-page portfolio built with React, Vite, and Tailwind CSS.
+Portfolio personal moderno y responsive construido con React, Vite y Tailwind CSS.
 
-![Portfolio Preview](https://via.placeholder.com/800x400/111113/d17a3e?text=Layla+Rodas+Portfolio)
+🔗 **Live:** [layla-portfolio-zeta.vercel.app](https://layla-portfolio-zeta.vercel.app/)
 
-## Features
+## Características
 
-- **Dark/Light Theme** - Toggle with localStorage persistence (dark by default)
-- **Responsive Design** - Fully responsive across all devices
-- **Accessible** - Proper focus states, ARIA labels, and good contrast ratios
-- **Smooth Animations** - Fade-in effects and hover transitions
-- **Modern Stack** - React 18, Vite 5, Tailwind CSS 3
+- **Tema Dark/Light** - Toggle con persistencia en localStorage (dark por defecto)
+- **Diseño Responsive** - Adaptado a todos los dispositivos
+- **Accesible** - Focus states, ARIA labels, buen contraste
+- **Animaciones suaves** - Efectos fade-in y transiciones hover
+- **Stack moderno** - React 18, Vite 5, Tailwind CSS 3
 
-## Sections
+## Secciones
 
-- **Hero** - Introduction with social links and CV download
-- **Projects** - 6 featured projects with stack tags and live demos
-- **Skills** - Technologies grouped by category
-- **About** - Background and personal information
-- **Contact** - Email and social links
+- **Hero** - Introducción con links sociales y descarga de CV
+- **Proyectos** - 6 proyectos reales con stack y links a GitHub
+- **Skills** - Tecnologías agrupadas por categoría
+- **Sobre mí** - Información personal y background
+- **Contacto** - Email y links sociales
 
-## Tech Stack
+## Stack Técnico
 
-- [React](https://reactjs.org/) - UI library
+- [React](https://reactjs.org/) - Librería UI
 - [Vite](https://vitejs.dev/) - Build tool
-- [Tailwind CSS](https://tailwindcss.com/) - Styling
-- [Google Fonts](https://fonts.google.com/) - Typography (Outfit, Sora, JetBrains Mono)
+- [Tailwind CSS](https://tailwindcss.com/) - Estilos
+- [Google Fonts](https://fonts.google.com/) - Tipografía (Inter, JetBrains Mono)
 
-## Getting Started
+## Desarrollo Local
 
-### Prerequisites
+### Requisitos
 
 - Node.js 18+ 
-- npm or yarn
+- npm
 
-### Installation
+### Instalación
 
-1. Clone the repository:
 ```bash
-git clone https://github.com/layla-rodas/portfolio.git
-cd portfolio
-```
+# Clonar repositorio
+git clone https://github.com/laylarodas/layla-portfolio.git
+cd layla-portfolio
 
-2. Install dependencies:
-```bash
+# Instalar dependencias
 npm install
-```
 
-3. Start the development server:
-```bash
+# Iniciar servidor de desarrollo
 npm run dev
 ```
 
-4. Open [http://localhost:5173](http://localhost:5173) in your browser.
+Abrir [http://localhost:5173](http://localhost:5173)
 
-### Build for Production
+### Build de Producción
 
 ```bash
 npm run build
 ```
 
-The build output will be in the `dist` folder.
-
-### Preview Production Build
-
-```bash
-npm run preview
-```
-
-## Deployment
-
-### Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Import your repository on [Vercel](https://vercel.com)
-3. Vercel will auto-detect Vite and configure the build
-4. Deploy!
-
-### Netlify
-
-1. Push your code to GitHub
-2. Import your repository on [Netlify](https://netlify.com)
-3. Set build command: `npm run build`
-4. Set publish directory: `dist`
-5. Deploy!
-
-### GitHub Pages
-
-1. Install gh-pages:
-```bash
-npm install -D gh-pages
-```
-
-2. Add to `package.json`:
-```json
-{
-  "homepage": "https://yourusername.github.io/portfolio",
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
-  }
-}
-```
-
-3. Update `vite.config.js`:
-```js
-export default defineConfig({
-  base: '/portfolio/',
-  plugins: [react()],
-})
-```
-
-4. Deploy:
-```bash
-npm run deploy
-```
-
-## Customization
-
-### Update Personal Info
-
-Edit the following files:
-- `src/sections/Hero.jsx` - Name, headline, summary
-- `src/sections/About.jsx` - Biography and facts
-- `src/sections/Contact.jsx` - Email address
-- `src/data/projects.js` - Your projects
-
-### Update CV
-
-Replace `public/cv.pdf` with your own CV file.
-
-### Change Colors
-
-Edit `tailwind.config.js` to modify the color palette:
-- `warm` - Accent color (currently amber/orange)
-- `dark` - Background shades
-
-### Add/Remove Projects
-
-Edit `src/data/projects.js`. Each project should have:
-```js
-{
-  id: 1,
-  title: "Project Name",
-  description: "Short description",
-  stack: ["Tech1", "Tech2"],
-  features: ["Feature 1", "Feature 2", "Feature 3"],
-  githubUrl: "https://github.com/...",
-  demoUrl: "https://..." // optional
-  status: "completed" // or "in-progress"
-}
-```
-
-## Project Structure
+## Estructura del Proyecto
 
 ```
 src/
-├── components/         # Reusable UI components
+├── components/         # Componentes UI reutilizables
 │   ├── Button.jsx
 │   ├── Footer.jsx
 │   ├── Navbar.jsx
@@ -165,23 +69,24 @@ src/
 │   ├── Tag.jsx
 │   └── ThemeToggle.jsx
 ├── data/
-│   └── projects.js     # Project data
-├── sections/           # Page sections
+│   └── projects.js     # Datos de proyectos
+├── sections/           # Secciones de la página
 │   ├── About.jsx
 │   ├── Contact.jsx
 │   ├── Hero.jsx
 │   ├── Projects.jsx
 │   └── Skills.jsx
-├── App.jsx             # Main app component
-├── index.css           # Global styles
+├── App.jsx             # Componente principal
+├── index.css           # Estilos globales
 └── main.jsx            # Entry point
 ```
 
-## License
+## Deploy
 
-MIT License - feel free to use this template for your own portfolio!
+Desplegado automáticamente en [Vercel](https://vercel.com) con cada push a `main`.
 
-## Contact
+## Contacto
 
-- GitHub: [@layla-rodas](https://github.com/layla-rodas)
-- LinkedIn: [Layla Rodas](https://linkedin.com/in/layla-rodas)
+- GitHub: [@laylarodas](https://github.com/laylarodas)
+- LinkedIn: [Layla Rodas](https://www.linkedin.com/in/laylarodas/)
+- Email: rodas.layla@gmail.com
