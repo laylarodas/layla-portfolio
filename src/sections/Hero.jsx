@@ -20,7 +20,7 @@ function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center pt-16"
+      className="relative min-h-screen flex items-center pt-16 overflow-hidden"
     >
       {/* Grid background */}
       <div className="absolute inset-0 bg-grid opacity-60" />

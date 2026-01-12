@@ -6,10 +6,15 @@
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
+    overflow-x: hidden;
   }
 
   body {
     @apply antialiased bg-surface-900 text-text-primary;
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
+    position: relative;
+    width: 100%;
   }
 
   ::selection {

@@ -24,7 +24,7 @@ function Projects() {
   }, [])
 
   return (
-    <section id="projects" className="py-24 md:py-32 relative" ref={sectionRef}>
+    <section id="projects" className="py-24 md:py-32 relative overflow-hidden" ref={sectionRef}>
       {/* Background accent */}
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-accent/3 rounded-full blur-3xl pointer-events-none" />
       

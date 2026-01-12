@@ -35,7 +35,7 @@ function Navbar() {
             className="group flex items-center gap-2"
           >
             <span className="text-accent font-mono text-lg font-bold group-hover:text-accent-light transition-colors">
-              {'<LR />'}
+              LR
             </span>
           </a>
 
