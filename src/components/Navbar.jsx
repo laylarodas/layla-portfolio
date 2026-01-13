@@ -5,15 +5,16 @@ import LanguageSwitcher from './LanguageSwitcher'
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('')
   const { t, language } = useTranslation()
   
   const cvUrl = `/cv-${language}.pdf`
 
   const navLinks = [
-    { name: t('nav.projects'), href: '#projects' },
-    { name: t('nav.skills'), href: '#skills' },
-    { name: t('nav.about'), href: '#about' },
-    { name: t('nav.contact'), href: '#contact' },
+    { name: t('nav.projects'), href: '#projects', id: 'projects' },
+    { name: t('nav.skills'), href: '#skills', id: 'skills' },
+    { name: t('nav.about'), href: '#about', id: 'about' },
+    { name: t('nav.contact'), href: '#contact', id: 'contact' },
   ]
 
   useEffect(() => {
@@ -21,6 +22,36 @@ function Navbar() {
       setIsScrolled(window.scrollY > 20)
     }
     window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  // Detect active section based on scroll position
+  useEffect(() => {
+    const sections = ['projects', 'skills', 'about', 'contact']
+    
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 150
+      
+      for (const id of sections) {
+        const element = document.getElementById(id)
+        if (element) {
+          const { offsetTop, offsetHeight } = element
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(id)
+            return
+          }
+        }
+      }
+      
+      // If at the very top, no section is active
+      if (window.scrollY < 300) {
+        setActiveSection('')
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    handleScroll() // Check initial position
+    
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
@@ -48,9 +79,13 @@ function Navbar() {
           <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
               <a
-                key={link.name}
+                key={link.id}
                 href={link.href}
-                className="px-4 py-2 text-sm text-text-muted hover:text-text-primary rounded-lg hover:bg-surface-700/50 transition-all duration-200"
+                className={`px-4 py-2 text-sm rounded-lg transition-all duration-200 ${
+                  activeSection === link.id
+                    ? 'text-accent bg-accent/10'
+                    : 'text-text-muted hover:text-text-primary hover:bg-surface-700/50'
+                }`}
               >
                 {link.name}
               </a>
@@ -99,10 +134,14 @@ function Navbar() {
           <div className="flex flex-col gap-1 pt-2 border-t border-surface-700/50 bg-surface-900">
             {navLinks.map((link) => (
               <a
-                key={link.name}
+                key={link.id}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="px-4 py-2 text-sm text-text-muted hover:text-text-primary hover:bg-surface-700/50 rounded-lg transition-colors"
+                className={`px-4 py-2 text-sm rounded-lg transition-colors ${
+                  activeSection === link.id
+                    ? 'text-accent bg-accent/10'
+                    : 'text-text-muted hover:text-text-primary hover:bg-surface-700/50'
+                }`}
               >
                 {link.name}
               </a>
