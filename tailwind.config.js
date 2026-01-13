@@ -40,6 +40,9 @@ export default {
         'typing': 'typing 3s steps(40) forwards',
         'blink': 'blink 1s step-end infinite',
         'bounce-in': 'bounceIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards',
+        'glitch': 'glitch 0.3s ease-in-out infinite',
+        'glitch-overlay': 'glitchOverlay 0.15s ease-in-out infinite',
+        'scanline': 'scanline 0.1s linear infinite',
       },
       keyframes: {
         fadeIn: {
@@ -71,6 +74,22 @@ export default {
           '50%': { transform: 'scale(1.05)' },
           '70%': { transform: 'scale(0.9)' },
           '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        glitch: {
+          '0%, 100%': { transform: 'translate(0)', filter: 'hue-rotate(0deg)' },
+          '20%': { transform: 'translate(-4px, 4px)', filter: 'hue-rotate(90deg)' },
+          '40%': { transform: 'translate(-4px, -4px)', filter: 'hue-rotate(180deg)' },
+          '60%': { transform: 'translate(4px, 4px)', filter: 'hue-rotate(270deg)' },
+          '80%': { transform: 'translate(4px, -4px)', filter: 'hue-rotate(360deg)' },
+        },
+        glitchOverlay: {
+          '0%': { opacity: '0', transform: 'translateX(-100%)' },
+          '50%': { opacity: '0.8' },
+          '100%': { opacity: '0', transform: 'translateX(100%)' },
+        },
+        scanline: {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(100vh)' },
         },
       },
       backgroundImage: {
