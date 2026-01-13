@@ -5,7 +5,9 @@ import LanguageSwitcher from './LanguageSwitcher'
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const { t } = useTranslation()
+  const { t, language } = useTranslation()
+  
+  const cvUrl = `/cv-${language}.pdf`
 
   const navLinks = [
     { name: t('nav.projects'), href: '#projects' },
@@ -54,7 +56,7 @@ function Navbar() {
               </a>
             ))}
             <a
-              href="/cv.pdf"
+              href={cvUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="ml-4 px-4 py-2 text-sm text-accent border border-accent/30 rounded-lg hover:bg-accent/10 hover:border-accent/50 transition-all duration-200"
@@ -106,7 +108,7 @@ function Navbar() {
               </a>
             ))}
             <a
-              href="/cv.pdf"
+              href={cvUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 text-sm text-accent"

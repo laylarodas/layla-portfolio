@@ -2,8 +2,9 @@ import { useEffect, useRef } from 'react'
 import { useTranslation } from '../context/LanguageContext'
 
 function Contact() {
-  const { t } = useTranslation()
+  const { t, language } = useTranslation()
   const sectionRef = useRef(null)
+  const cvUrl = `/cv-${language}.pdf`
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -73,12 +74,12 @@ function Contact() {
               GitHub ↗
             </a>
             <a
-              href="/cv.pdf"
+              href={cvUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="text-text-muted hover:text-accent transition-colors duration-200 font-mono text-sm"
             >
-              CV ↗
+              {t('nav.cv')} ↗
             </a>
           </div>
         </div>
