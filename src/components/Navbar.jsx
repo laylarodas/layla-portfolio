@@ -13,6 +13,7 @@ function Navbar() {
   const navLinks = [
     { name: t('nav.projects'), href: '#projects', id: 'projects' },
     { name: t('nav.skills'), href: '#skills', id: 'skills' },
+    { name: t('nav.experience'), href: '#experience', id: 'experience' },
     { name: t('nav.about'), href: '#about', id: 'about' },
     { name: t('nav.contact'), href: '#contact', id: 'contact' },
   ]
@@ -27,7 +28,7 @@ function Navbar() {
 
   // Detect active section based on scroll position
   useEffect(() => {
-    const sections = ['projects', 'skills', 'about', 'contact']
+    const sections = ['projects', 'skills', 'experience', 'about', 'contact']
     
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 150

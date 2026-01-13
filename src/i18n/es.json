@@ -2,6 +2,7 @@
   "nav": {
     "projects": "Proyectos",
     "skills": "Skills",
+    "experience": "Cursos",
     "about": "Sobre mí",
     "contact": "Contacto",
     "cv": "CV"
@@ -73,6 +74,50 @@
       }
     },
     "or": "o escríbeme directamente a"
+  },
+  "experience": {
+    "tag": "<cursos>",
+    "title": "Cursos y Certificaciones",
+    "showMore": "Ver más cursos",
+    "showLess": "Ver menos",
+    "certs": {
+      "java": {
+        "title": "Java Programming: Solving Problems with Software",
+        "institution": "Duke University · Coursera",
+        "date": "Oct 2025",
+        "description": "Fundamentos de programación en Java, resolución de problemas y diseño de algoritmos."
+      },
+      "ml": {
+        "title": "Supervised Machine Learning",
+        "institution": "DeepLearning.AI",
+        "date": "Oct 2025",
+        "description": "Regresión lineal, clasificación y fundamentos de aprendizaje automático supervisado."
+      },
+      "datascience": {
+        "title": "Introduction to Data Science",
+        "institution": "Cisco",
+        "date": "Oct 2024",
+        "description": "Conceptos fundamentales de ciencia de datos, análisis y visualización."
+      },
+      "reactts": {
+        "title": "React and TypeScript",
+        "institution": "Udemy",
+        "date": "Mar 2024",
+        "description": "Desarrollo de aplicaciones React con tipado estático usando TypeScript."
+      },
+      "mern": {
+        "title": "Master ReactJS, Hooks, MERN, NodeJS",
+        "institution": "Udemy",
+        "date": "Ene 2024",
+        "description": "Stack MERN completo: MongoDB, Express, React y Node.js."
+      },
+      "responsive": {
+        "title": "Responsive Web Design",
+        "institution": "freeCodeCamp",
+        "date": "Mar 2021",
+        "description": "HTML, CSS y diseño web adaptable a diferentes dispositivos."
+      }
+    }
   },
   "footer": {
     "role": "Junior Backend Developer"
