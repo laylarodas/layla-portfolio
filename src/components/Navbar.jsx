@@ -1,15 +1,18 @@
 import { useState, useEffect } from 'react'
-
-const navLinks = [
-  { name: 'Proyectos', href: '#projects' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Sobre mí', href: '#about' },
-  { name: 'Contacto', href: '#contact' },
-]
+import { useTranslation } from '../context/LanguageContext'
+import LanguageSwitcher from './LanguageSwitcher'
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const { t } = useTranslation()
+
+  const navLinks = [
+    { name: t('nav.projects'), href: '#projects' },
+    { name: t('nav.skills'), href: '#skills' },
+    { name: t('nav.about'), href: '#about' },
+    { name: t('nav.contact'), href: '#contact' },
+  ]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,8 +25,8 @@ function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? 'bg-surface-900/90 backdrop-blur-md border-b border-surface-700/50'
+        isScrolled || isMobileMenuOpen
+          ? 'bg-surface-900/95 backdrop-blur-md border-b border-surface-700/50'
           : 'bg-transparent'
       }`}
     >
@@ -56,8 +59,11 @@ function Navbar() {
               rel="noopener noreferrer"
               className="ml-4 px-4 py-2 text-sm text-accent border border-accent/30 rounded-lg hover:bg-accent/10 hover:border-accent/50 transition-all duration-200"
             >
-              CV
+              {t('nav.cv')}
             </a>
+            <div className="ml-2">
+              <LanguageSwitcher />
+            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -84,11 +90,11 @@ function Navbar() {
 
         {/* Mobile menu */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ${
+          className={`md:hidden overflow-hidden transition-all duration-300 bg-surface-900/95 backdrop-blur-md ${
             isMobileMenuOpen ? 'max-h-64 pb-4' : 'max-h-0'
           }`}
         >
-          <div className="flex flex-col gap-1 pt-2 border-t border-surface-700/50">
+          <div className="flex flex-col gap-1 pt-2 border-t border-surface-700/50 bg-surface-900">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -105,8 +111,11 @@ function Navbar() {
               rel="noopener noreferrer"
               className="px-4 py-2 text-sm text-accent"
             >
-              CV
+              {t('nav.cv')}
             </a>
+            <div className="px-4 py-2">
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
       </div>

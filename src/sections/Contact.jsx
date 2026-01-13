@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react'
+import { useTranslation } from '../context/LanguageContext'
 
 function Contact() {
+  const { t } = useTranslation()
   const sectionRef = useRef(null)
 
   useEffect(() => {
@@ -27,19 +29,18 @@ function Contact() {
         {/* Section header */}
         <div className="mb-16 scroll-animate">
           <div className="flex items-center gap-3 mb-4">
-            <span className="text-accent font-mono text-sm">{'<contacto>'}</span>
+            <span className="text-accent font-mono text-sm">{t('contact.tag')}</span>
             <div className="h-px flex-1 bg-gradient-to-r from-accent/30 to-transparent max-w-32" />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-text-primary tracking-tight">
-            Contacto
+            {t('contact.title')}
           </h2>
         </div>
         
         {/* Content */}
         <div className="max-w-2xl scroll-animate" style={{ transitionDelay: '100ms' }}>
           <p className="text-text-secondary text-lg leading-relaxed mb-8">
-            Actualmente busco prácticas o posiciones junior como desarrolladora. 
-            Si quieres hablar sobre una oportunidad o simplemente conectar, escríbeme.
+            {t('contact.description')}
           </p>
           
           {/* Email CTA */}

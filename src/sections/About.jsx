@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react'
+import { useTranslation } from '../context/LanguageContext'
 
 function About() {
+  const { t } = useTranslation()
   const sectionRef = useRef(null)
 
   useEffect(() => {
@@ -30,11 +32,11 @@ function About() {
         {/* Section header */}
         <div className="mb-16 scroll-animate">
           <div className="flex items-center gap-3 mb-4">
-            <span className="text-accent font-mono text-sm">{'<sobre-mi>'}</span>
+            <span className="text-accent font-mono text-sm">{t('about.tag')}</span>
             <div className="h-px flex-1 bg-gradient-to-r from-accent/30 to-transparent max-w-32" />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-text-primary tracking-tight">
-            Sobre Mí
+            {t('about.title')}
           </h2>
         </div>
         
@@ -43,18 +45,17 @@ function About() {
           {/* Text */}
           <div className="lg:col-span-3 space-y-6 scroll-animate" style={{ transitionDelay: '100ms' }}>
             <p className="text-text-secondary text-lg leading-relaxed">
-              Soy desarrolladora junior de <span className="text-text-primary">Palma de Mallorca, España</span>, 
-              actualmente cursando el segundo año de DAM (Desarrollo de Aplicaciones Multiplataforma).
+              {t('about.p1').split('<location>')[0]}
+              <span className="text-text-primary">{t('about.locationValue')}</span>
+              {t('about.p1').split('</location>')[1]}
             </p>
             <p className="text-text-secondary leading-relaxed">
-              Mi enfoque principal es el <span className="text-text-primary">desarrollo backend</span>: 
-              construir APIs, trabajar con bases de datos y crear aplicaciones orientadas a datos. 
-              Abordo los problemas de forma metódica: primero entender, luego planificar la arquitectura, 
-              y después escribir código limpio.
+              {t('about.p2').split('<highlight>')[0]}
+              <span className="text-text-primary">{t('about.p2').match(/<highlight>(.*?)<\/highlight>/)?.[1]}</span>
+              {t('about.p2').split('</highlight>')[1]}
             </p>
             <p className="text-text-secondary leading-relaxed">
-              Además del backend, tengo experiencia en desarrollo Android y proyectos full-stack. 
-              Busco un entorno donde pueda crecer técnicamente mientras contribuyo a proyectos con impacto.
+              {t('about.p3')}
             </p>
           </div>
           
@@ -62,20 +63,20 @@ function About() {
           <div className="lg:col-span-2 scroll-animate" style={{ transitionDelay: '200ms' }}>
             <div className="card p-6 space-y-6">
               <div>
-                <p className="text-xs font-mono text-text-muted uppercase tracking-wider mb-2">Ubicación</p>
-                <p className="text-text-primary">Palma de Mallorca, España</p>
+                <p className="text-xs font-mono text-text-muted uppercase tracking-wider mb-2">{t('about.location')}</p>
+                <p className="text-text-primary">{t('about.locationValue')}</p>
               </div>
               <div>
-                <p className="text-xs font-mono text-text-muted uppercase tracking-wider mb-2">Formación</p>
-                <p className="text-text-primary">DAM · 2º Año</p>
+                <p className="text-xs font-mono text-text-muted uppercase tracking-wider mb-2">{t('about.education')}</p>
+                <p className="text-text-primary">{t('about.educationValue')}</p>
               </div>
               <div>
-                <p className="text-xs font-mono text-text-muted uppercase tracking-wider mb-2">Idiomas</p>
-                <p className="text-text-primary">Español (nativo), Inglés (B2)</p>
+                <p className="text-xs font-mono text-text-muted uppercase tracking-wider mb-2">{t('about.languages')}</p>
+                <p className="text-text-primary">{t('about.languagesValue')}</p>
               </div>
               <div>
-                <p className="text-xs font-mono text-text-muted uppercase tracking-wider mb-2">Estado</p>
-                <p className="text-accent">Abierta a oportunidades</p>
+                <p className="text-xs font-mono text-text-muted uppercase tracking-wider mb-2">{t('about.status')}</p>
+                <p className="text-accent">{t('about.statusValue')}</p>
               </div>
             </div>
           </div>

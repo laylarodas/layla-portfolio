@@ -1,13 +1,8 @@
 export const projects = [
   {
     id: 1,
-    title: 'Notes API - Spring Boot',
-    description: 'API REST construida con Spring Boot para gestión de notas con operaciones CRUD completas.',
+    translationKey: 'notesApi',
     stack: ['Java', 'Spring Boot', 'JPA', 'REST'],
-    features: [
-      'Endpoints CRUD para gestión de notas',
-      'Persistencia con JPA y base de datos H2',
-    ],
     image: '/projects/notes-api.svg',
     githubUrl: 'https://github.com/laylarodas/notes-api-springboot',
     demoUrl: null,
@@ -15,13 +10,8 @@ export const projects = [
   },
   {
     id: 2,
-    title: 'QuickNotes Android',
-    description: 'App de notas ligera para Android enfocada en simplicidad y experiencia offline.',
+    translationKey: 'quicknotes',
     stack: ['Java', 'Android', 'SQLite', 'Material Design'],
-    features: [
-      'Almacenamiento local con SQLite',
-      'Interfaz Material Design responsive',
-    ],
     image: '/projects/quicknotes.svg',
     githubUrl: 'https://github.com/laylarodas/quicknotes-android',
     demoUrl: null,
@@ -29,13 +19,8 @@ export const projects = [
   },
   {
     id: 3,
-    title: 'MovieHub Android',
-    description: 'Aplicación Android que muestra películas populares consumiendo la API de TMDB.',
+    translationKey: 'moviehub',
     stack: ['Java', 'Android', 'Retrofit', 'MVVM'],
-    features: [
-      'Arquitectura MVVM para separación de responsabilidades',
-      'Consumo de API REST con Retrofit',
-    ],
     image: '/projects/moviehub.svg',
     githubUrl: 'https://github.com/laylarodas/MovieHub-Android',
     demoUrl: null,
@@ -43,13 +28,8 @@ export const projects = [
   },
   {
     id: 4,
-    title: 'Rovedra S.L. Website',
-    description: 'Sitio corporativo moderno para empresa, con diseño responsive y profesional.',
+    translationKey: 'rovedra',
     stack: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
-    features: [
-      'Diseño responsive y accesible',
-      'Componentes reutilizables con TypeScript',
-    ],
     image: '/projects/rovedra.svg',
     githubUrl: 'https://github.com/laylarodas/rovedrasl-website',
     demoUrl: null,
@@ -57,13 +37,8 @@ export const projects = [
   },
   {
     id: 5,
-    title: 'Task Backend',
-    description: 'Backend para aplicación de gestión de tareas con API REST y persistencia en MongoDB.',
+    translationKey: 'taskBackend',
     stack: ['Node.js', 'Express', 'TypeScript', 'MongoDB'],
-    features: [
-      'API REST con endpoints CRUD',
-      'Modelado de datos con Mongoose',
-    ],
     image: '/projects/task-backend.svg',
     githubUrl: 'https://github.com/laylarodas/task-backend',
     demoUrl: null,
@@ -71,13 +46,8 @@ export const projects = [
   },
   {
     id: 6,
-    title: 'MacraméRose',
-    description: 'Mi primer proyecto completo: marketplace con vistas renderizadas del lado del servidor.',
+    translationKey: 'macramerose',
     stack: ['JavaScript', 'Node.js', 'EJS', 'CSS'],
-    features: [
-      'Server-side rendering con EJS',
-      'Sistema de catálogo de productos',
-    ],
     image: '/projects/macramerose.svg',
     githubUrl: 'https://github.com/laylarodas/macrameRose',
     demoUrl: null,

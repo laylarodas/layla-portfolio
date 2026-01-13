@@ -1,0 +1,111 @@
+{
+  "nav": {
+    "projects": "Proyectos",
+    "skills": "Skills",
+    "about": "Sobre mí",
+    "contact": "Contacto",
+    "cv": "CV"
+  },
+  "hero": {
+    "status": "Estudiante DAM · Buscando prácticas",
+    "role": "Junior Backend Developer",
+    "name": "Layla Rodas",
+    "description": "Desarrollo aplicaciones orientadas a datos y APIs con",
+    "and": "y",
+    "viewProjects": "Ver Proyectos",
+    "github": "GitHub"
+  },
+  "projects": {
+    "tag": "<proyectos>",
+    "title": "Proyectos Destacados",
+    "code": "Código",
+    "demo": "Demo",
+    "showMore": "Ver más proyectos",
+    "showLess": "Ver menos"
+  },
+  "skills": {
+    "tag": "<skills>",
+    "title": "Tecnologías",
+    "learning": "Actualmente aprendiendo:",
+    "categories": {
+      "backend": "Backend",
+      "mobile": "Mobile",
+      "databases": "Bases de Datos",
+      "frontend": "Frontend",
+      "tools": "Herramientas"
+    }
+  },
+  "about": {
+    "tag": "<sobre-mi>",
+    "title": "Sobre Mí",
+    "p1": "Soy desarrolladora junior de <location>Palma de Mallorca, España</location>, actualmente cursando el segundo año de DAM (Desarrollo de Aplicaciones Multiplataforma).",
+    "p2": "Mi enfoque principal es el <highlight>desarrollo backend</highlight>: construir APIs, trabajar con bases de datos y crear aplicaciones orientadas a datos. Abordo los problemas de forma metódica: primero entender, luego planificar la arquitectura, y después escribir código limpio.",
+    "p3": "Además del backend, tengo experiencia en desarrollo Android y proyectos full-stack. Busco un entorno donde pueda crecer técnicamente mientras contribuyo a proyectos con impacto.",
+    "location": "Ubicación",
+    "locationValue": "Palma de Mallorca, España",
+    "education": "Formación",
+    "educationValue": "DAM · 2º Año",
+    "languages": "Idiomas",
+    "languagesValue": "Español (nativo), Inglés (B2)",
+    "status": "Estado",
+    "statusValue": "Abierta a oportunidades"
+  },
+  "contact": {
+    "tag": "<contacto>",
+    "title": "Contacto",
+    "description": "Actualmente busco prácticas o posiciones junior como desarrolladora. Si quieres hablar sobre una oportunidad o simplemente conectar, escríbeme."
+  },
+  "footer": {
+    "role": "Junior Backend Developer"
+  },
+  "projectsData": {
+    "notesApi": {
+      "title": "Notes API - Spring Boot",
+      "description": "API REST construida con Spring Boot para gestión de notas con operaciones CRUD completas.",
+      "features": [
+        "Endpoints CRUD para gestión de notas",
+        "Persistencia con JPA y base de datos H2"
+      ]
+    },
+    "quicknotes": {
+      "title": "QuickNotes Android",
+      "description": "App de notas ligera para Android enfocada en simplicidad y experiencia offline.",
+      "features": [
+        "Almacenamiento local con SQLite",
+        "Interfaz Material Design responsive"
+      ]
+    },
+    "moviehub": {
+      "title": "MovieHub Android",
+      "description": "Aplicación Android que muestra películas populares consumiendo la API de TMDB.",
+      "features": [
+        "Arquitectura MVVM para separación de responsabilidades",
+        "Consumo de API REST con Retrofit"
+      ]
+    },
+    "rovedra": {
+      "title": "Rovedra S.L. Website",
+      "description": "Sitio corporativo moderno para empresa, con diseño responsive y profesional.",
+      "features": [
+        "Diseño responsive y accesible",
+        "Componentes reutilizables con TypeScript"
+      ]
+    },
+    "taskBackend": {
+      "title": "Task Backend",
+      "description": "Backend para aplicación de gestión de tareas con API REST y persistencia en MongoDB.",
+      "features": [
+        "API REST con endpoints CRUD",
+        "Modelado de datos con Mongoose"
+      ]
+    },
+    "macramerose": {
+      "title": "MacraméRose",
+      "description": "Mi primer proyecto completo: marketplace con vistas renderizadas del lado del servidor.",
+      "features": [
+        "Server-side rendering con EJS",
+        "Sistema de catálogo de productos"
+      ]
+    }
+  }
+}

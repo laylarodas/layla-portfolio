@@ -1,4 +1,8 @@
+import { useTranslation } from '../context/LanguageContext'
+
 function Footer() {
+  const { t } = useTranslation()
+  
   return (
     <footer className="py-8 border-t border-surface-700/30">
       <div className="section-container">
@@ -7,7 +11,7 @@ function Footer() {
           <div className="text-text-muted text-sm">
             <span className="text-text-primary font-medium">Layla Rodas</span>
             {' · '}
-            <span>Junior Backend Developer</span>
+            <span>{t('footer.role')}</span>
           </div>
           
           {/* Right - Social links */}

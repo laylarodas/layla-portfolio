@@ -1,0 +1,111 @@
+{
+  "nav": {
+    "projects": "Projects",
+    "skills": "Skills",
+    "about": "About",
+    "contact": "Contact",
+    "cv": "CV"
+  },
+  "hero": {
+    "status": "DAM Student · Looking for internship",
+    "role": "Junior Backend Developer",
+    "name": "Layla Rodas",
+    "description": "I build data-driven applications and APIs with",
+    "and": "and",
+    "viewProjects": "View Projects",
+    "github": "GitHub"
+  },
+  "projects": {
+    "tag": "<projects>",
+    "title": "Featured Projects",
+    "code": "Code",
+    "demo": "Demo",
+    "showMore": "Show more projects",
+    "showLess": "Show less"
+  },
+  "skills": {
+    "tag": "<skills>",
+    "title": "Technologies",
+    "learning": "Currently learning:",
+    "categories": {
+      "backend": "Backend",
+      "mobile": "Mobile",
+      "databases": "Databases",
+      "frontend": "Frontend",
+      "tools": "Tools"
+    }
+  },
+  "about": {
+    "tag": "<about-me>",
+    "title": "About Me",
+    "p1": "I'm a junior developer from <location>Palma de Mallorca, Spain</location>, currently in my second year of DAM (Cross-platform Application Development).",
+    "p2": "My main focus is <highlight>backend development</highlight>: building APIs, working with databases, and creating data-driven applications. I approach problems methodically: first understand, then plan the architecture, and then write clean code.",
+    "p3": "Beyond backend, I have experience in Android development and full-stack projects. I'm looking for an environment where I can grow technically while contributing to impactful projects.",
+    "location": "Location",
+    "locationValue": "Palma de Mallorca, Spain",
+    "education": "Education",
+    "educationValue": "DAM · 2nd Year",
+    "languages": "Languages",
+    "languagesValue": "Spanish (native), English (B2)",
+    "status": "Status",
+    "statusValue": "Open to opportunities"
+  },
+  "contact": {
+    "tag": "<contact>",
+    "title": "Contact",
+    "description": "I'm currently looking for internships or junior positions as a developer. If you want to discuss an opportunity or just connect, reach out."
+  },
+  "footer": {
+    "role": "Junior Backend Developer"
+  },
+  "projectsData": {
+    "notesApi": {
+      "title": "Notes API - Spring Boot",
+      "description": "REST API built with Spring Boot for note management with full CRUD operations.",
+      "features": [
+        "CRUD endpoints for note management",
+        "Persistence with JPA and H2 database"
+      ]
+    },
+    "quicknotes": {
+      "title": "QuickNotes Android",
+      "description": "Lightweight notes app for Android focused on simplicity and offline experience.",
+      "features": [
+        "Local storage with SQLite",
+        "Responsive Material Design interface"
+      ]
+    },
+    "moviehub": {
+      "title": "MovieHub Android",
+      "description": "Android app displaying popular movies by consuming the TMDB API.",
+      "features": [
+        "MVVM architecture for separation of concerns",
+        "REST API consumption with Retrofit"
+      ]
+    },
+    "rovedra": {
+      "title": "Rovedra S.L. Website",
+      "description": "Modern corporate website for a company, with responsive and professional design.",
+      "features": [
+        "Responsive and accessible design",
+        "Reusable components with TypeScript"
+      ]
+    },
+    "taskBackend": {
+      "title": "Task Backend",
+      "description": "Backend for task management app with REST API and MongoDB persistence.",
+      "features": [
+        "REST API with CRUD endpoints",
+        "Data modeling with Mongoose"
+      ]
+    },
+    "macramerose": {
+      "title": "MacraméRose",
+      "description": "My first complete project: marketplace with server-side rendered views.",
+      "features": [
+        "Server-side rendering with EJS",
+        "Product catalog system"
+      ]
+    }
+  }
+}

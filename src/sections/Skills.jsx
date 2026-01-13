@@ -1,34 +1,36 @@
 import { useEffect, useRef } from 'react'
+import { useTranslation } from '../context/LanguageContext'
 
 const skillCategories = [
   {
-    name: 'Backend',
+    nameKey: 'skills.categories.backend',
     icon: '{ }',
     skills: ['Java', 'Spring Boot', 'Node.js', 'Express', 'REST APIs', 'JPA'],
   },
   {
-    name: 'Mobile',
+    nameKey: 'skills.categories.mobile',
     icon: '📱',
     skills: ['Android', 'Kotlin', 'MVVM', 'Retrofit', 'Room'],
   },
   {
-    name: 'Bases de Datos',
+    nameKey: 'skills.categories.databases',
     icon: '◈',
     skills: ['MySQL', 'MongoDB', 'PostgreSQL', 'H2', 'SQL'],
   },
   {
-    name: 'Frontend',
+    nameKey: 'skills.categories.frontend',
     icon: '</>',
     skills: ['React', 'TypeScript', 'JavaScript', 'Tailwind CSS'],
   },
   {
-    name: 'Herramientas',
+    nameKey: 'skills.categories.tools',
     icon: '⚙',
     skills: ['Git', 'GitHub', 'Docker', 'Maven', 'Postman'],
   },
 ]
 
 function Skills() {
+  const { t } = useTranslation()
   const sectionRef = useRef(null)
 
   useEffect(() => {
@@ -55,11 +57,11 @@ function Skills() {
         {/* Section header */}
         <div className="mb-16 scroll-animate">
           <div className="flex items-center gap-3 mb-4">
-            <span className="text-accent font-mono text-sm">{'<skills>'}</span>
+            <span className="text-accent font-mono text-sm">{t('skills.tag')}</span>
             <div className="h-px flex-1 bg-gradient-to-r from-accent/30 to-transparent max-w-32" />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-text-primary tracking-tight">
-            Tecnologías
+            {t('skills.title')}
           </h2>
         </div>
         
@@ -67,14 +69,14 @@ function Skills() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {skillCategories.map((category, index) => (
             <div
-              key={category.name}
+              key={category.nameKey}
               className="scroll-animate"
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-accent font-mono text-lg">{category.icon}</span>
                 <h3 className="text-sm font-mono text-text-muted uppercase tracking-wider">
-                  {category.name}
+                  {t(category.nameKey)}
                 </h3>
               </div>
               <div className="flex flex-wrap gap-2">
@@ -92,7 +94,7 @@ function Skills() {
         <div className="mt-20 pt-8 border-t border-surface-700/30 scroll-animate" style={{ transitionDelay: '500ms' }}>
           <p className="text-sm text-text-muted">
             <span className="text-accent font-mono mr-2">{'//'}</span>
-            Actualmente aprendiendo:{' '}
+            {t('skills.learning')}{' '}
             <span className="text-text-secondary">AWS</span>,{' '}
             <span className="text-text-secondary">Machine Learning</span>
           </p>
