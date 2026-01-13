@@ -122,6 +122,16 @@
   "footer": {
     "role": "Junior Backend Developer"
   },
+  "easterEgg": {
+    "title": "You found it!",
+    "message": "You're the curious type... I like that!"
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "Page not found",
+    "message": "Looks like this route doesn't exist. Maybe the code went on vacation.",
+    "backHome": "Back to home"
+  },
   "projectsData": {
     "notesApi": {
       "title": "Notes API - Spring Boot",

@@ -6,11 +6,13 @@ Portfolio personal moderno y responsive construido con React, Vite y Tailwind CS
 
 ## Características
 
-- **Tema Dark/Light** - Toggle con persistencia en localStorage (dark por defecto)
+- **Bilingüe** - Español/Inglés con detección automática del navegador
 - **Diseño Responsive** - Adaptado a todos los dispositivos
 - **Accesible** - Focus states, ARIA labels, buen contraste
 - **Animaciones suaves** - Efectos fade-in y transiciones hover
+- **Formulario de contacto** - Integrado con Web3Forms
 - **Stack moderno** - React 18, Vite 5, Tailwind CSS 3
+- **🎮 Easter egg** - ¿Conoces el código secreto de los videojuegos?
 
 ## Secciones
 

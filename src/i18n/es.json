@@ -122,6 +122,16 @@
   "footer": {
     "role": "Junior Backend Developer"
   },
+  "easterEgg": {
+    "title": "¡Lo encontraste!",
+    "message": "Eres de los que exploran... ¡Me gusta!"
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "Página no encontrada",
+    "message": "Parece que esta ruta no existe. Quizás el código se fue de vacaciones.",
+    "backHome": "Volver al inicio"
+  },
   "projectsData": {
     "notesApi": {
       "title": "Notes API - Spring Boot",

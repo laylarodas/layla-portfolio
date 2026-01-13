@@ -39,6 +39,7 @@ export default {
         'glow-pulse': 'glowPulse 3s ease-in-out infinite',
         'typing': 'typing 3s steps(40) forwards',
         'blink': 'blink 1s step-end infinite',
+        'bounce-in': 'bounceIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards',
       },
       keyframes: {
         fadeIn: {
@@ -64,6 +65,12 @@ export default {
         blink: {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0' },
+        },
+        bounceIn: {
+          '0%': { opacity: '0', transform: 'scale(0.3)' },
+          '50%': { transform: 'scale(1.05)' },
+          '70%': { transform: 'scale(0.9)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
         },
       },
       backgroundImage: {
