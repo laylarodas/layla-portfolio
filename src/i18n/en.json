@@ -53,7 +53,26 @@
   "contact": {
     "tag": "<contact>",
     "title": "Contact",
-    "description": "I'm currently looking for internships or junior positions as a developer. If you want to discuss an opportunity or just connect, reach out."
+    "description": "I'm currently looking for internships or junior positions as a developer. If you want to discuss an opportunity or just connect, reach out.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about the opportunity or project...",
+      "send": "Send message",
+      "sending": "Sending...",
+      "success": "Message sent! I'll get back to you soon.",
+      "error": "Something went wrong. Try again or email me directly.",
+      "errors": {
+        "nameRequired": "Please enter your name",
+        "emailRequired": "Please enter your email",
+        "emailInvalid": "Please enter a valid email",
+        "messageRequired": "Please write a message"
+      }
+    },
+    "or": "or email me directly at"
   },
   "footer": {
     "role": "Junior Backend Developer"

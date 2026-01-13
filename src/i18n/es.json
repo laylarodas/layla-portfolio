@@ -53,7 +53,26 @@
   "contact": {
     "tag": "<contacto>",
     "title": "Contacto",
-    "description": "Actualmente busco prácticas o posiciones junior como desarrolladora. Si quieres hablar sobre una oportunidad o simplemente conectar, escríbeme."
+    "description": "Actualmente busco prácticas o posiciones junior como desarrolladora. Si quieres hablar sobre una oportunidad o simplemente conectar, escríbeme.",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Email",
+      "emailPlaceholder": "tu@email.com",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntame sobre la oportunidad o el proyecto...",
+      "send": "Enviar mensaje",
+      "sending": "Enviando...",
+      "success": "¡Mensaje enviado! Te responderé pronto.",
+      "error": "Hubo un error. Intenta de nuevo o escríbeme directamente.",
+      "errors": {
+        "nameRequired": "Por favor, ingresa tu nombre",
+        "emailRequired": "Por favor, ingresa tu email",
+        "emailInvalid": "Por favor, ingresa un email válido",
+        "messageRequired": "Por favor, escribe un mensaje"
+      }
+    },
+    "or": "o escríbeme directamente a"
   },
   "footer": {
     "role": "Junior Backend Developer"
