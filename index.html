@@ -7,11 +7,11 @@
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="irdVeUQU88b7qYCWC6viJ_47n5jxEjR_RhXJvZgd_vA" />
     
-    <!-- Primary Meta Tags -->
-    <title>Layla Rodas | Junior Backend Developer - Java, Spring Boot, Android</title>
-    <meta name="title" content="Layla Rodas | Junior Backend Developer - Java, Spring Boot, Android" />
-    <meta name="description" content="Portfolio de Layla Rodas, desarrolladora junior especializada en backend con Java, Spring Boot, Node.js y desarrollo Android. Buscando prácticas o primer empleo en Palma de Mallorca, España." />
-    <meta name="keywords" content="Layla Rodas, desarrolladora junior, backend developer, Java, Spring Boot, Node.js, Android, Kotlin, portfolio, Palma de Mallorca, España, DAM, programador" />
+    <!-- Primary Meta Tags (fallback - dynamic tags managed by react-helmet-async) -->
+    <title>Layla Rodas | Backend Developer - Java, Spring Boot, Node.js</title>
+    <meta name="title" content="Layla Rodas | Backend Developer - Java, Spring Boot, Node.js" />
+    <meta name="description" content="Backend Developer en Palma de Mallorca, España. Enfocada en datos, estructura y arquitectura limpia. Construyendo APIs y aplicaciones con Java, Spring Boot y Node.js." />
+    <meta name="keywords" content="Layla Rodas, backend developer, Java, Spring Boot, Node.js, Android, APIs, bases de datos, portfolio, Palma de Mallorca, España" />
     <meta name="author" content="Layla Rodas" />
     <meta name="robots" content="index, follow" />
     <meta name="language" content="Spanish" />
@@ -20,6 +20,11 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://layla-portfolio-zeta.vercel.app/" />
     
+    <!-- Alternate Languages (hreflang) -->
+    <link rel="alternate" hreflang="es" href="https://layla-portfolio-zeta.vercel.app/" />
+    <link rel="alternate" hreflang="en" href="https://layla-portfolio-zeta.vercel.app/" />
+    <link rel="alternate" hreflang="x-default" href="https://layla-portfolio-zeta.vercel.app/" />
+    
     <!-- Theme Color -->
     <meta name="theme-color" content="#09090b" />
     <meta name="msapplication-TileColor" content="#09090b" />
@@ -27,19 +32,20 @@
     <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://layla-portfolio-zeta.vercel.app/" />
-    <meta property="og:title" content="Layla Rodas | Junior Backend Developer - Java & Android" />
-    <meta property="og:description" content="Desarrolladora junior especializada en backend con Java, Spring Boot, Node.js y Android. Palma de Mallorca." />
+    <meta property="og:title" content="Layla Rodas | Backend Developer" />
+    <meta property="og:description" content="Backend Developer enfocada en datos, estructura y arquitectura limpia. Java, Spring Boot, Node.js." />
     <meta property="og:image" content="https://layla-portfolio-zeta.vercel.app/og-image.svg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="es_ES" />
+    <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:site_name" content="Layla Rodas Portfolio" />
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://layla-portfolio-zeta.vercel.app/" />
-    <meta name="twitter:title" content="Layla Rodas | Junior Backend Developer - Java & Android" />
-    <meta name="twitter:description" content="Desarrolladora junior especializada en backend con Java, Spring Boot, Node.js y Android. Palma de Mallorca." />
+    <meta name="twitter:title" content="Layla Rodas | Backend Developer" />
+    <meta name="twitter:description" content="Backend Developer enfocada en datos, estructura y arquitectura limpia. Java, Spring Boot, Node.js." />
     <meta name="twitter:image" content="https://layla-portfolio-zeta.vercel.app/og-image.svg" />
     <meta name="twitter:creator" content="@laylarodas" />
     
@@ -47,12 +53,18 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="manifest" href="/site.webmanifest" />
     
-    <!-- Fonts -->
+    <!-- DNS Prefetch & Preconnect for Performance -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://api.web3forms.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Preload Critical Fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" as="style" />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
     
-    <!-- JSON-LD Structured Data -->
+    <!-- JSON-LD Structured Data (fallback - dynamic version in SEO component) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -60,8 +72,8 @@
       "name": "Layla Rodas",
       "url": "https://layla-portfolio-zeta.vercel.app/",
       "image": "https://layla-portfolio-zeta.vercel.app/og-image.svg",
-      "jobTitle": "Junior Backend Developer",
-      "description": "Desarrolladora junior especializada en backend con Java, Spring Boot, Node.js y desarrollo Android",
+      "jobTitle": "Backend Developer",
+      "description": "Backend Developer enfocada en datos, estructura y arquitectura limpia con Java, Spring Boot y Node.js",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Palma de Mallorca",
@@ -72,7 +84,7 @@
         "https://github.com/laylarodas",
         "https://www.linkedin.com/in/laylarodas/"
       ],
-      "knowsAbout": ["Java", "Spring Boot", "Node.js", "Android", "SQL", "React", "TypeScript"],
+      "knowsAbout": ["Java", "Spring Boot", "Node.js", "Android", "SQL", "React", "TypeScript", "APIs", "Databases"],
       "alumniOf": {
         "@type": "EducationalOrganization",
         "name": "DAM - Desarrollo de Aplicaciones Multiplataforma"

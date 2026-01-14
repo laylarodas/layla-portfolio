@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useTranslation } from '../context/LanguageContext'
 import LanguageSwitcher from './LanguageSwitcher'
 
@@ -7,6 +7,7 @@ function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('')
   const { t, language } = useTranslation()
+  const navRef = useRef(null)
   
   const cvUrl = `/cv-${language}.pdf`
 
@@ -25,6 +26,23 @@ function Navbar() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target) && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false)
+      }
+    }
+    
+    document.addEventListener('mousedown', handleClickOutside)
+    document.addEventListener('touchstart', handleClickOutside)
+    
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('touchstart', handleClickOutside)
+    }
+  }, [isMobileMenuOpen])
 
   // Detect active section based on scroll position
   useEffect(() => {
@@ -58,6 +76,7 @@ function Navbar() {
 
   return (
     <nav
+      ref={navRef}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled || isMobileMenuOpen
           ? 'bg-surface-900/95 backdrop-blur-md border-b border-surface-700/50'
@@ -129,7 +148,7 @@ function Navbar() {
         {/* Mobile menu */}
         <div
           className={`md:hidden overflow-hidden transition-all duration-300 bg-surface-900/95 backdrop-blur-md ${
-            isMobileMenuOpen ? 'max-h-64 pb-4' : 'max-h-0'
+            isMobileMenuOpen ? 'max-h-96 pb-4' : 'max-h-0'
           }`}
         >
           <div className="flex flex-col gap-1 pt-2 border-t border-surface-700/50 bg-surface-900">

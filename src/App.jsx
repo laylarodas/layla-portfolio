@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
 import EasterEgg from './components/EasterEgg'
+import SEO from './components/SEO'
 import Hero from './sections/Hero'
 import Projects from './sections/Projects'
 import Skills from './sections/Skills'
@@ -14,6 +15,7 @@ import NotFound from './pages/NotFound'
 function HomePage() {
   return (
     <div className="min-h-screen bg-surface-900 overflow-x-hidden">
+      <SEO />
       <Navbar />
       <main>
         <Hero />
