@@ -19,8 +19,8 @@ function getInitialLanguage() {
     return browserLang
   }
   
-  // Default to Spanish
-  return 'es'
+  // Default to English
+  return 'en'
 }
 
 export function LanguageProvider({ children }) {
