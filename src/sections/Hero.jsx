@@ -59,10 +59,7 @@ function Hero() {
           
           {/* Description */}
           <p className="text-text-secondary text-lg md:text-xl leading-relaxed mb-10 max-w-2xl animate-fade-in animate-delay-300">
-            {t('hero.description')}{' '}
-            <span className="text-text-primary font-medium">Java</span>,{' '}
-            <span className="text-text-primary font-medium">Spring Boot</span> {t('hero.and')}{' '}
-            <span className="text-text-primary font-medium">Node.js</span>.
+            {t('hero.description')}
           </p>
           
           {/* Tech stack pills */}

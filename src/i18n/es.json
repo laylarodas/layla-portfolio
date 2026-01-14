@@ -9,9 +9,9 @@
   },
   "hero": {
     "status": "Estudiante DAM · Buscando prácticas",
-    "role": "Junior Backend Developer",
+    "role": "Backend Developer",
     "name": "Layla Rodas",
-    "description": "Desarrollo aplicaciones orientadas a datos y APIs con",
+    "description": "Enfocada en datos, estructura y arquitectura limpia a través de un diseño reflexivo",
     "and": "y",
     "viewProjects": "Ver Proyectos",
     "github": "GitHub"
@@ -39,9 +39,9 @@
   "about": {
     "tag": "<sobre-mi>",
     "title": "Sobre Mí",
-    "p1": "Soy desarrolladora junior de <location>Palma de Mallorca, España</location>, actualmente cursando el segundo año de DAM (Desarrollo de Aplicaciones Multiplataforma).",
-    "p2": "Mi enfoque principal es el <highlight>desarrollo backend</highlight>: construir APIs, trabajar con bases de datos y crear aplicaciones orientadas a datos. Abordo los problemas de forma metódica: primero entender, luego planificar la arquitectura, y después escribir código limpio.",
-    "p3": "Además del backend, tengo experiencia en desarrollo Android y proyectos full-stack. Busco un entorno donde pueda crecer técnicamente mientras contribuyo a proyectos con impacto.",
+    "p1": "Soy desarrolladora backend de <location>Palma de Mallorca</location>, actualmente cursando el segundo año de DAM (Desarrollo de Aplicaciones Multiplataforma).",
+    "p2": "Me interesa especialmente construir software donde los <highlight>datos, la lógica y la estructura</highlight> son fundamentales. Disfruto trabajando en sistemas backend como APIs y aplicaciones basadas en bases de datos, abordando los problemas de manera reflexiva y metódica: primero comprender el contexto, luego diseñar la arquitectura, y finalmente escribir código limpio y mantenible.",
+    "p3": "He desarrollado proyectos usando Java y Spring Boot, trabajado con bases de datos relacionales, y explorado el desarrollo Android y full-stack, lo que me da una perspectiva más amplia sobre cómo las decisiones de backend afectan a todo el sistema. Busco crecer en entornos técnicos que valoren la claridad, el aprendizaje y el software bien diseñado con intención a largo plazo.",
     "location": "Ubicación",
     "locationValue": "Palma de Mallorca, España",
     "education": "Formación",

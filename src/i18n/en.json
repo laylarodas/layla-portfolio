@@ -9,9 +9,9 @@
   },
   "hero": {
     "status": "DAM Student · Looking for internship",
-    "role": "Junior Backend Developer",
+    "role": "Backend Developer",
     "name": "Layla Rodas",
-    "description": "I build data-driven applications and APIs with",
+    "description": "Focused on data, structure, and clean architecture through thoughtful design",
     "and": "and",
     "viewProjects": "View Projects",
     "github": "GitHub"
@@ -39,9 +39,9 @@
   "about": {
     "tag": "<about-me>",
     "title": "About Me",
-    "p1": "I'm a junior developer from <location>Palma de Mallorca, Spain</location>, currently in my second year of DAM (Cross-platform Application Development).",
-    "p2": "My main focus is <highlight>backend development</highlight>: building APIs, working with databases, and creating data-driven applications. I approach problems methodically: first understand, then plan the architecture, and then write clean code.",
-    "p3": "Beyond backend, I have experience in Android development and full-stack projects. I'm looking for an environment where I can grow technically while contributing to impactful projects.",
+    "p1": "I'm a backend developer based in <location>Palma de Mallorca</location>, currently in my second year of DAM (Cross-platform Application Development).",
+    "p2": "I'm especially interested in building software where <highlight>data, logic, and structure</highlight> are central. I enjoy working on backend systems such as APIs and database-driven applications, approaching problems in a thoughtful and methodical way: first understanding the context, then designing the architecture, and finally writing clean, maintainable code.",
+    "p3": "I've built projects using Java and Spring Boot, worked with relational databases, and explored Android and full-stack development, which gives me a broader perspective on how backend decisions affect the entire system. I'm looking to grow in technical environments that value clarity, learning, and well-designed software built with long-term intention.",
     "location": "Location",
     "locationValue": "Palma de Mallorca, Spain",
     "education": "Education",
