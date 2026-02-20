@@ -3,8 +3,8 @@ import { useTranslation } from '../context/LanguageContext'
 
 const certifications = [
   { key: 'java', icon: '☕' },
-  { key: 'ml', icon: '🤖' },
   { key: 'datascience', icon: '📊' },
+  { key: 'ml', icon: '🤖' },
   { key: 'reactts', icon: '⚛️' },
   { key: 'mern', icon: '🔗' },
   { key: 'responsive', icon: '📱' },

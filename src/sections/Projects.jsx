@@ -3,7 +3,7 @@ import { useTranslation } from '../context/LanguageContext'
 import ProjectCard from '../components/ProjectCard'
 import { projects } from '../data/projects'
 
-const INITIAL_MOBILE_COUNT = 3
+const INITIAL_MOBILE_COUNT = 2
 
 function Projects() {
   const { t } = useTranslation()

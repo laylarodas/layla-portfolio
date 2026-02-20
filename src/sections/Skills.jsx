@@ -5,27 +5,27 @@ const skillCategories = [
   {
     nameKey: 'skills.categories.backend',
     icon: '{ }',
-    skills: ['Java', 'Spring Boot', 'Node.js', 'Express', 'REST APIs', 'JPA'],
-  },
-  {
-    nameKey: 'skills.categories.mobile',
-    icon: '📱',
-    skills: ['Android', 'Kotlin', 'MVVM', 'Retrofit', 'Room'],
+    skills: ['Java', 'Spring Boot', 'REST APIs', 'JPA', 'Maven'],
   },
   {
     nameKey: 'skills.categories.databases',
     icon: '◈',
-    skills: ['MySQL', 'MongoDB', 'PostgreSQL', 'H2', 'SQL'],
+    skills: ['SQL', 'MySQL', 'PostgreSQL', 'H2'],
   },
   {
-    nameKey: 'skills.categories.frontend',
-    icon: '</>',
-    skills: ['React', 'TypeScript', 'JavaScript', 'Tailwind CSS'],
+    nameKey: 'skills.categories.data',
+    icon: '📊',
+    skills: ['Python', 'Pandas', 'scikit-learn', 'Streamlit'],
   },
   {
     nameKey: 'skills.categories.tools',
     icon: '⚙',
-    skills: ['Git', 'GitHub', 'Docker', 'Maven', 'Postman'],
+    skills: ['Git', 'GitHub', 'Docker', 'Postman', 'IntelliJ IDEA'],
+  },
+  {
+    nameKey: 'skills.categories.alsoWorkedWith',
+    icon: '~',
+    skills: ['Node.js', 'React', 'TypeScript', 'Android', 'MongoDB'],
   },
 ]
 
@@ -95,8 +95,9 @@ function Skills() {
           <p className="text-sm text-text-muted">
             <span className="text-accent font-mono mr-2">{'//'}</span>
             {t('skills.learning')}{' '}
+            <span className="text-text-secondary">Python for Data</span>,{' '}
             <span className="text-text-secondary">AWS</span>,{' '}
-            <span className="text-text-secondary">Machine Learning</span>
+            <span className="text-text-secondary">Database Optimization</span>
           </p>
         </div>
       </div>

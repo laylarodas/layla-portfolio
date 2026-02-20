@@ -8,10 +8,10 @@
     "cv": "CV"
   },
   "hero": {
-    "status": "Estudiante DAM · Buscando prácticas",
+    "status": "Backend Developer · Abierta a Oportunidades",
     "role": "Backend Developer",
     "name": "Layla Rodas",
-    "description": "Enfocada en datos, estructura y arquitectura limpia a través de un diseño reflexivo",
+    "description": "Construyendo APIs RESTful y aplicaciones basadas en datos con un enfoque data-oriented",
     "and": "y",
     "viewProjects": "Ver Proyectos",
     "github": "GitHub"
@@ -30,18 +30,18 @@
     "learning": "Actualmente aprendiendo:",
     "categories": {
       "backend": "Backend",
-      "mobile": "Mobile",
-      "databases": "Bases de Datos",
-      "frontend": "Frontend",
-      "tools": "Herramientas"
+      "databases": "Bases de Datos & SQL",
+      "data": "Datos & Análisis",
+      "tools": "Herramientas",
+      "alsoWorkedWith": "También he trabajado con"
     }
   },
   "about": {
     "tag": "<sobre-mi>",
     "title": "Sobre Mí",
     "p1": "Soy desarrolladora backend de <location>Palma de Mallorca</location>, actualmente cursando el segundo año de DAM (Desarrollo de Aplicaciones Multiplataforma).",
-    "p2": "Me interesa especialmente construir software donde los <highlight>datos, la lógica y la estructura</highlight> son fundamentales. Disfruto trabajando en sistemas backend como APIs y aplicaciones basadas en bases de datos, abordando los problemas de manera reflexiva y metódica: primero comprender el contexto, luego diseñar la arquitectura, y finalmente escribir código limpio y mantenible.",
-    "p3": "He desarrollado proyectos usando Java y Spring Boot, trabajado con bases de datos relacionales, y explorado el desarrollo Android y full-stack, lo que me da una perspectiva más amplia sobre cómo las decisiones de backend afectan a todo el sistema. Busco crecer en entornos técnicos que valoren la claridad, el aprendizaje y el software bien diseñado con intención a largo plazo.",
+    "p2": "Me interesa especialmente construir software donde los <highlight>datos, la lógica y la estructura</highlight> son fundamentales. Disfruto trabajando en sistemas backend — APIs, aplicaciones basadas en bases de datos y procesamiento de datos — abordando los problemas de manera reflexiva y metódica: primero comprender el contexto, luego diseñar la arquitectura, y finalmente escribir código limpio y mantenible.",
+    "p3": "Mi stack principal es Java y Spring Boot, donde construyo APIs RESTful y diseño aplicaciones basadas en bases de datos usando SQL. También he desarrollado aplicaciones full-stack y proyectos Android, lo que me da una perspectiva más amplia sobre cómo los sistemas backend se integran con entornos reales del lado del cliente. Recientemente, he ampliado mi enfoque hacia el desarrollo data-driven usando Python.",
     "location": "Ubicación",
     "locationValue": "Palma de Mallorca, España",
     "education": "Formación",
@@ -54,7 +54,7 @@
   "contact": {
     "tag": "<contacto>",
     "title": "Contacto",
-    "description": "Actualmente busco prácticas o posiciones junior como desarrolladora. Si quieres hablar sobre una oportunidad o simplemente conectar, escríbeme.",
+    "description": "Abierta a oportunidades como Junior Backend Developer, especialmente en entornos backend y orientados a datos. Si quieres hablar sobre una oportunidad o simplemente conectar, escríbeme.",
     "form": {
       "name": "Nombre",
       "namePlaceholder": "Tu nombre",
@@ -87,17 +87,17 @@
         "date": "Oct 2025",
         "description": "Fundamentos de programación en Java, resolución de problemas y diseño de algoritmos."
       },
-      "ml": {
-        "title": "Supervised Machine Learning",
-        "institution": "DeepLearning.AI",
-        "date": "Oct 2025",
-        "description": "Regresión lineal, clasificación y fundamentos de aprendizaje automático supervisado."
-      },
       "datascience": {
         "title": "Introduction to Data Science",
         "institution": "Cisco",
         "date": "Oct 2024",
         "description": "Conceptos fundamentales de ciencia de datos, análisis y visualización."
+      },
+      "ml": {
+        "title": "Supervised Machine Learning",
+        "institution": "DeepLearning.AI",
+        "date": "Oct 2025",
+        "description": "Regresión lineal, clasificación y fundamentos de aprendizaje automático supervisado."
       },
       "reactts": {
         "title": "React and TypeScript",
@@ -141,6 +141,22 @@
         "Persistencia con JPA y base de datos H2"
       ]
     },
+    "spotifyAnalysis": {
+      "title": "Spotify Data Analysis",
+      "description": "Análisis exploratorio de datos y modelo de predicción de popularidad para 114K+ canciones de Spotify.",
+      "features": [
+        "EDA, limpieza y visualización de datos con Pandas, Matplotlib y Seaborn",
+        "Modelo predictivo con scikit-learn y dashboard interactivo con Streamlit"
+      ]
+    },
+    "taskBackend": {
+      "title": "Task Backend",
+      "description": "Backend para aplicación de gestión de tareas con API REST y persistencia en MongoDB.",
+      "features": [
+        "API REST con endpoints CRUD",
+        "Modelado de datos con Mongoose"
+      ]
+    },
     "quicknotes": {
       "title": "QuickNotes Android",
       "description": "App de notas ligera para Android enfocada en simplicidad y experiencia offline.",
@@ -163,14 +179,6 @@
       "features": [
         "Diseño responsive y accesible",
         "Componentes reutilizables con TypeScript"
-      ]
-    },
-    "taskBackend": {
-      "title": "Task Backend",
-      "description": "Backend para aplicación de gestión de tareas con API REST y persistencia en MongoDB.",
-      "features": [
-        "API REST con endpoints CRUD",
-        "Modelado de datos con Mongoose"
       ]
     },
     "macramerose": {

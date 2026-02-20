@@ -3,20 +3,20 @@ import { useTranslation } from '../context/LanguageContext'
 
 const seoData = {
   en: {
-    title: 'Layla Rodas | Backend Developer - Java, Spring Boot, Node.js',
-    description: 'Backend Developer based in Palma de Mallorca, Spain. Focused on data, structure, and clean architecture. Building APIs and database-driven applications with Java, Spring Boot, and Node.js.',
-    keywords: 'Layla Rodas, backend developer, Java, Spring Boot, Node.js, Android, APIs, databases, portfolio, Palma de Mallorca, Spain, software developer',
+    title: 'Layla Rodas | Backend Developer - Java, Spring Boot, SQL',
+    description: 'Backend Developer based in Palma de Mallorca, Spain. Focused on data, structure, and clean architecture. Building RESTful APIs and database-driven applications with Java, Spring Boot, and SQL.',
+    keywords: 'Layla Rodas, backend developer, Java, Spring Boot, SQL, REST APIs, JPA, databases, data-oriented, Python, portfolio, Palma de Mallorca, Spain, software developer',
     ogTitle: 'Layla Rodas | Backend Developer',
-    ogDescription: 'Backend Developer focused on data, structure, and clean architecture. Java, Spring Boot, Node.js.',
+    ogDescription: 'Backend Developer focused on data, structure, and clean architecture. Java, Spring Boot, SQL.',
     locale: 'en_US',
     language: 'English',
   },
   es: {
-    title: 'Layla Rodas | Backend Developer - Java, Spring Boot, Node.js',
-    description: 'Desarrolladora Backend en Palma de Mallorca, España. Enfocada en datos, estructura y arquitectura limpia. Construyendo APIs y aplicaciones basadas en bases de datos con Java, Spring Boot y Node.js.',
-    keywords: 'Layla Rodas, desarrolladora backend, Java, Spring Boot, Node.js, Android, APIs, bases de datos, portfolio, Palma de Mallorca, España, desarrolladora software',
+    title: 'Layla Rodas | Backend Developer - Java, Spring Boot, SQL',
+    description: 'Desarrolladora Backend en Palma de Mallorca, España. Enfocada en datos, estructura y arquitectura limpia. Construyendo APIs RESTful y aplicaciones basadas en bases de datos con Java, Spring Boot y SQL.',
+    keywords: 'Layla Rodas, desarrolladora backend, Java, Spring Boot, SQL, REST APIs, JPA, bases de datos, data-oriented, Python, portfolio, Palma de Mallorca, España, desarrolladora software',
     ogTitle: 'Layla Rodas | Backend Developer',
-    ogDescription: 'Desarrolladora Backend enfocada en datos, estructura y arquitectura limpia. Java, Spring Boot, Node.js.',
+    ogDescription: 'Desarrolladora Backend enfocada en datos, estructura y arquitectura limpia. Java, Spring Boot, SQL.',
     locale: 'es_ES',
     language: 'Spanish',
   },
@@ -75,7 +75,7 @@ function SEO() {
             'https://github.com/laylarodas',
             'https://www.linkedin.com/in/laylarodas/',
           ],
-          knowsAbout: ['Java', 'Spring Boot', 'Node.js', 'Android', 'SQL', 'React', 'TypeScript', 'APIs', 'Databases'],
+          knowsAbout: ['Java', 'Spring Boot', 'SQL', 'REST APIs', 'JPA', 'MySQL', 'PostgreSQL', 'Python', 'Data Analysis'],
           alumniOf: {
             '@type': 'EducationalOrganization',
             name: 'DAM - Desarrollo de Aplicaciones Multiplataforma',
