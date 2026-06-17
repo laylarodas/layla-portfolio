@@ -61,7 +61,7 @@ describe('LanguageContext', () => {
     })
 
     const title = result.current.t('hero.role')
-    expect(title).toBe('Backend Developer')
+    expect(title).toBe('Data & Backend Developer')
   })
 
   it('translates keys correctly in Spanish', () => {

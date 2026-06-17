@@ -8,10 +8,10 @@
     "cv": "CV"
   },
   "hero": {
-    "status": "Backend Developer · Open to Opportunities",
-    "role": "Backend Developer",
+    "status": "Data & Backend Developer · Open to Opportunities",
+    "role": "Data & Backend Developer",
     "name": "Layla Rodas",
-    "description": "Building RESTful APIs and database-driven applications with a data-oriented approach",
+    "description": "Business Data · SQL · ERP Integrations · Automation",
     "and": "and",
     "viewProjects": "View Projects",
     "github": "GitHub"
@@ -19,33 +19,37 @@
   "projects": {
     "tag": "<projects>",
     "title": "Featured Projects",
+    "secondaryTag": "<more>",
+    "secondaryTitle": "More Projects",
     "code": "Code",
     "demo": "Demo",
+    "clientWork": "Client work",
     "showMore": "Show more projects",
-    "showLess": "Show less"
+    "showLess": "Show less",
+    "showSecondary": "Show more projects",
+    "hideSecondary": "Show less"
   },
   "skills": {
     "tag": "<skills>",
     "title": "Technologies",
     "learning": "Currently learning:",
+    "learningList": "Power BI, Snowflake fundamentals, Denodo fundamentals, Machine Learning, AWS basics",
     "categories": {
-      "backend": "Backend",
-      "databases": "Databases & SQL",
-      "data": "Data & Analysis",
-      "tools": "Tools",
-      "alsoWorkedWith": "Also Worked With"
+      "core": "Core",
+      "data": "Data & ERP",
+      "tools": "Tools"
     }
   },
   "about": {
     "tag": "<about-me>",
     "title": "About Me",
-    "p1": "I'm a backend developer based in <location>Palma de Mallorca</location>, currently in my second year of DAM (Cross-platform Application Development).",
-    "p2": "I'm especially interested in building software where <highlight>data, logic, and structure</highlight> are central. I enjoy working on backend systems — APIs, database-driven applications, and data processing — approaching problems in a thoughtful and methodical way: first understanding the context, then designing the architecture, and finally writing clean, maintainable code.",
-    "p3": "My main stack is Java and Spring Boot, where I build RESTful APIs and design database-driven applications using SQL. I've also developed full-stack applications and Android projects, which gives me a broader perspective on how backend systems integrate with real client-side environments. Recently, I've expanded my focus toward data-driven development using Python.",
+    "p1": "I'm based in <location>Palma de Mallorca</location>, finishing my Higher Degree in Multiplatform Application Development (DAM).",
+    "p2": "I have practical experience building <highlight>ERP modules, OCR automation, data workflows and business process integrations</highlight>. I work with SQL, structured business data, validation pipelines and reliable handoffs between systems.",
+    "p3": "I'm interested in data analytics, business intelligence and cloud data platforms — roles where backend engineering meets real business data.",
     "location": "Location",
     "locationValue": "Palma de Mallorca, Spain",
     "education": "Education",
-    "educationValue": "DAM · 2nd Year",
+    "educationValue": "DAM · Finishing",
     "languages": "Languages",
     "languagesValue": "Spanish (native), English (B2)",
     "status": "Status",
@@ -54,7 +58,7 @@
   "contact": {
     "tag": "<contact>",
     "title": "Contact",
-    "description": "Open to Junior Backend Developer opportunities, especially in backend and data-oriented environments. If you want to discuss an opportunity or just connect, reach out.",
+    "description": "Open to Junior Data & Backend Developer opportunities, especially in business data, ERP integrations and automation. If you want to discuss an opportunity or just connect, reach out.",
     "form": {
       "name": "Name",
       "namePlaceholder": "Your name",
@@ -120,7 +124,7 @@
     }
   },
   "footer": {
-    "role": "Backend Developer"
+    "role": "Data & Backend Developer"
   },
   "easterEgg": {
     "title": "You found it!",
@@ -133,60 +137,100 @@
     "backHome": "Back to home"
   },
   "projectsData": {
-    "notesApi": {
-      "title": "Notes API - Spring Boot",
-      "description": "REST API built with Spring Boot for note management with full CRUD operations.",
+    "supplierInvoiceOcr": {
+      "title": "Supplier Invoice OCR",
+      "description": "Automated supplier invoice processing pipeline using Python, OCR/LLM extraction, structured JSON validation and ERP integration.",
       "features": [
-        "CRUD endpoints for note management",
-        "Persistence with JPA and H2 database"
+        "Business data extraction, validation and ERP integration",
+        "Error handling across OCR, validation and handoff stages"
+      ]
+    },
+    "a3Export": {
+      "title": "A3 Export",
+      "description": "Accounting data integration between Dolibarr ERP and A3 Asesor, including validation, transformation and reconciliation of financial data.",
+      "features": [
+        "Financial data export, fixed-width files and Excel reconciliation",
+        "Validation rules for accounting data integrity"
       ]
     },
     "spotifyAnalysis": {
       "title": "Spotify Data Analysis",
-      "description": "Exploratory data analysis and popularity prediction model for 114K+ Spotify tracks.",
+      "description": "End-to-end data analysis project using a real Spotify dataset with 114K+ tracks, focused on data cleaning, exploratory data analysis, visualization, basic ML and dashboarding.",
       "features": [
-        "EDA, data cleaning and visualization with Pandas, Matplotlib & Seaborn",
-        "ML prediction model with scikit-learn and interactive Streamlit dashboard"
+        "EDA, data cleaning and visual insights across 114K+ tracks",
+        "Interactive Streamlit dashboard and basic ML with scikit-learn"
       ]
     },
-    "taskBackend": {
-      "title": "Task Backend",
-      "description": "Backend for task management app with REST API and MongoDB persistence.",
+    "eqControl": {
+      "title": "EqControl",
+      "description": "ERP module for equipment and asset management, focused on tracking business resources and operational data.",
       "features": [
-        "REST API with CRUD endpoints",
-        "Data modeling with Mongoose"
+        "Equipment and asset tracking within Dolibarr ERP",
+        "Operational data management for business resources"
       ]
     },
-    "quicknotes": {
-      "title": "QuickNotes Android",
-      "description": "Lightweight notes app for Android focused on simplicity and offline experience.",
+    "customerManagement": {
+      "title": "Customer Management",
+      "description": "ERP module for managing customer information, assignments, contracts and related business workflows.",
       "features": [
-        "Local storage with SQLite",
-        "Responsive Material Design interface"
+        "Customer records, assignments and contract management",
+        "Business workflows integrated with ERP processes"
       ]
     },
-    "moviehub": {
-      "title": "MovieHub Android",
-      "description": "Android app displaying popular movies by consuming the TMDB API.",
+    "commercialManagement": {
+      "title": "Commercial Management",
+      "description": "ERP module for commercial workflows, profitability views and sales-related business operations.",
       "features": [
-        "MVVM architecture for separation of concerns",
-        "REST API consumption with Retrofit"
+        "Commercial workflows and sales-related operations",
+        "Profitability views for business decision support"
       ]
     },
     "rovedra": {
-      "title": "Rovedra S.L. Website",
-      "description": "Modern corporate website for a company, with responsive and professional design.",
+      "title": "Rovedra S.L.",
+      "description": "Corporate website in production for a Mallorca-based company, with responsive and professional design.",
       "features": [
         "Responsive and accessible design",
         "Reusable components with TypeScript"
       ]
     },
-    "macramerose": {
-      "title": "MacraméRose",
-      "description": "My first complete project: marketplace with server-side rendered views.",
+    "portfolio": {
+      "title": "Portfolio Website",
+      "description": "Personal developer portfolio built with React, Vite and Tailwind CSS.",
       "features": [
-        "Server-side rendering with EJS",
-        "Product catalog system"
+        "Bilingual interface with dark mode",
+        "Responsive layout and accessible components"
+      ]
+    },
+    "javaCoursework": {
+      "title": "Java Coursework",
+      "description": "Object-oriented programming and data processing projects from the Duke University Java specialization.",
+      "features": [
+        "OOP fundamentals and problem-solving with Java",
+        "Data processing and algorithm design exercises"
+      ]
+    },
+    "damCoursework": {
+      "title": "DAM Coursework",
+      "description": "Academic projects covering databases, Android development, security and UI design.",
+      "features": [
+        "Database design and SQL practice",
+        "Android, security and UI design coursework"
+      ]
+    },
+    "mlNotebooks": {
+      "title": "ML Notebooks",
+      "description": "Regression and supervised learning experiments with Python notebooks.",
+      "features": [
+        "Linear regression and classification experiments",
+        "Supervised learning fundamentals with scikit-learn"
+      ]
+    },
+    "odooSandbox": {
+      "title": "Odoo Sandbox",
+      "description": "Local Docker environment for exploring a second ERP stack and integration patterns.",
+      "features": [
+        "Docker-based Odoo setup for hands-on exploration",
+        "ERP workflow and module experimentation"
       ]
     }
   }

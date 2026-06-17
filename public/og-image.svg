@@ -8,12 +8,12 @@
   <!-- Content -->
   <!-- Status -->
   <text x="100" y="200" font-family="ui-monospace, monospace" font-size="16" fill="#71717a">
-    Estudiante DAM · Buscando prácticas
+    DAM · Open to Opportunities
   </text>
   
   <!-- Role -->
   <text x="100" y="260" font-family="system-ui, sans-serif" font-size="28" font-weight="500" fill="#8b7394">
-    Junior Backend Developer
+    Data &amp; Backend Developer
   </text>
   
   <!-- Name -->
@@ -23,7 +23,7 @@
   
   <!-- Description -->
   <text x="100" y="400" font-family="system-ui, sans-serif" font-size="20" fill="#a1a1aa">
-    Building data-driven applications and APIs with Java, Spring Boot and Node.js
+    Business Data · SQL · ERP Integrations · Automation
   </text>
   
   <!-- Location -->

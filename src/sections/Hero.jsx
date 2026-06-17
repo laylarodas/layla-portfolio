@@ -64,7 +64,7 @@ function Hero() {
           
           {/* Tech stack pills */}
           <div className="flex flex-wrap gap-2 mb-10 animate-fade-in animate-delay-400">
-            {['Java', 'Spring Boot', 'SQL', 'REST APIs', 'JPA', 'Python'].map((tech) => (
+            {['SQL', 'Python', 'PHP', 'ERP Integrations', 'Business Data', 'Automation'].map((tech) => (
               <span
                 key={tech}
                 className="px-3 py-1 text-sm font-mono text-text-muted bg-surface-800 rounded border border-surface-600/50 hover:border-accent/40 hover:text-accent transition-all duration-200"

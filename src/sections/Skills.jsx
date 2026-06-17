@@ -3,29 +3,19 @@ import { useTranslation } from '../context/LanguageContext'
 
 const skillCategories = [
   {
-    nameKey: 'skills.categories.backend',
+    nameKey: 'skills.categories.core',
     icon: '{ }',
-    skills: ['Java', 'Spring Boot', 'REST APIs', 'JPA', 'Maven'],
-  },
-  {
-    nameKey: 'skills.categories.databases',
-    icon: '◈',
-    skills: ['SQL', 'MySQL', 'PostgreSQL', 'H2'],
+    skills: ['SQL', 'Python', 'PHP', 'Java'],
   },
   {
     nameKey: 'skills.categories.data',
-    icon: '📊',
-    skills: ['Python', 'Pandas', 'scikit-learn', 'Streamlit'],
+    icon: '◈',
+    skills: ['MySQL', 'Data Validation', 'Data Workflows', 'ERP Integrations', 'OCR Pipelines', 'JSON Processing', 'Excel'],
   },
   {
     nameKey: 'skills.categories.tools',
     icon: '⚙',
-    skills: ['Git', 'GitHub', 'Docker', 'Postman', 'IntelliJ IDEA'],
-  },
-  {
-    nameKey: 'skills.categories.alsoWorkedWith',
-    icon: '~',
-    skills: ['Node.js', 'React', 'TypeScript', 'Android', 'MongoDB'],
+    skills: ['Git', 'GitHub', 'Docker', 'Postman'],
   },
 ]
 
@@ -54,7 +44,6 @@ function Skills() {
   return (
     <section id="skills" className="py-24 md:py-32 relative" ref={sectionRef}>
       <div className="section-container">
-        {/* Section header */}
         <div className="mb-16 scroll-animate">
           <div className="flex items-center gap-3 mb-4">
             <span className="text-accent font-mono text-sm">{t('skills.tag')}</span>
@@ -64,8 +53,7 @@ function Skills() {
             {t('skills.title')}
           </h2>
         </div>
-        
-        {/* Skills grid */}
+
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {skillCategories.map((category, index) => (
             <div
@@ -89,15 +77,12 @@ function Skills() {
             </div>
           ))}
         </div>
-        
-        {/* Currently learning */}
+
         <div className="mt-20 pt-8 border-t border-surface-700/30 scroll-animate" style={{ transitionDelay: '500ms' }}>
           <p className="text-sm text-text-muted">
             <span className="text-accent font-mono mr-2">{'//'}</span>
             {t('skills.learning')}{' '}
-            <span className="text-text-secondary">Python for Data</span>,{' '}
-            <span className="text-text-secondary">AWS</span>,{' '}
-            <span className="text-text-secondary">Database Optimization</span>
+            <span className="text-text-secondary">{t('skills.learningList')}</span>
           </p>
         </div>
       </div>

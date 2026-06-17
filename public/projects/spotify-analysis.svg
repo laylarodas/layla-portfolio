@@ -23,5 +23,5 @@
 
   <!-- Project name -->
   <text x="400" y="320" font-family="system-ui, sans-serif" font-size="28" fill="#e8e6e3" text-anchor="middle" font-weight="600">Spotify Data Analysis</text>
-  <text x="400" y="355" font-family="monospace" font-size="16" fill="#8b7394" text-anchor="middle">Python &#xB7; Pandas &#xB7; ML</text>
+  <text x="400" y="355" font-family="monospace" font-size="16" fill="#8b7394" text-anchor="middle">Python &#xB7; Pandas &#xB7; Streamlit</text>
 </svg>

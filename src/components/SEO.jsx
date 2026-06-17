@@ -3,20 +3,20 @@ import { useTranslation } from '../context/LanguageContext'
 
 const seoData = {
   en: {
-    title: 'Layla Rodas | Backend Developer - Java, Spring Boot, SQL',
-    description: 'Backend Developer based in Palma de Mallorca, Spain. Focused on data, structure, and clean architecture. Building RESTful APIs and database-driven applications with Java, Spring Boot, and SQL.',
-    keywords: 'Layla Rodas, backend developer, Java, Spring Boot, SQL, REST APIs, JPA, databases, data-oriented, Python, portfolio, Palma de Mallorca, Spain, software developer',
-    ogTitle: 'Layla Rodas | Backend Developer',
-    ogDescription: 'Backend Developer focused on data, structure, and clean architecture. Java, Spring Boot, SQL.',
+    title: 'Layla Rodas | Data & Backend Developer - SQL, Python, ERP',
+    description: 'Junior Data & Backend Developer based in Palma de Mallorca, Spain. Focused on business data, SQL, ERP integrations, automation and validation pipelines.',
+    keywords: 'Layla Rodas, data backend developer, SQL, Python, PHP, ERP integrations, business data, OCR, automation, data validation, portfolio, Palma de Mallorca, Spain',
+    ogTitle: 'Layla Rodas | Data & Backend Developer',
+    ogDescription: 'Business Data · SQL · ERP Integrations · Automation. Junior developer with practical ERP and data workflow experience.',
     locale: 'en_US',
     language: 'English',
   },
   es: {
-    title: 'Layla Rodas | Backend Developer - Java, Spring Boot, SQL',
-    description: 'Desarrolladora Backend en Palma de Mallorca, España. Enfocada en datos, estructura y arquitectura limpia. Construyendo APIs RESTful y aplicaciones basadas en bases de datos con Java, Spring Boot y SQL.',
-    keywords: 'Layla Rodas, desarrolladora backend, Java, Spring Boot, SQL, REST APIs, JPA, bases de datos, data-oriented, Python, portfolio, Palma de Mallorca, España, desarrolladora software',
-    ogTitle: 'Layla Rodas | Backend Developer',
-    ogDescription: 'Desarrolladora Backend enfocada en datos, estructura y arquitectura limpia. Java, Spring Boot, SQL.',
+    title: 'Layla Rodas | Data & Backend Developer - SQL, Python, ERP',
+    description: 'Junior Data & Backend Developer en Palma de Mallorca, España. Enfocada en datos de negocio, SQL, integraciones ERP, automatización y pipelines de validación.',
+    keywords: 'Layla Rodas, desarrolladora data backend, SQL, Python, PHP, integraciones ERP, datos de negocio, OCR, automatización, validación de datos, portfolio, Palma de Mallorca, España',
+    ogTitle: 'Layla Rodas | Data & Backend Developer',
+    ogDescription: 'Business Data · SQL · ERP Integrations · Automation. Desarrolladora junior con experiencia práctica en ERP y flujos de datos.',
     locale: 'es_ES',
     language: 'Spanish',
   },
@@ -32,7 +32,6 @@ function SEO() {
 
   return (
     <Helmet>
-      {/* Primary Meta Tags */}
       <html lang={language} />
       <title>{data.title}</title>
       <meta name="title" content={data.title} />
@@ -40,22 +39,18 @@ function SEO() {
       <meta name="keywords" content={data.keywords} />
       <meta name="language" content={data.language} />
 
-      {/* Alternate Language Tags */}
       <link rel="alternate" hrefLang={language} href={baseUrl} />
       <link rel="alternate" hrefLang={altLang} href={baseUrl} />
       <link rel="alternate" hrefLang="x-default" href={baseUrl} />
 
-      {/* Open Graph / Facebook / LinkedIn */}
       <meta property="og:title" content={data.ogTitle} />
       <meta property="og:description" content={data.ogDescription} />
       <meta property="og:locale" content={data.locale} />
       <meta property="og:locale:alternate" content={altData.locale} />
 
-      {/* Twitter Card */}
       <meta name="twitter:title" content={data.ogTitle} />
       <meta name="twitter:description" content={data.ogDescription} />
 
-      {/* JSON-LD Structured Data - Dynamic */}
       <script type="application/ld+json">
         {JSON.stringify({
           '@context': 'https://schema.org',
@@ -63,7 +58,7 @@ function SEO() {
           name: 'Layla Rodas',
           url: baseUrl,
           image: `${baseUrl}/og-image.svg`,
-          jobTitle: 'Backend Developer',
+          jobTitle: 'Data & Backend Developer',
           description: data.description,
           address: {
             '@type': 'PostalAddress',
@@ -75,7 +70,7 @@ function SEO() {
             'https://github.com/laylarodas',
             'https://www.linkedin.com/in/laylarodas/',
           ],
-          knowsAbout: ['Java', 'Spring Boot', 'SQL', 'REST APIs', 'JPA', 'MySQL', 'PostgreSQL', 'Python', 'Data Analysis'],
+          knowsAbout: ['SQL', 'Python', 'PHP', 'ERP Integrations', 'Business Data', 'Data Validation', 'OCR', 'Automation', 'MySQL'],
           alumniOf: {
             '@type': 'EducationalOrganization',
             name: 'DAM - Desarrollo de Aplicaciones Multiplataforma',

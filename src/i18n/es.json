@@ -8,10 +8,10 @@
     "cv": "CV"
   },
   "hero": {
-    "status": "Backend Developer · Abierta a Oportunidades",
-    "role": "Backend Developer",
+    "status": "Data & Backend Developer · Abierta a Oportunidades",
+    "role": "Data & Backend Developer",
     "name": "Layla Rodas",
-    "description": "Construyendo APIs RESTful y aplicaciones basadas en datos con un enfoque data-oriented",
+    "description": "Business Data · SQL · ERP Integrations · Automation",
     "and": "y",
     "viewProjects": "Ver Proyectos",
     "github": "GitHub"
@@ -19,33 +19,37 @@
   "projects": {
     "tag": "<proyectos>",
     "title": "Proyectos Destacados",
+    "secondaryTag": "<más>",
+    "secondaryTitle": "Más Proyectos",
     "code": "Código",
     "demo": "Demo",
+    "clientWork": "Trabajo de cliente",
     "showMore": "Ver más proyectos",
-    "showLess": "Ver menos"
+    "showLess": "Ver menos",
+    "showSecondary": "Ver más proyectos",
+    "hideSecondary": "Ver menos"
   },
   "skills": {
     "tag": "<skills>",
     "title": "Tecnologías",
     "learning": "Actualmente aprendiendo:",
+    "learningList": "Power BI, fundamentos de Snowflake, fundamentos de Denodo, Machine Learning, fundamentos de AWS",
     "categories": {
-      "backend": "Backend",
-      "databases": "Bases de Datos & SQL",
-      "data": "Datos & Análisis",
-      "tools": "Herramientas",
-      "alsoWorkedWith": "También he trabajado con"
+      "core": "Core",
+      "data": "Datos & ERP",
+      "tools": "Herramientas"
     }
   },
   "about": {
     "tag": "<sobre-mi>",
     "title": "Sobre Mí",
-    "p1": "Soy desarrolladora backend de <location>Palma de Mallorca</location>, actualmente cursando el segundo año de DAM (Desarrollo de Aplicaciones Multiplataforma).",
-    "p2": "Me interesa especialmente construir software donde los <highlight>datos, la lógica y la estructura</highlight> son fundamentales. Disfruto trabajando en sistemas backend — APIs, aplicaciones basadas en bases de datos y procesamiento de datos — abordando los problemas de manera reflexiva y metódica: primero comprender el contexto, luego diseñar la arquitectura, y finalmente escribir código limpio y mantenible.",
-    "p3": "Mi stack principal es Java y Spring Boot, donde construyo APIs RESTful y diseño aplicaciones basadas en bases de datos usando SQL. También he desarrollado aplicaciones full-stack y proyectos Android, lo que me da una perspectiva más amplia sobre cómo los sistemas backend se integran con entornos reales del lado del cliente. Recientemente, he ampliado mi enfoque hacia el desarrollo data-driven usando Python.",
+    "p1": "Vivo en <location>Palma de Mallorca</location>, y estoy finalizando el ciclo superior DAM (Desarrollo de Aplicaciones Multiplataforma).",
+    "p2": "Tengo experiencia práctica construyendo <highlight>módulos ERP, automatización OCR, flujos de datos e integraciones de procesos de negocio</highlight>. Trabajo con SQL, datos estructurados de negocio, pipelines de validación y handoffs fiables entre sistemas.",
+    "p3": "Me interesan el análisis de datos, la inteligencia de negocio y las plataformas de datos en la nube — roles donde el backend se conecta con datos de negocio reales.",
     "location": "Ubicación",
     "locationValue": "Palma de Mallorca, España",
     "education": "Formación",
-    "educationValue": "DAM · 2º Año",
+    "educationValue": "DAM · Finalizando",
     "languages": "Idiomas",
     "languagesValue": "Español (nativo), Inglés (B2)",
     "status": "Estado",
@@ -54,7 +58,7 @@
   "contact": {
     "tag": "<contacto>",
     "title": "Contacto",
-    "description": "Abierta a oportunidades como Junior Backend Developer, especialmente en entornos backend y orientados a datos. Si quieres hablar sobre una oportunidad o simplemente conectar, escríbeme.",
+    "description": "Abierta a oportunidades como Junior Data & Backend Developer, especialmente en datos de negocio, integraciones ERP y automatización. Si quieres hablar sobre una oportunidad o simplemente conectar, escríbeme.",
     "form": {
       "name": "Nombre",
       "namePlaceholder": "Tu nombre",
@@ -120,7 +124,7 @@
     }
   },
   "footer": {
-    "role": "Backend Developer"
+    "role": "Data & Backend Developer"
   },
   "easterEgg": {
     "title": "¡Lo encontraste!",
@@ -133,60 +137,100 @@
     "backHome": "Volver al inicio"
   },
   "projectsData": {
-    "notesApi": {
-      "title": "Notes API - Spring Boot",
-      "description": "API REST construida con Spring Boot para gestión de notas con operaciones CRUD completas.",
+    "supplierInvoiceOcr": {
+      "title": "Supplier Invoice OCR",
+      "description": "Pipeline automatizado de procesamiento de facturas de proveedores con Python, extracción OCR/LLM, validación JSON estructurada e integración ERP.",
       "features": [
-        "Endpoints CRUD para gestión de notas",
-        "Persistencia con JPA y base de datos H2"
+        "Extracción de datos de negocio, validación e integración ERP",
+        "Gestión de errores en OCR, validación y handoff entre sistemas"
+      ]
+    },
+    "a3Export": {
+      "title": "A3 Export",
+      "description": "Integración de datos contables entre Dolibarr ERP y A3 Asesor, incluyendo validación, transformación y conciliación de datos financieros.",
+      "features": [
+        "Exportación de datos financieros, archivos de ancho fijo y conciliación Excel",
+        "Reglas de validación para la integridad de datos contables"
       ]
     },
     "spotifyAnalysis": {
       "title": "Spotify Data Analysis",
-      "description": "Análisis exploratorio de datos y modelo de predicción de popularidad para 114K+ canciones de Spotify.",
+      "description": "Proyecto de análisis de datos end-to-end con un dataset real de Spotify de 114K+ canciones, enfocado en limpieza, EDA, visualización, ML básico y dashboarding.",
       "features": [
-        "EDA, limpieza y visualización de datos con Pandas, Matplotlib y Seaborn",
-        "Modelo predictivo con scikit-learn y dashboard interactivo con Streamlit"
+        "EDA, limpieza de datos e insights visuales sobre 114K+ canciones",
+        "Dashboard interactivo con Streamlit y ML básico con scikit-learn"
       ]
     },
-    "taskBackend": {
-      "title": "Task Backend",
-      "description": "Backend para aplicación de gestión de tareas con API REST y persistencia en MongoDB.",
+    "eqControl": {
+      "title": "EqControl",
+      "description": "Módulo ERP para gestión de equipos y activos, enfocado en el seguimiento de recursos de negocio y datos operativos.",
       "features": [
-        "API REST con endpoints CRUD",
-        "Modelado de datos con Mongoose"
+        "Seguimiento de equipos y activos dentro de Dolibarr ERP",
+        "Gestión de datos operativos para recursos de negocio"
       ]
     },
-    "quicknotes": {
-      "title": "QuickNotes Android",
-      "description": "App de notas ligera para Android enfocada en simplicidad y experiencia offline.",
+    "customerManagement": {
+      "title": "Customer Management",
+      "description": "Módulo ERP para gestionar información de clientes, asignaciones, contratos y flujos de negocio relacionados.",
       "features": [
-        "Almacenamiento local con SQLite",
-        "Interfaz Material Design responsive"
+        "Registros de clientes, asignaciones y gestión de contratos",
+        "Flujos de negocio integrados con procesos ERP"
       ]
     },
-    "moviehub": {
-      "title": "MovieHub Android",
-      "description": "Aplicación Android que muestra películas populares consumiendo la API de TMDB.",
+    "commercialManagement": {
+      "title": "Commercial Management",
+      "description": "Módulo ERP para flujos comerciales, vistas de rentabilidad y operaciones de ventas.",
       "features": [
-        "Arquitectura MVVM para separación de responsabilidades",
-        "Consumo de API REST con Retrofit"
+        "Flujos comerciales y operaciones de ventas",
+        "Vistas de rentabilidad para apoyo en decisiones de negocio"
       ]
     },
     "rovedra": {
-      "title": "Rovedra S.L. Website",
-      "description": "Sitio corporativo moderno para empresa, con diseño responsive y profesional.",
+      "title": "Rovedra S.L.",
+      "description": "Sitio corporativo en producción para una empresa de Mallorca, con diseño responsive y profesional.",
       "features": [
         "Diseño responsive y accesible",
         "Componentes reutilizables con TypeScript"
       ]
     },
-    "macramerose": {
-      "title": "MacraméRose",
-      "description": "Mi primer proyecto completo: marketplace con vistas renderizadas del lado del servidor.",
+    "portfolio": {
+      "title": "Portfolio Website",
+      "description": "Portfolio personal de desarrollo construido con React, Vite y Tailwind CSS.",
       "features": [
-        "Server-side rendering con EJS",
-        "Sistema de catálogo de productos"
+        "Interfaz bilingüe con modo oscuro",
+        "Diseño responsive y componentes accesibles"
+      ]
+    },
+    "javaCoursework": {
+      "title": "Java Coursework",
+      "description": "Proyectos de programación orientada a objetos y procesamiento de datos de la especialización Java de Duke University.",
+      "features": [
+        "Fundamentos de POO y resolución de problemas con Java",
+        "Procesamiento de datos y ejercicios de diseño de algoritmos"
+      ]
+    },
+    "damCoursework": {
+      "title": "DAM Coursework",
+      "description": "Proyectos académicos de bases de datos, desarrollo Android, seguridad y diseño de interfaces.",
+      "features": [
+        "Diseño de bases de datos y práctica con SQL",
+        "Trabajos de Android, seguridad y diseño de UI"
+      ]
+    },
+    "mlNotebooks": {
+      "title": "ML Notebooks",
+      "description": "Experimentos de regresión y aprendizaje supervisado con notebooks de Python.",
+      "features": [
+        "Experimentos de regresión lineal y clasificación",
+        "Fundamentos de aprendizaje supervisado con scikit-learn"
+      ]
+    },
+    "odooSandbox": {
+      "title": "Odoo Sandbox",
+      "description": "Entorno local con Docker para explorar un segundo stack ERP y patrones de integración.",
+      "features": [
+        "Configuración de Odoo con Docker para exploración práctica",
+        "Experimentación con flujos ERP y módulos"
       ]
     }
   }
