@@ -19,15 +19,16 @@
   "projects": {
     "tag": "<projects>",
     "title": "Featured Projects",
-    "secondaryTag": "<more>",
-    "secondaryTitle": "More Projects",
+    "viewMore": "View More Projects",
     "code": "Code",
     "demo": "Demo",
     "clientWork": "Client work",
-    "showMore": "Show more projects",
     "showLess": "Show less",
-    "showSecondary": "Show more projects",
-    "hideSecondary": "Show less"
+    "groups": {
+      "erp": "Professional ERP Projects",
+      "dataAnalytics": "Data & Analytics",
+      "additional": "Additional Projects"
+    }
   },
   "skills": {
     "tag": "<skills>",
@@ -139,34 +140,34 @@
   "projectsData": {
     "supplierInvoiceOcr": {
       "title": "Supplier Invoice OCR",
-      "description": "Automated supplier invoice processing pipeline using Python, OCR/LLM extraction, structured JSON validation and ERP integration.",
+      "description": "OCR automation pipeline for supplier invoices — structured data extraction, validation, ERP integration and business workflows using Python.",
       "features": [
-        "Business data extraction, validation and ERP integration",
-        "Error handling across OCR, validation and handoff stages"
+        "OCR automation and structured data extraction from supplier invoices",
+        "JSON validation, ERP integration and business workflow handoffs"
       ]
     },
     "a3Export": {
       "title": "A3 Export",
-      "description": "Accounting data integration between Dolibarr ERP and A3 Asesor, including validation, transformation and reconciliation of financial data.",
+      "description": "Accounting data integration between Dolibarr ERP and A3 Asesor — transformation, validation, reconciliation and financial data export.",
       "features": [
-        "Financial data export, fixed-width files and Excel reconciliation",
-        "Validation rules for accounting data integrity"
+        "Accounting data transformation, validation and financial data reconciliation",
+        "Fixed-width file export and Excel reconciliation workflows"
       ]
     },
     "spotifyAnalysis": {
       "title": "Spotify Data Analysis",
-      "description": "End-to-end data analysis project using a real Spotify dataset with 114K+ tracks, focused on data cleaning, exploratory data analysis, visualization, basic ML and dashboarding.",
+      "description": "End-to-end data analysis project using a real Spotify dataset with 114K+ tracks, focused on data cleaning, exploratory data analysis, visualization, basic machine learning and dashboarding.",
       "features": [
         "EDA, data cleaning and visual insights across 114K+ tracks",
-        "Interactive Streamlit dashboard and basic ML with scikit-learn"
+        "Interactive Streamlit dashboard and basic machine learning with scikit-learn"
       ]
     },
     "eqControl": {
       "title": "EqControl",
-      "description": "ERP module for equipment and asset management, focused on tracking business resources and operational data.",
+      "description": "ERP module for equipment lifecycle and asset management — operational data tracking and ERP workflows.",
       "features": [
-        "Equipment and asset tracking within Dolibarr ERP",
-        "Operational data management for business resources"
+        "Equipment lifecycle and asset management within Dolibarr ERP",
+        "Operational data tracking integrated with ERP workflows"
       ]
     },
     "customerManagement": {
@@ -199,22 +200,6 @@
       "features": [
         "Bilingual interface with dark mode",
         "Responsive layout and accessible components"
-      ]
-    },
-    "javaCoursework": {
-      "title": "Java Coursework",
-      "description": "Object-oriented programming and data processing projects from the Duke University Java specialization.",
-      "features": [
-        "OOP fundamentals and problem-solving with Java",
-        "Data processing and algorithm design exercises"
-      ]
-    },
-    "damCoursework": {
-      "title": "DAM Coursework",
-      "description": "Academic projects covering databases, Android development, security and UI design.",
-      "features": [
-        "Database design and SQL practice",
-        "Android, security and UI design coursework"
       ]
     },
     "mlNotebooks": {

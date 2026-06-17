@@ -19,15 +19,16 @@
   "projects": {
     "tag": "<proyectos>",
     "title": "Proyectos Destacados",
-    "secondaryTag": "<más>",
-    "secondaryTitle": "Más Proyectos",
+    "viewMore": "Ver Más Proyectos",
     "code": "Código",
     "demo": "Demo",
     "clientWork": "Trabajo de cliente",
-    "showMore": "Ver más proyectos",
     "showLess": "Ver menos",
-    "showSecondary": "Ver más proyectos",
-    "hideSecondary": "Ver menos"
+    "groups": {
+      "erp": "Proyectos ERP Profesionales",
+      "dataAnalytics": "Datos & Análisis",
+      "additional": "Proyectos Adicionales"
+    }
   },
   "skills": {
     "tag": "<skills>",
@@ -139,34 +140,34 @@
   "projectsData": {
     "supplierInvoiceOcr": {
       "title": "Supplier Invoice OCR",
-      "description": "Pipeline automatizado de procesamiento de facturas de proveedores con Python, extracción OCR/LLM, validación JSON estructurada e integración ERP.",
+      "description": "Pipeline de automatización OCR para facturas de proveedores — extracción de datos estructurados, validación, integración ERP y flujos de negocio con Python.",
       "features": [
-        "Extracción de datos de negocio, validación e integración ERP",
-        "Gestión de errores en OCR, validación y handoff entre sistemas"
+        "Automatización OCR y extracción de datos estructurados de facturas",
+        "Validación JSON, integración ERP y handoffs de flujos de negocio"
       ]
     },
     "a3Export": {
       "title": "A3 Export",
-      "description": "Integración de datos contables entre Dolibarr ERP y A3 Asesor, incluyendo validación, transformación y conciliación de datos financieros.",
+      "description": "Integración de datos contables entre Dolibarr ERP y A3 Asesor — transformación, validación, conciliación y exportación de datos financieros.",
       "features": [
-        "Exportación de datos financieros, archivos de ancho fijo y conciliación Excel",
-        "Reglas de validación para la integridad de datos contables"
+        "Transformación de datos contables, validación y conciliación financiera",
+        "Exportación de archivos de ancho fijo y conciliación con Excel"
       ]
     },
     "spotifyAnalysis": {
       "title": "Spotify Data Analysis",
-      "description": "Proyecto de análisis de datos end-to-end con un dataset real de Spotify de 114K+ canciones, enfocado en limpieza, EDA, visualización, ML básico y dashboarding.",
+      "description": "Proyecto de análisis de datos end-to-end con un dataset real de Spotify de 114K+ canciones, enfocado en limpieza, EDA, visualización, machine learning básico y dashboarding.",
       "features": [
         "EDA, limpieza de datos e insights visuales sobre 114K+ canciones",
-        "Dashboard interactivo con Streamlit y ML básico con scikit-learn"
+        "Dashboard interactivo con Streamlit y machine learning básico con scikit-learn"
       ]
     },
     "eqControl": {
       "title": "EqControl",
-      "description": "Módulo ERP para gestión de equipos y activos, enfocado en el seguimiento de recursos de negocio y datos operativos.",
+      "description": "Módulo ERP para ciclo de vida de equipos y gestión de activos — seguimiento de datos operativos y flujos ERP.",
       "features": [
-        "Seguimiento de equipos y activos dentro de Dolibarr ERP",
-        "Gestión de datos operativos para recursos de negocio"
+        "Ciclo de vida de equipos y gestión de activos en Dolibarr ERP",
+        "Seguimiento de datos operativos integrado con flujos ERP"
       ]
     },
     "customerManagement": {
@@ -199,22 +200,6 @@
       "features": [
         "Interfaz bilingüe con modo oscuro",
         "Diseño responsive y componentes accesibles"
-      ]
-    },
-    "javaCoursework": {
-      "title": "Java Coursework",
-      "description": "Proyectos de programación orientada a objetos y procesamiento de datos de la especialización Java de Duke University.",
-      "features": [
-        "Fundamentos de POO y resolución de problemas con Java",
-        "Procesamiento de datos y ejercicios de diseño de algoritmos"
-      ]
-    },
-    "damCoursework": {
-      "title": "DAM Coursework",
-      "description": "Proyectos académicos de bases de datos, desarrollo Android, seguridad y diseño de interfaces.",
-      "features": [
-        "Diseño de bases de datos y práctica con SQL",
-        "Trabajos de Android, seguridad y diseño de UI"
       ]
     },
     "mlNotebooks": {
