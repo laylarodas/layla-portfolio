@@ -50,9 +50,7 @@ function About() {
               {t('about.p1').split('</location>')[1]}
             </p>
             <p className="text-text-secondary leading-relaxed">
-              {t('about.p2').split('<highlight>')[0]}
-              <span className="text-text-primary">{t('about.p2').match(/<highlight>(.*?)<\/highlight>/)?.[1]}</span>
-              {t('about.p2').split('</highlight>')[1]}
+              {t('about.p2')}
             </p>
             <p className="text-text-secondary leading-relaxed">
               {t('about.p3')}
@@ -68,7 +66,7 @@ function About() {
               </div>
               <div>
                 <p className="text-xs font-mono text-text-muted uppercase tracking-wider mb-2">{t('about.education')}</p>
-                <p className="text-text-primary">{t('about.educationValue')}</p>
+                <p className="text-text-primary whitespace-pre-line">{t('about.educationValue')}</p>
               </div>
               <div>
                 <p className="text-xs font-mono text-text-muted uppercase tracking-wider mb-2">{t('about.languages')}</p>
