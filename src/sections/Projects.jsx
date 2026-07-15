@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import { useTranslation } from '../context/LanguageContext'
 import ProjectCard from '../components/ProjectCard'
 import OtherProjectCard from '../components/OtherProjectCard'
+import SectionAtmosphere from '../components/SectionAtmosphere'
 import { featuredProjects } from '../data/projects'
 import { otherProjects } from '../data/otherProjects'
 
@@ -29,6 +30,7 @@ function Projects() {
 
   return (
     <section id="projects" className="py-24 md:py-32 relative overflow-hidden" ref={sectionRef}>
+      <SectionAtmosphere variant="projects" />
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-accent/3 rounded-full blur-3xl pointer-events-none" />
 
       <div className="section-container relative z-10">

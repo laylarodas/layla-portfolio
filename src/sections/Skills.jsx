@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { useTranslation } from '../context/LanguageContext'
+import SectionAtmosphere from '../components/SectionAtmosphere'
 
 const skillCategories = [
   {
@@ -78,8 +79,9 @@ function Skills() {
   }, [])
 
   return (
-    <section id="skills" className="py-24 md:py-32 relative" ref={sectionRef}>
-      <div className="section-container">
+    <section id="skills" className="py-24 md:py-32 relative overflow-hidden" ref={sectionRef}>
+      <SectionAtmosphere variant="skills" />
+      <div className="section-container relative z-10">
         <div className="mb-16 scroll-animate">
           <div className="flex items-center gap-3 mb-4">
             <span className="text-accent font-mono text-sm">{t('skills.tag')}</span>

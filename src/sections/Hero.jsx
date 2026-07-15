@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useTranslation } from '../context/LanguageContext'
+import HeroAtmosphere from '../components/HeroAtmosphere'
 
 function Hero() {
   const { t } = useTranslation()
@@ -25,9 +26,9 @@ function Hero() {
       id="hero"
       className="relative min-h-screen flex items-center pt-16 overflow-hidden"
     >
-      <div className="absolute inset-0 bg-grid opacity-60" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-surface-900/50 to-surface-900" />
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl pointer-events-none" />
+      <HeroAtmosphere />
+      <div className="absolute inset-0 bg-grid opacity-40 pointer-events-none z-[2]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-surface-900/45 to-surface-900 pointer-events-none z-[3]" />
 
       <div className="section-container relative z-10 py-20">
         <div className="max-w-3xl">
@@ -91,7 +92,7 @@ function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animate-delay-700">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animate-delay-700 z-10">
         <div className="w-5 h-8 rounded-full border-2 border-surface-500 flex justify-center pt-2">
           <div className="w-1 h-2 bg-accent rounded-full animate-bounce" />
         </div>

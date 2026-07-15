@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from '../context/LanguageContext'
 import { UPWORK_URL, LINKEDIN_URL, GITHUB_URL } from '../data/social'
+import SectionAtmosphere from '../components/SectionAtmosphere'
 
 // TODO: Set VITE_FORMSPREE_FORM_ID in .env before deployment for live form submissions.
 const FORMSPREE_FORM_ID = import.meta.env.VITE_FORMSPREE_FORM_ID
@@ -160,8 +161,9 @@ function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 md:py-32 relative" ref={sectionRef}>
-      <div className="section-container">
+    <section id="contact" className="py-24 md:py-32 relative overflow-hidden" ref={sectionRef}>
+      <SectionAtmosphere variant="contact" />
+      <div className="section-container relative z-10">
         <div className="mb-16 scroll-animate">
           <div className="flex items-center gap-3 mb-4">
             <span className="text-accent font-mono text-sm">{t('contact.tag')}</span>

@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { useTranslation } from '../context/LanguageContext'
 import { eventKeys, eventLinks } from '../data/events'
+import SectionAtmosphere from '../components/SectionAtmosphere'
 
 function Events() {
   const { t } = useTranslation()
@@ -25,8 +26,9 @@ function Events() {
   }, [])
 
   return (
-    <section id="events" className="py-24 md:py-32 relative" ref={sectionRef}>
-      <div className="section-container">
+    <section id="events" className="py-24 md:py-32 relative overflow-hidden" ref={sectionRef}>
+      <SectionAtmosphere variant="events" />
+      <div className="section-container relative z-10">
         <div className="mb-16 scroll-animate">
           <div className="flex items-center gap-3 mb-4">
             <span className="text-accent font-mono text-sm">{t('events.tag')}</span>

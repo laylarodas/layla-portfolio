@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { useTranslation } from '../context/LanguageContext'
 import { certifications, certificationLinks } from '../data/certifications'
+import SectionAtmosphere from '../components/SectionAtmosphere'
 
 function Certifications() {
   const { t } = useTranslation()
@@ -25,8 +26,9 @@ function Certifications() {
   }, [])
 
   return (
-    <section id="certifications" className="py-24 md:py-32 relative border-t border-surface-700/30" ref={sectionRef}>
-      <div className="section-container">
+    <section id="certifications" className="py-24 md:py-32 relative overflow-hidden border-t border-surface-700/30" ref={sectionRef}>
+      <SectionAtmosphere variant="certifications" />
+      <div className="section-container relative z-10">
         <div className="mb-12 scroll-animate">
           <div className="flex items-center gap-3 mb-4">
             <span className="text-accent font-mono text-sm">{t('certifications.tag')}</span>

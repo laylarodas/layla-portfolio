@@ -43,13 +43,45 @@
   /* Card with glow on hover */
   .card {
     @apply bg-surface-800/80 border border-surface-600/50 rounded-xl backdrop-blur-sm;
-    transition: all 0.3s ease;
+    position: relative;
+    isolation: isolate;
+    --card-x: 50%;
+    --card-y: 50%;
+    transition:
+      transform 200ms ease,
+      border-color 200ms ease,
+      box-shadow 200ms ease;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0;
+    background: radial-gradient(
+      420px circle at var(--card-x) var(--card-y),
+      rgba(157, 123, 176, 0.1),
+      transparent 42%
+    );
+    transition: opacity 200ms ease;
+  }
+
+  .card > * {
+    position: relative;
+    z-index: 1;
   }
 
   .card:hover {
-    @apply border-accent/30;
-    box-shadow: 0 0 30px rgba(157, 123, 176, 0.1), 0 10px 40px -10px rgba(0, 0, 0, 0.3);
-    transform: translateY(-4px);
+    @apply border-accent/40;
+    box-shadow: 0 0 28px rgba(157, 123, 176, 0.12), 0 8px 28px -12px rgba(0, 0, 0, 0.35);
+    transform: translateY(-2px);
+  }
+
+  .card:hover::before {
+    opacity: 1;
   }
 
   /* Gradient text */
@@ -130,6 +162,549 @@
 .scroll-animate.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ============================================================
+   Hero interactive atmosphere
+   ============================================================ */
+.hero-atmosphere {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+  --parallax-x: 0;
+  --parallax-y: 0;
+}
+
+.hero-atmosphere__layer {
+  position: absolute;
+  inset: -8%;
+  will-change: transform;
+  transform: translate3d(
+    calc(var(--parallax-x) * var(--layer-depth, 0px)),
+    calc(var(--parallax-y) * var(--layer-depth, 0px)),
+    0
+  );
+  transition: transform 80ms linear;
+}
+
+.hero-atmosphere__layer--far {
+  --layer-depth: 4px;
+  background:
+    radial-gradient(ellipse 55% 45% at 22% 28%, rgba(157, 123, 176, 0.09), transparent 70%),
+    radial-gradient(ellipse 40% 35% at 78% 68%, rgba(122, 95, 138, 0.07), transparent 72%);
+}
+
+.hero-atmosphere__layer--mid {
+  --layer-depth: 8px;
+  background:
+    radial-gradient(circle at 68% 24%, rgba(157, 123, 176, 0.06), transparent 42%),
+    radial-gradient(circle at 18% 72%, rgba(35, 35, 41, 0.55), transparent 48%);
+  filter: blur(2px);
+}
+
+.hero-atmosphere__layer--near {
+  --layer-depth: 12px;
+  background:
+    radial-gradient(ellipse 30% 24% at 58% 42%, rgba(183, 148, 198, 0.05), transparent 70%),
+    radial-gradient(ellipse 22% 18% at 34% 58%, rgba(157, 123, 176, 0.04), transparent 75%);
+}
+
+.hero-atmosphere__layer--lines {
+  --layer-depth: 10px;
+  opacity: 0.35;
+  background-image:
+    linear-gradient(115deg, transparent 48%, rgba(157, 123, 176, 0.045) 49.5%, transparent 51%),
+    linear-gradient(155deg, transparent 46%, rgba(157, 123, 176, 0.03) 50%, transparent 54%);
+}
+
+.hero-atmosphere__layer--grid {
+  --layer-depth: 6px;
+  opacity: 0.55;
+  background-image:
+    linear-gradient(rgba(157, 123, 176, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(157, 123, 176, 0.028) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 70% 60% at 40% 40%, black 20%, transparent 75%);
+}
+
+.hero-atmosphere__spotlight {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    520px circle at var(--mouse-x) var(--mouse-y),
+    rgba(157, 123, 176, 0.09),
+    transparent 55%
+  );
+  opacity: 0.85;
+  transition: opacity 200ms ease;
+}
+
+.hero-atmosphere__particles {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+
+.hero-atmosphere--static .hero-atmosphere__layer {
+  transform: none;
+  transition: none;
+}
+
+/* ============================================================
+   Shooting star field — global atmosphere + refined streaks
+   Layer order: ambient → stars → readability → (content above)
+   ============================================================ */
+.shooting-star-field {
+  pointer-events: none;
+  --star-nudge-x: 0px;
+  --star-nudge-y: 0px;
+  --star-intensity: 1;
+}
+
+.shooting-star-field--global {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.shooting-star-field__ambient {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.shooting-star-field__halo {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.shooting-star-field__halo--a {
+  width: min(70vw, 720px);
+  height: min(70vw, 720px);
+  top: -12%;
+  left: -18%;
+  background: radial-gradient(
+    circle,
+    rgba(157, 123, 176, 0.11) 0%,
+    rgba(122, 95, 138, 0.04) 42%,
+    transparent 70%
+  );
+}
+
+.shooting-star-field__halo--b {
+  width: min(55vw, 560px);
+  height: min(55vw, 560px);
+  right: -10%;
+  top: 28%;
+  background: radial-gradient(
+    circle,
+    rgba(157, 123, 176, 0.09) 0%,
+    transparent 68%
+  );
+}
+
+.shooting-star-field__halo--c {
+  width: min(50vw, 480px);
+  height: min(40vw, 380px);
+  left: 30%;
+  bottom: -8%;
+  background: radial-gradient(
+    ellipse,
+    rgba(122, 95, 138, 0.07) 0%,
+    transparent 72%
+  );
+}
+
+.shooting-star-field__breath {
+  position: absolute;
+  width: min(62vw, 640px);
+  height: min(38vw, 340px);
+  right: -4%;
+  top: 20%;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(157, 123, 176, 0.1),
+    rgba(122, 95, 138, 0.03) 48%,
+    transparent 74%
+  );
+  filter: blur(22px);
+  opacity: 0.5;
+  animation: starBreath 16s ease-in-out infinite;
+  transform: translate3d(var(--star-nudge-x), var(--star-nudge-y), 0);
+}
+
+.shooting-star-field--static .shooting-star-field__breath {
+  animation: none;
+  opacity: 0.4;
+}
+
+.shooting-star-field__orbit {
+  position: absolute;
+  width: 155%;
+  height: 155%;
+  left: -28%;
+  top: -28%;
+  border-radius: 50%;
+  border: 1px solid rgba(157, 123, 176, 0.045);
+  opacity: 0.35;
+  animation: starOrbit 48s linear infinite;
+  transform-origin: 46% 50%;
+}
+
+.shooting-star-field__orbit::after {
+  content: '';
+  position: absolute;
+  inset: 16%;
+  border-radius: 50%;
+  border: 1px solid rgba(157, 123, 176, 0.03);
+}
+
+.shooting-star-field__drift-glow {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(157, 123, 176, 0.09), transparent 70%);
+  filter: blur(28px);
+  opacity: 0.35;
+  animation: starDriftGlow 30s ease-in-out infinite alternate;
+}
+
+.shooting-star-field__stars {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  transform: translate3d(
+    calc(var(--star-nudge-x) * 0.6),
+    calc(var(--star-nudge-y) * 0.6),
+    0
+  );
+}
+
+/* Soft veil protecting central content — not a hard rectangle */
+.shooting-star-field__readability {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background:
+    radial-gradient(
+      ellipse 58% 62% at 36% 42%,
+      rgba(12, 12, 14, 0.55) 0%,
+      rgba(12, 12, 14, 0.22) 42%,
+      transparent 72%
+    ),
+    linear-gradient(
+      105deg,
+      rgba(12, 12, 14, 0.42) 0%,
+      rgba(12, 12, 14, 0.18) 26%,
+      transparent 48%
+    );
+  pointer-events: none;
+}
+
+.shooting-star {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: max-content;
+  height: max-content;
+  opacity: 0;
+  will-change: transform, opacity;
+  animation-name: starTravel;
+  animation-duration: var(--star-interval);
+  animation-delay: var(--star-delay);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.shooting-star__orient {
+  transform: rotate(var(--angle));
+  transform-origin: center center;
+  display: block;
+  line-height: 0;
+}
+
+.shooting-star__mark {
+  display: block;
+  overflow: visible;
+  opacity: calc(0.9 * var(--star-intensity, 1));
+}
+
+.shooting-star__mark--distant {
+  opacity: calc(0.55 * var(--star-intensity, 1));
+}
+
+.shooting-star__mark--standard {
+  opacity: calc(0.85 * var(--star-intensity, 1));
+}
+
+.shooting-star__mark--rare {
+  opacity: calc(1 * var(--star-intensity, 1));
+}
+
+.shooting-star__glow {
+  opacity: 0.55;
+}
+
+.shooting-star__core {
+  opacity: 0.9;
+}
+
+.shooting-star__afterglow {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  left: 50%;
+  top: 50%;
+  margin: -24px 0 0 -24px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(157, 123, 176, 0.2), transparent 70%);
+  opacity: 0;
+  pointer-events: none;
+  animation: starAfterglow var(--star-interval) linear infinite;
+  animation-delay: var(--star-delay);
+}
+
+/* Travel window ≈ 8%→40% of interval ≈ duration for 22–28s cycles */
+@keyframes starTravel {
+  0%,
+  7% {
+    opacity: 0;
+    transform: translate3d(var(--sx), var(--sy), 0);
+  }
+  10% {
+    opacity: 1;
+    transform: translate3d(var(--sx), var(--sy), 0);
+  }
+  38% {
+    opacity: 1;
+    transform: translate3d(var(--ex), var(--ey), 0);
+  }
+  42%,
+  100% {
+    opacity: 0;
+    transform: translate3d(var(--ex), var(--ey), 0);
+  }
+}
+
+@keyframes starAfterglow {
+  0%,
+  36% {
+    opacity: 0;
+    transform: scale(0.55);
+  }
+  39% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  44% {
+    opacity: 0;
+    transform: scale(1.35);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes starBreath {
+  0%,
+  100% {
+    opacity: 0.38;
+    transform: translate3d(var(--star-nudge-x), var(--star-nudge-y), 0) scale(1);
+  }
+  50% {
+    opacity: 0.58;
+    transform: translate3d(var(--star-nudge-x), var(--star-nudge-y), 0) scale(1.04);
+  }
+}
+
+@keyframes starOrbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes starDriftGlow {
+  0% {
+    top: 12%;
+    left: 58%;
+    opacity: 0.22;
+  }
+  50% {
+    top: 52%;
+    left: 70%;
+    opacity: 0.4;
+  }
+  100% {
+    top: 28%;
+    left: 42%;
+    opacity: 0.26;
+  }
+}
+
+.shooting-star-field--mobile .shooting-star-field__readability {
+  background:
+    radial-gradient(
+      ellipse 80% 55% at 50% 38%,
+      rgba(12, 12, 14, 0.62) 0%,
+      rgba(12, 12, 14, 0.28) 48%,
+      transparent 75%
+    );
+}
+
+.shooting-star-field--mobile .shooting-star-field__orbit,
+.shooting-star-field--mobile .shooting-star-field__drift-glow {
+  opacity: 0.22;
+}
+
+/* ============================================================
+   Section atmospheres (static / subtle scroll drift)
+   ============================================================ */
+.section-atmosphere {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section-atmosphere__glow,
+.section-atmosphere__pattern {
+  position: absolute;
+  inset: 0;
+}
+
+.section-atmosphere--about .section-atmosphere__glow {
+  background: radial-gradient(ellipse 45% 55% at 0% 45%, rgba(157, 123, 176, 0.07), transparent 70%);
+}
+
+.section-atmosphere--projects .section-atmosphere__pattern {
+  opacity: 0.4;
+  background-image:
+    linear-gradient(rgba(157, 123, 176, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(157, 123, 176, 0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(180deg, transparent, black 18%, black 82%, transparent);
+}
+
+.section-atmosphere--projects .section-atmosphere__glow {
+  background: linear-gradient(135deg, transparent 40%, rgba(157, 123, 176, 0.03) 50%, transparent 60%);
+}
+
+.section-atmosphere--experience .section-atmosphere__glow {
+  background: linear-gradient(180deg, rgba(157, 123, 176, 0.035), transparent 45%, rgba(19, 19, 22, 0.4) 100%);
+}
+
+.section-atmosphere--skills .section-atmosphere__pattern {
+  background-image: radial-gradient(rgba(157, 123, 176, 0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.22;
+  mask-image: radial-gradient(ellipse 60% 50% at 70% 40%, black, transparent 75%);
+}
+
+.section-atmosphere--certifications .section-atmosphere__glow {
+  background: radial-gradient(ellipse 50% 40% at 50% 30%, rgba(157, 123, 176, 0.06), transparent 70%);
+}
+
+.section-atmosphere--events .section-atmosphere__pattern {
+  opacity: 0.28;
+  background-image:
+    linear-gradient(120deg, transparent 49%, rgba(157, 123, 176, 0.04) 50%, transparent 51%),
+    linear-gradient(60deg, transparent 49%, rgba(157, 123, 176, 0.03) 50%, transparent 51%);
+  background-size: 120px 120px, 90px 90px;
+}
+
+.section-atmosphere--events .section-atmosphere__glow {
+  background: radial-gradient(circle at 80% 20%, rgba(157, 123, 176, 0.05), transparent 45%);
+}
+
+.section-atmosphere--contact .section-atmosphere__glow {
+  background: radial-gradient(ellipse 55% 50% at 50% 55%, rgba(157, 123, 176, 0.07), transparent 68%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .section-atmosphere__pattern {
+    animation: atmosphereDrift 28s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes atmosphereDrift {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.85;
+  }
+  to {
+    transform: translate3d(0, -6px, 0);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-atmosphere__layer,
+  .hero-atmosphere__spotlight,
+  .section-atmosphere__pattern,
+  .shooting-star,
+  .shooting-star-field__orbit,
+  .shooting-star-field__drift-glow,
+  .shooting-star-field__breath {
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .shooting-star,
+  .shooting-star-field__orbit,
+  .shooting-star-field__drift-glow,
+  .shooting-star__afterglow {
+    display: none !important;
+  }
+
+  .shooting-star-field__breath {
+    opacity: 0.4;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .card::before {
+    display: none;
+  }
+
+  .scroll-animate {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 768px), (pointer: coarse) {
+  .hero-atmosphere__spotlight,
+  .hero-atmosphere__particles {
+    display: none;
+  }
+
+  .hero-atmosphere__layer {
+    transform: none;
+  }
+
+  .card::before {
+    display: none;
+  }
 }
 
 /* Easter egg glitch animation */

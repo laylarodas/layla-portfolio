@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { useTranslation } from '../context/LanguageContext'
+import SectionAtmosphere from '../components/SectionAtmosphere'
 
 function About() {
   const { t } = useTranslation()
@@ -25,6 +26,7 @@ function About() {
 
   return (
     <section id="about" className="py-24 md:py-32 relative overflow-hidden" ref={sectionRef}>
+      <SectionAtmosphere variant="about" />
       <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-accent/3 rounded-full blur-3xl pointer-events-none" />
 
       <div className="section-container relative z-10">

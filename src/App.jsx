@@ -4,6 +4,8 @@ import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
 import EasterEgg from './components/EasterEgg'
 import SEO from './components/SEO'
+import CardGlow from './components/CardGlow'
+import ShootingStarField from './components/ShootingStarField'
 import Hero from './sections/Hero'
 import About from './sections/About'
 import Projects from './sections/Projects'
@@ -16,10 +18,11 @@ import NotFound from './pages/NotFound'
 
 function HomePage() {
   return (
-    <div className="min-h-screen bg-surface-900 overflow-x-hidden">
+    <div className="min-h-screen bg-surface-900 overflow-x-hidden relative">
+      <ShootingStarField intensity={0.9} />
       <SEO />
       <Navbar />
-      <main>
+      <main className="relative z-[2]">
         <Hero />
         <About />
         <Projects />
@@ -29,9 +32,12 @@ function HomePage() {
         <Events />
         <Contact />
       </main>
-      <Footer />
-      <ScrollToTop />
-      <EasterEgg />
+      <div className="relative z-[2]">
+        <Footer />
+        <ScrollToTop />
+        <EasterEgg />
+      </div>
+      <CardGlow />
     </div>
   )
 }
