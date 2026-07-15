@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dolibarr → A3 Accounting Integration — Case Study</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <div class="container">
+
+      <header class="hero">
+        <span class="hero-eyebrow">Case Study</span>
+        <h1>Dolibarr → A3 Accounting Integration</h1>
+        <p class="hero-lead">Bridge between operational ERP invoices and the accounting firm's import format — validated, mapped, and exported in one controlled batch.</p>
+      </header>
+
+      <hr class="section-rule">
+
+      <section class="section" id="challenge">
+        <span class="section-label">Challenge</span>
+        <h2 class="section-title">A manual gap between ERP and accounting software</h2>
+        <div class="prose">
+          <p>Validated invoices in Dolibarr still had to be re-exported manually for the external accounting system (A3), with risk of missing fields, wrong accounts, and reconciliation gaps.</p>
+        </div>
+      </section>
+
+      <hr class="section-rule">
+
+      <section class="section" id="solution">
+        <span class="section-label">Solution</span>
+        <h2 class="section-title">Controlled batch export with built-in validation</h2>
+        <div class="prose">
+          <p>A dashboard lets finance select eligible invoices; the system validates accounting prerequisites, maps Dolibarr fields to A3 records, generates the fixed-width export file, and supports Excel reconciliation.</p>
+        </div>
+      </section>
+
+      <hr class="section-rule">
+
+      <section class="section" id="architecture">
+        <span class="section-label">Architecture</span>
+        <h2 class="section-title">Invoice-to-accounting export pipeline</h2>
+        <div class="container--diagram">
+          <div class="flow" aria-label="System architecture">
+
+            <div class="flow-node">
+              <span class="flow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+              </span>
+              <div class="flow-text">
+                <span class="flow-label">Invoices</span>
+                <span class="flow-desc">Validated customer and supplier invoices in Dolibarr</span>
+              </div>
+            </div>
+
+            <div class="flow-connector" aria-hidden="true">
+              <div class="flow-connector-line"></div>
+              <span class="flow-connector-chevron"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></span>
+            </div>
+
+            <div class="flow-node">
+              <span class="flow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              </span>
+              <div class="flow-text">
+                <span class="flow-label">Validation</span>
+                <span class="flow-desc">Accounting accounts, tax IDs, and amounts verified</span>
+              </div>
+            </div>
+
+            <div class="flow-connector" aria-hidden="true">
+              <div class="flow-connector-line"></div>
+              <span class="flow-connector-chevron"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></span>
+            </div>
+
+            <div class="flow-node">
+              <span class="flow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </span>
+              <div class="flow-text">
+                <span class="flow-label">Business Rules</span>
+                <span class="flow-desc">Eligibility checks and rectificative handling</span>
+              </div>
+            </div>
+
+            <div class="flow-connector" aria-hidden="true">
+              <div class="flow-connector-line"></div>
+              <span class="flow-connector-chevron"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></span>
+            </div>
+
+            <div class="flow-node">
+              <span class="flow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3"/><path d="M21 3l-7.828 7.828A4 4 0 0 0 12 13.7V22"/></svg>
+              </span>
+              <div class="flow-text">
+                <span class="flow-label">Accounting Mapping</span>
+                <span class="flow-desc">Dolibarr fields mapped to A3 record structure</span>
+              </div>
+            </div>
+
+            <div class="flow-connector" aria-hidden="true">
+              <div class="flow-connector-line"></div>
+              <span class="flow-connector-chevron"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></span>
+            </div>
+
+            <div class="flow-node">
+              <span class="flow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+              </span>
+              <div class="flow-text">
+                <span class="flow-label">Export File</span>
+                <span class="flow-desc">Fixed-width .dat file ready for import</span>
+              </div>
+            </div>
+
+            <div class="flow-connector" aria-hidden="true">
+              <div class="flow-connector-line"></div>
+              <span class="flow-connector-chevron"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></span>
+            </div>
+
+            <div class="flow-node">
+              <span class="flow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+              </span>
+              <div class="flow-text">
+                <span class="flow-label">A3</span>
+                <span class="flow-desc">Accounting firm imports entries into a3ASESOR</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-rule">
+
+      <section class="section" id="technologies">
+        <span class="section-label">Technologies</span>
+        <h2 class="section-title">Technology Stack</h2>
+        <div class="badge-row">
+          <span class="badge">PHP</span>
+          <span class="badge">SQL</span>
+          <span class="badge">Dolibarr</span>
+          <span class="badge">ERP</span>
+          <span class="badge">Accounting</span>
+          <span class="badge">Excel</span>
+        </div>
+      </section>
+
+      <hr class="section-rule">
+
+      <section class="section" id="features">
+        <span class="section-label">Key Features</span>
+        <h2 class="section-title">Key Features</h2>
+        <ul class="feature-list">
+          <li class="feature-item">
+            <span class="feature-marker" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            Pre-export validation of all required accounting fields
+          </li>
+          <li class="feature-item">
+            <span class="feature-marker" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            Customer and supplier mapping to A3 account structure
+          </li>
+          <li class="feature-item">
+            <span class="feature-marker" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            Fixed-width .dat file generation per official specification
+          </li>
+          <li class="feature-item">
+            <span class="feature-marker" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            Batch tracking with per-invoice export status
+          </li>
+          <li class="feature-item">
+            <span class="feature-marker" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            Excel reconciliation reports for finance review
+          </li>
+        </ul>
+      </section>
+
+      <hr class="section-rule">
+
+      <section class="section" id="outcome">
+        <div class="outcome-card">
+          <span class="section-label">Outcome</span>
+          <h2 class="section-title">Business Outcome</h2>
+          <p class="outcome-text">A structured handoff from ERP to accounting software, with validated batch exports and clear per-invoice status for the finance team.</p>
+          <div class="outcome-highlights">
+            <div class="outcome-highlight">
+              <span class="outcome-highlight-label">Before</span>
+              <span class="outcome-highlight-value">Manual re-export</span>
+            </div>
+            <div class="outcome-highlight">
+              <span class="outcome-highlight-label">After</span>
+              <span class="outcome-highlight-value">Validated batch files</span>
+            </div>
+            <div class="outcome-highlight">
+              <span class="outcome-highlight-label">Visibility</span>
+              <span class="outcome-highlight-value">Per-invoice status</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</body>
+</html>

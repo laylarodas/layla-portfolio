@@ -3,19 +3,55 @@ import { useTranslation } from '../context/LanguageContext'
 
 const skillCategories = [
   {
-    nameKey: 'skills.categories.core',
+    nameKey: 'skills.categories.backend',
     icon: '{ }',
-    skills: ['SQL', 'Python', 'PHP', 'Java'],
+    skills: [
+      { name: 'Python' },
+      { name: 'Java' },
+      { name: 'PHP' },
+      { name: 'Spring Boot' },
+      { name: 'REST APIs' },
+      { name: 'Playwright' },
+    ],
   },
   {
-    nameKey: 'skills.categories.data',
+    nameKey: 'skills.categories.dataIntegration',
     icon: '◈',
-    skills: ['MySQL', 'Data Validation', 'Data Workflows', 'ERP Integrations', 'OCR Pipelines', 'JSON Processing', 'Excel'],
+    skills: [
+      { name: 'Power BI', highlight: true },
+      { name: 'SQL' },
+      { name: 'MySQL' },
+      { name: 'PostgreSQL' },
+      { name: 'JSON' },
+      { name: 'ERP Integrations' },
+      { name: 'Dolibarr' },
+      { name: 'IMAP' },
+      { name: 'OCR' },
+    ],
+  },
+  {
+    nameKey: 'skills.categories.architecture',
+    icon: '⬡',
+    skills: [
+      { name: 'Layered Architecture' },
+      { name: 'DTOs' },
+      { name: 'Validation' },
+      { name: 'Exception Handling' },
+      { name: 'JWT' },
+      { name: 'HMAC' },
+      { name: 'Idempotency' },
+    ],
   },
   {
     nameKey: 'skills.categories.tools',
     icon: '⚙',
-    skills: ['Git', 'GitHub', 'Docker', 'Postman'],
+    skills: [
+      { name: 'Git' },
+      { name: 'GitHub' },
+      { name: 'Docker' },
+      { name: 'Postman' },
+      { name: 'Maven' },
+    ],
   },
 ]
 
@@ -54,7 +90,7 @@ function Skills() {
           </h2>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2">
           {skillCategories.map((category, index) => (
             <div
               key={category.nameKey}
@@ -69,8 +105,15 @@ function Skills() {
               </div>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill) => (
-                  <span key={skill} className="tech-badge">
-                    {skill}
+                  <span
+                    key={skill.name}
+                    className={
+                      skill.highlight
+                        ? 'px-2.5 py-1 text-xs font-mono text-accent bg-accent/10 rounded border border-accent/40'
+                        : 'tech-badge'
+                    }
+                  >
+                    {skill.name}
                   </span>
                 ))}
               </div>

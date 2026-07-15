@@ -54,10 +54,10 @@ describe('Navbar', () => {
     expect(screen.getAllByText('Contact').length).toBeGreaterThan(0)
   })
 
-  it('renders CV link', () => {
+  it('renders resume link', () => {
     renderNavbar()
-    const cvLinks = screen.getAllByText('CV')
-    expect(cvLinks.length).toBeGreaterThan(0)
+    const resumeLinks = screen.getAllByText('Resume')
+    expect(resumeLinks.length).toBeGreaterThan(0)
   })
 
   it('renders mobile menu button', () => {
@@ -72,12 +72,12 @@ describe('Navbar', () => {
     const menuButton = screen.getByLabelText('Toggle menu')
     
     // Menu should be closed initially (max-h-0)
-    const mobileMenu = document.querySelector('.md\\:hidden.overflow-hidden')
+    const mobileMenu = document.querySelector('.lg\\:hidden.overflow-hidden')
     expect(mobileMenu).toHaveClass('max-h-0')
     
     // Click to open
     await user.click(menuButton)
-    expect(mobileMenu).toHaveClass('max-h-96')
+    expect(mobileMenu).toHaveClass('max-h-[52rem]')
     
     // Click to close
     await user.click(menuButton)
@@ -88,19 +88,17 @@ describe('Navbar', () => {
     const user = userEvent.setup()
     renderNavbar()
     
-    // Open menu
     const menuButton = screen.getByLabelText('Toggle menu')
     await user.click(menuButton)
     
-    // Click a link in mobile menu
     const mobileLinks = screen.getAllByText('Projects')
     const mobileLink = mobileLinks.find(link => 
-      link.closest('.md\\:hidden')
+      link.closest('.lg\\:hidden')
     )
     
     if (mobileLink) {
       await user.click(mobileLink)
-      const mobileMenu = document.querySelector('.md\\:hidden.overflow-hidden')
+      const mobileMenu = document.querySelector('.lg\\:hidden.overflow-hidden')
       expect(mobileMenu).toHaveClass('max-h-0')
     }
   })

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OCR Supplier Invoice Pipeline — Case Study</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <div class="container">
+
+      <header class="hero">
+        <span class="hero-eyebrow">Case Study</span>
+        <h1>OCR Supplier Invoice Pipeline</h1>
+        <p class="hero-lead">Automated ingestion of supplier invoices from email into a governed ERP workflow — from document to validated draft invoice.</p>
+      </header>
+
+      <hr class="section-rule">
+
+      <section class="section" id="challenge">
+        <span class="section-label">Challenge</span>
+        <h2 class="section-title">Manual invoice processing slowed finance operations</h2>
+        <div class="prose">
+          <p>Finance teams spent hours manually retyping PDF invoices. Errors delayed payments, duplicates slipped through, and supplier data was inconsistent across the organisation.</p>
+        </div>
+      </section>
+
+      <hr class="section-rule">
+
+      <section class="section" id="solution">
+        <span class="section-label">Solution</span>
+        <h2 class="section-title">An automated pipeline from inbox to ERP draft</h2>
+        <div class="prose">
+          <p>Invoices arrive by email, are read and structured automatically, validated against business rules, and handed to the ERP as review-ready drafts — humans approve edge cases, not every line item.</p>
+        </div>
+      </section>
+
+      <hr class="section-rule">
+
+      <section class="section" id="architecture">
+        <span class="section-label">Architecture</span>
+        <h2 class="section-title">End-to-end document processing flow</h2>
+        <div class="container--diagram">
+          <div class="flow" aria-label="System architecture">
+
+            <div class="flow-node">
+              <span class="flow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+              </span>
+              <div class="flow-text">
+                <span class="flow-label">Supplier Invoice</span>
+                <span class="flow-desc">PDF arrives by email from suppliers</span>
+              </div>
+            </div>
+
+            <div class="flow-connector" aria-hidden="true">
+              <div class="flow-connector-line"></div>
+              <span class="flow-connector-chevron"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></span>
+            </div>
+
+            <div class="flow-node">
+              <span class="flow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+              </span>
+              <div class="flow-text">
+                <span class="flow-label">IMAP</span>
+                <span class="flow-desc">Dedicated mailbox receives and queues documents</span>
+              </div>
+            </div>
+
+            <div class="flow-connector" aria-hidden="true">
+              <div class="flow-connector-line"></div>
+              <span class="flow-connector-chevron"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></span>
+            </div>
+
+            <div class="flow-node">
+              <span class="flow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              </span>
+              <div class="flow-text">
+                <span class="flow-label">OCR</span>
+                <span class="flow-desc">Text extraction from PDF documents</span>
+              </div>
+            </div>
+
+            <div class="flow-connector" aria-hidden="true">
+              <div class="flow-connector-line"></div>
+              <span class="flow-connector-chevron"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></span>
+            </div>
+
+            <div class="flow-node">
+              <span class="flow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 2a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.4V11h2a4 4 0 1 1 0 8h-4a4 4 0 1 1 0-8h2v-1.6A4 4 0 0 1 12 2z"/></svg>
+              </span>
+              <div class="flow-text">
+                <span class="flow-label">LLM Extraction</span>
+                <span class="flow-desc">Structured fields extracted from invoice text</span>
+              </div>
+            </div>
+
+            <div class="flow-connector" aria-hidden="true">
+              <div class="flow-connector-line"></div>
+              <span class="flow-connector-chevron"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></span>
+            </div>
+
+            <div class="flow-node">
+              <span class="flow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              </span>
+              <div class="flow-text">
+                <span class="flow-label">JSON Validation</span>
+                <span class="flow-desc">Schema checks ensure data integrity</span>
+              </div>
+            </div>
+
+            <div class="flow-connector" aria-hidden="true">
+              <div class="flow-connector-line"></div>
+              <span class="flow-connector-chevron"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></span>
+            </div>
+
+            <div class="flow-node">
+              <span class="flow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </span>
+              <div class="flow-text">
+                <span class="flow-label">Business Rules</span>
+                <span class="flow-desc">Cost centers, duplicates, and amount checks</span>
+              </div>
+            </div>
+
+            <div class="flow-connector" aria-hidden="true">
+              <div class="flow-connector-line"></div>
+              <span class="flow-connector-chevron"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></span>
+            </div>
+
+            <div class="flow-node">
+              <span class="flow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+              </span>
+              <div class="flow-text">
+                <span class="flow-label">Dolibarr ERP</span>
+                <span class="flow-desc">Draft supplier invoice ready for review</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-rule">
+
+      <section class="section" id="technologies">
+        <span class="section-label">Technologies</span>
+        <h2 class="section-title">Technology Stack</h2>
+        <div class="badge-row">
+          <span class="badge">Python</span>
+          <span class="badge">OCR</span>
+          <span class="badge">LLMs</span>
+          <span class="badge">JSON</span>
+          <span class="badge">IMAP</span>
+          <span class="badge">ERP</span>
+          <span class="badge">Docker</span>
+        </div>
+      </section>
+
+      <hr class="section-rule">
+
+      <section class="section" id="features">
+        <span class="section-label">Key Features</span>
+        <h2 class="section-title">Key Features</h2>
+        <ul class="feature-list">
+          <li class="feature-item">
+            <span class="feature-marker" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            Email-based ingestion with no external API exposure to the ERP
+          </li>
+          <li class="feature-item">
+            <span class="feature-marker" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            Schema-bound extraction with versioned JSON contracts
+          </li>
+          <li class="feature-item">
+            <span class="feature-marker" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            Duplicate detection and amount validation before posting
+          </li>
+          <li class="feature-item">
+            <span class="feature-marker" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            Automatic cost-center assignment through business rules
+          </li>
+          <li class="feature-item">
+            <span class="feature-marker" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            Human review states for edge cases and exceptions
+          </li>
+          <li class="feature-item">
+            <span class="feature-marker" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            Audit-friendly processing with full traceability
+          </li>
+        </ul>
+      </section>
+
+      <hr class="section-rule">
+
+      <section class="section" id="outcome">
+        <div class="outcome-card">
+          <span class="section-label">Outcome</span>
+          <h2 class="section-title">Business Outcome</h2>
+          <p class="outcome-text">Improved invoice processing by reducing manual data entry, increasing traceability, and streamlining the review workflow before ERP registration.</p>
+          <div class="outcome-highlights">
+            <div class="outcome-highlight">
+              <span class="outcome-highlight-label">Before</span>
+              <span class="outcome-highlight-value">Manual retyping</span>
+            </div>
+            <div class="outcome-highlight">
+              <span class="outcome-highlight-label">After</span>
+              <span class="outcome-highlight-value">Automated draft invoices</span>
+            </div>
+            <div class="outcome-highlight">
+              <span class="outcome-highlight-label">Review</span>
+              <span class="outcome-highlight-value">Exceptions only</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</body>
+</html>

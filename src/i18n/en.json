@@ -1,131 +1,237 @@
 {
   "nav": {
-    "projects": "Projects",
-    "skills": "Skills",
-    "experience": "Certifications",
+    "home": "Home",
     "about": "About",
+    "projects": "Projects",
+    "experience": "Experience",
+    "skills": "Skills",
+    "events": "Events",
     "contact": "Contact",
-    "cv": "CV"
+    "resume": "Resume"
   },
   "hero": {
-    "status": "Data & Backend Developer · Open to Opportunities",
-    "role": "Data & Backend Developer",
     "name": "Layla Rodas",
-    "description": "Business Data · SQL · ERP Integrations · Automation",
-    "and": "and",
+    "role": "Backend Developer | Automation, APIs & ERP Integrations",
+    "lead": "Backend Developer specialized in business automation, ERP integrations and reliable backend systems.",
+    "description": "I build backend systems and automation solutions for real business workflows, including ERP integrations, document processing, authenticated web automation and data-driven applications.",
     "viewProjects": "View Projects",
-    "github": "GitHub"
-  },
-  "projects": {
-    "tag": "<projects>",
-    "title": "Featured Projects",
-    "viewMore": "View More Projects",
-    "code": "Code",
-    "demo": "Demo",
-    "clientWork": "Client work",
-    "showLess": "Show less",
-    "groups": {
-      "erp": "Professional ERP Projects",
-      "dataAnalytics": "Data & Analytics",
-      "additional": "Additional Projects"
-    }
-  },
-  "skills": {
-    "tag": "<skills>",
-    "title": "Technologies",
-    "learning": "Currently learning:",
-    "learningList": "Power BI, Snowflake fundamentals, Denodo fundamentals, Machine Learning, AWS basics",
-    "categories": {
-      "core": "Core",
-      "data": "Data & ERP",
-      "tools": "Tools"
-    }
+    "downloadResume": "Download Resume",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
   },
   "about": {
     "tag": "<about-me>",
     "title": "About Me",
-    "p1": "I'm based in <location>Palma de Mallorca</location>, and hold a Higher Degree in Multiplatform Application Development (DAM).",
-    "p2": "I build ERP integrations, automation tools and data solutions, combining backend development with real business processes. My experience includes ERP modules, AI-assisted workflows, SQL and data pipelines.",
-    "p3": "I'm particularly interested in data analytics, business intelligence and AI-powered automation, where software engineering meets real business needs.",
+    "p1": "I build software that connects systems and automates everyday business work — from invoice processing and accounting exports to dashboards that teams actually use.",
+    "p2": "Most of my recent work sits at the intersection of backend engineering and operational data: integrating ERPs, validating business records, and making sure information moves reliably between tools.",
+    "p3": "I care about writing clear, dependable code for real processes, not demos. Python, Java, PHP, SQL and REST APIs are my day-to-day tools; Power BI when the goal is insight.",
     "location": "Location",
     "locationValue": "Palma de Mallorca, Spain",
     "education": "Education",
     "educationValue": "Higher Degree in Multiplatform Application Development (DAM)\nGraduated · 2026",
     "languages": "Languages",
-    "languagesValue": "Spanish (native), English (B2)",
-    "status": "Status",
-    "statusValue": "Open to opportunities"
+    "languagesValue": "Spanish (native), English (B2)"
+  },
+  "projects": {
+    "tag": "<projects>",
+    "title": "Featured Projects",
+    "subtitle": "Selected case studies from backend automation, ERP integration and business intelligence work.",
+    "viewCaseStudy": "View Case Study",
+    "clientProject": "Client Project",
+    "otherTitle": "Other Projects",
+    "viewOnGitHub": "View on GitHub ↗",
+    "viewProject": "View Project ↗",
+    "viewProjectDetails": "View Project Details",
+    "privateNote": "Source code for client and company projects is private. Architecture and implementation details are presented through anonymized case studies."
+  },
+  "projectsData": {
+    "ocrPipeline": {
+      "title": "OCR Supplier Invoice Pipeline",
+      "description": "Automated supplier invoice processing from email through OCR extraction, JSON validation and ERP integration into governed draft invoices.",
+      "category": "Backend Automation · Document Processing"
+    },
+    "a3Integration": {
+      "title": "Dolibarr → A3 Accounting Integration",
+      "description": "Accounting data bridge between Dolibarr ERP and A3 Asesor with validation, transformation, fixed-width export and Excel reconciliation.",
+      "category": "ERP Integration · Backend Development"
+    },
+    "workflowAutomation": {
+      "title": "Authenticated Workflow Automation",
+      "description": "Event-driven Python automation for authenticated web workflows with Playwright, REST API integration, structured logging and session recovery.",
+      "category": "Python Automation · API Integration"
+    },
+    "aviationDashboard": {
+      "title": "Airline Commercial Analytics Dashboard",
+      "description": "Power BI dashboard for airline revenue, markets, routes, points of sale and ticket issuance with KPI definition and commercial visualizations.",
+      "category": "Power BI · Business Intelligence"
+    },
+    "springBootApi": {
+      "title": "Spring Boot REST API",
+      "description": "Public REST API built with Java and Spring Boot using Controller–Service–Repository architecture, MySQL, JPA/Hibernate, DTOs, validation and global exception handling.",
+      "category": "Backend Development · Java"
+    },
+    "rovedraWebsite": {
+      "title": "Rovedra Corporate Website",
+      "description": "Responsive corporate website developed and maintained with React, Vite and Tailwind CSS, including reusable components, contact flows and production deployment.",
+      "category": "Frontend Development · Business Website"
+    },
+    "aviationSustainability": {
+      "title": "Aviation Sustainability Analysis",
+      "description": "Analysis of approximately 30,000 aviation-operation records using Python, SQL and Power BI, with indicators by airline, airport, route and period.",
+      "category": "Data Analysis · Power BI"
+    }
+  },
+  "experience": {
+    "tag": "<experience>",
+    "title": "Professional Experience",
+    "roles": {
+      "ebal": {
+        "title": "Backend & ERP Integration Developer",
+        "company": "EBAL IT",
+        "date": "Mar 2026 – Jun 2026",
+        "type": "Professional internship",
+        "bullets": [
+          "Developed an accounting integration between Dolibarr and A3 with invoice validation, transformation, tax rules and duplicate controls.",
+          "Built a supplier-invoice processing pipeline using Python, OCR, JSON validation, IMAP integration and business rules.",
+          "Worked with PHP, Python, SQL and ERP workflows."
+        ]
+      },
+      "upwork": {
+        "title": "Python Automation Developer",
+        "company": "Freelance / Upwork",
+        "date": "Jun 2026 – Present",
+        "type": "Freelance",
+        "bullets": [
+          "Developed Python automation for authenticated web workflows using Playwright.",
+          "Integrated REST APIs, JWT authentication, real-time events, structured logging and automated execution controls."
+        ]
+      },
+      "rovedra": {
+        "title": "Software Developer",
+        "company": "Rovedra SL",
+        "date": "Sep 2022 – Sep 2025",
+        "type": "Part-time",
+        "bullets": [
+          "Designed, developed and maintained the company's responsive website using React, Vite and Tailwind CSS.",
+          "Built reusable components and translated business requirements into digital features."
+        ]
+      }
+    }
+  },
+  "skills": {
+    "tag": "<skills>",
+    "title": "Skills",
+    "learning": "Learning / Exposure:",
+    "learningList": "Snowflake, Denodo, Machine Learning",
+    "categories": {
+      "backend": "Backend",
+      "dataIntegration": "Data & Integration",
+      "architecture": "Architecture & Security",
+      "tools": "Tools"
+    }
+  },
+  "events": {
+    "tag": "<events>",
+    "title": "Events & Community",
+    "intro": "I actively participate in developer, AI and open-source events to learn from technical communities, exchange ideas and explore collaboration opportunities.",
+    "viewLinkedIn": "View LinkedIn Post →",
+    "items": {
+      "cursor": {
+        "name": "Cursor Community Meetup",
+        "location": "Palma de Mallorca",
+        "date": "2026",
+        "description": "Presented a short talk about building backend, AI and ERP solutions from Mallorca while networking with the local developer community."
+      },
+      "machina": {
+        "name": "MACHINA Summit",
+        "location": "Paris",
+        "date": "2026",
+        "description": "Attended sessions focused on Physical AI and robotics while meeting engineers and AI startups working on real-world intelligent systems."
+      },
+      "osBreakfast": {
+        "name": "Open Source Breakfast",
+        "location": "Paris",
+        "date": "2026",
+        "description": "Participated in discussions with open-source communities including Mozilla and Hugging Face during RAISE Week."
+      },
+      "aiSummit": {
+        "name": "Paris Open Source AI Summit",
+        "location": "Paris",
+        "date": "2026",
+        "description": "Attended sessions by LINAGORA, NVIDIA and OpenRAG covering open-source LLMs, RAG systems and AI infrastructure."
+      }
+    }
+  },
+  "certifications": {
+    "tag": "<certifications>",
+    "title": "Certifications & Training",
+    "viewCredential": "View credential ↗",
+    "status": {
+      "completed": "Completed",
+      "inProgress": "In progress"
+    },
+    "items": {
+      "java": {
+        "title": "Java Programming: Solving Problems with Software",
+        "provider": "Duke University / Coursera"
+      },
+      "supervisedMl": {
+        "title": "Supervised Machine Learning: Regression and Classification",
+        "provider": "DeepLearning.AI / Coursera"
+      },
+      "mlSpecialization": {
+        "title": "Machine Learning Specialization",
+        "provider": "DeepLearning.AI / Coursera"
+      },
+      "aws": {
+        "title": "AWS Developer Associate",
+        "provider": ""
+      }
+    }
+  },
+  "resume": {
+    "viewHtml": "View HTML",
+    "downloadPdf": "Download PDF",
+    "versions": {
+      "backendEn": "Backend CV — English",
+      "backendEs": "Backend CV — Spanish",
+      "dataEn": "Data CV — English",
+      "dataEs": "Data CV — Spanish"
+    }
   },
   "contact": {
     "tag": "<contact>",
     "title": "Contact",
-    "description": "Open to Junior Data & Backend Developer opportunities, especially in business data, ERP integrations and automation. If you want to discuss an opportunity or just connect, reach out.",
+    "description": "Interested in backend development, automation, ERP integrations or data projects? Feel free to get in touch.",
+    "or": "Or reach me directly:",
+    "links": {
+      "email": "Email",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "upwork": "Upwork"
+    },
     "form": {
       "name": "Name",
       "namePlaceholder": "Your name",
       "email": "Email",
       "emailPlaceholder": "your@email.com",
       "message": "Message",
-      "messagePlaceholder": "Tell me about the opportunity or project...",
+      "messagePlaceholder": "Tell me about your project...",
       "send": "Send message",
       "sending": "Sending...",
-      "success": "Message sent! I'll get back to you soon.",
-      "error": "Something went wrong. Try again or email me directly.",
+      "success": "Message sent successfully!",
+      "mailtoFallback": "Your email client should open with a pre-filled message. Send it to complete your inquiry.",
+      "error": "Something went wrong. Please try again or email me directly.",
       "errors": {
-        "nameRequired": "Please enter your name",
-        "emailRequired": "Please enter your email",
+        "nameRequired": "Name is required",
+        "emailRequired": "Email is required",
         "emailInvalid": "Please enter a valid email",
-        "messageRequired": "Please write a message"
-      }
-    },
-    "or": "or email me directly at"
-  },
-  "experience": {
-    "tag": "<certifications>",
-    "title": "Courses & Certifications",
-    "showMore": "Show more courses",
-    "showLess": "Show less",
-    "certs": {
-      "java": {
-        "title": "Java Programming: Solving Problems with Software",
-        "institution": "Duke University · Coursera",
-        "date": "Oct 2025",
-        "description": "Java programming fundamentals, problem-solving and algorithm design."
-      },
-      "datascience": {
-        "title": "Introduction to Data Science",
-        "institution": "Cisco",
-        "date": "Oct 2024",
-        "description": "Data science fundamentals, analysis and visualization concepts."
-      },
-      "ml": {
-        "title": "Supervised Machine Learning",
-        "institution": "DeepLearning.AI",
-        "date": "Oct 2025",
-        "description": "Linear regression, classification and supervised learning fundamentals."
-      },
-      "reactts": {
-        "title": "React and TypeScript",
-        "institution": "Udemy",
-        "date": "Mar 2024",
-        "description": "Building React applications with static typing using TypeScript."
-      },
-      "mern": {
-        "title": "Master ReactJS, Hooks, MERN, NodeJS",
-        "institution": "Udemy",
-        "date": "Jan 2024",
-        "description": "Full MERN stack: MongoDB, Express, React and Node.js."
-      },
-      "responsive": {
-        "title": "Responsive Web Design",
-        "institution": "freeCodeCamp",
-        "date": "Mar 2021",
-        "description": "HTML, CSS and responsive design for multiple devices."
+        "messageRequired": "Message is required"
       }
     }
   },
   "footer": {
-    "role": "Data & Backend Developer"
+    "role": "Backend Developer"
   },
   "easterEgg": {
     "title": "You found it!",
@@ -136,87 +242,5 @@
     "subtitle": "Page not found",
     "message": "Looks like this route doesn't exist. Maybe the code went on vacation.",
     "backHome": "Back to home"
-  },
-  "projectsData": {
-    "supplierInvoiceOcr": {
-      "title": "Supplier Invoice OCR",
-      "description": "OCR automation pipeline for supplier invoices — structured data extraction, validation, ERP integration and business workflows using Python.",
-      "features": [
-        "OCR automation and structured data extraction from supplier invoices",
-        "JSON validation, ERP integration and business workflow handoffs"
-      ]
-    },
-    "a3Export": {
-      "title": "A3 Export",
-      "description": "Accounting data integration between Dolibarr ERP and A3 Asesor — transformation, validation, reconciliation and financial data export.",
-      "features": [
-        "Accounting data transformation, validation and financial data reconciliation",
-        "Fixed-width file export and Excel reconciliation workflows"
-      ]
-    },
-    "spotifyAnalysis": {
-      "title": "Spotify Data Analysis",
-      "description": "End-to-end data analysis project using a real Spotify dataset with 114K+ tracks, focused on data cleaning, exploratory data analysis, visualization, basic machine learning and dashboarding.",
-      "features": [
-        "EDA, data cleaning and visual insights across 114K+ tracks",
-        "Interactive Streamlit dashboard and basic machine learning with scikit-learn"
-      ]
-    },
-    "eqControl": {
-      "title": "EqControl",
-      "description": "ERP module for equipment lifecycle and asset management — operational data tracking and ERP workflows.",
-      "features": [
-        "Equipment lifecycle and asset management within Dolibarr ERP",
-        "Operational data tracking integrated with ERP workflows"
-      ]
-    },
-    "customerManagement": {
-      "title": "Customer Management",
-      "description": "ERP module for managing customer information, assignments, contracts and related business workflows.",
-      "features": [
-        "Customer records, assignments and contract management",
-        "Business workflows integrated with ERP processes"
-      ]
-    },
-    "commercialManagement": {
-      "title": "Commercial Management",
-      "description": "ERP module for commercial workflows, profitability views and sales-related business operations.",
-      "features": [
-        "Commercial workflows and sales-related operations",
-        "Profitability views for business decision support"
-      ]
-    },
-    "rovedra": {
-      "title": "Rovedra S.L.",
-      "description": "Corporate website in production for a Mallorca-based company, with responsive and professional design.",
-      "features": [
-        "Responsive and accessible design",
-        "Reusable components with TypeScript"
-      ]
-    },
-    "portfolio": {
-      "title": "Portfolio Website",
-      "description": "Personal developer portfolio built with React, Vite and Tailwind CSS.",
-      "features": [
-        "Bilingual interface with dark mode",
-        "Responsive layout and accessible components"
-      ]
-    },
-    "mlNotebooks": {
-      "title": "ML Notebooks",
-      "description": "Regression and supervised learning experiments with Python notebooks.",
-      "features": [
-        "Linear regression and classification experiments",
-        "Supervised learning fundamentals with scikit-learn"
-      ]
-    },
-    "odooSandbox": {
-      "title": "Odoo Sandbox",
-      "description": "Local Docker environment for exploring a second ERP stack and integration patterns.",
-      "features": [
-        "Docker-based Odoo setup for hands-on exploration",
-        "ERP workflow and module experimentation"
-      ]
-    }
   }
 }

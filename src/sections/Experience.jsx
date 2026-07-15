@@ -1,30 +1,16 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { useTranslation } from '../context/LanguageContext'
 
-const certifications = [
-  { key: 'java', icon: '☕' },
-  { key: 'datascience', icon: '📊' },
-  { key: 'ml', icon: '🤖' },
-  { key: 'reactts', icon: '⚛️' },
-  { key: 'mern', icon: '🔗' },
-  { key: 'responsive', icon: '📱' },
-]
+const roleKeys = ['ebal', 'upwork', 'rovedra']
 
-const INITIAL_MOBILE_COUNT = 3
+const companyLogos = {
+  ebal: '/logos/ebal.svg',
+  rovedra: '/logos/rovedra.svg',
+}
 
 function Experience() {
   const { t } = useTranslation()
   const sectionRef = useRef(null)
-  const [showAll, setShowAll] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
-
-  // Detect mobile viewport
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768)
-    checkMobile()
-    window.addEventListener('resize', checkMobile)
-    return () => window.removeEventListener('resize', checkMobile)
-  }, [])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -42,19 +28,11 @@ function Experience() {
     elements?.forEach((el) => observer.observe(el))
 
     return () => observer.disconnect()
-  }, [showAll])
-
-  // Show all on desktop, limited on mobile unless expanded
-  const visibleCerts = isMobile && !showAll 
-    ? certifications.slice(0, INITIAL_MOBILE_COUNT) 
-    : certifications
-
-  const hasMoreCerts = certifications.length > INITIAL_MOBILE_COUNT
+  }, [])
 
   return (
     <section id="experience" className="py-24 md:py-32 relative" ref={sectionRef}>
       <div className="section-container">
-        {/* Section header */}
         <div className="mb-16 scroll-animate">
           <div className="flex items-center gap-3 mb-4">
             <span className="text-accent font-mono text-sm">{t('experience.tag')}</span>
@@ -65,75 +43,56 @@ function Experience() {
           </h2>
         </div>
 
-        {/* Timeline */}
-        <div className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-accent/50 via-surface-600 to-transparent md:-translate-x-px" />
+        <div className="space-y-8">
+          {roleKeys.map((key, index) => {
+            const bullets = t(`experience.roles.${key}.bullets`)
+            const bulletList = Array.isArray(bullets) ? bullets : []
+            const logo = companyLogos[key]
 
-          <div className="space-y-8 md:space-y-12">
-            {visibleCerts.map((cert, index) => (
-              <div
-                key={cert.key}
-                className={`scroll-animate relative flex items-start gap-6 md:gap-0 ${
-                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                }`}
+            return (
+              <article
+                key={key}
+                className="scroll-animate card p-6 md:p-8"
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                {/* Timeline dot */}
-                <div className="absolute left-4 md:left-1/2 w-3 h-3 bg-accent rounded-full ring-4 ring-surface-900 md:-translate-x-1.5 z-10" />
-
-                {/* Content */}
-                <div className={`ml-12 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>
-                  <div className="card p-5 hover:border-accent/40">
-                    <div className={`flex items-start gap-3 mb-3 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
-                      <span className="text-2xl">{cert.icon}</span>
-                      <div className={index % 2 === 0 ? 'md:text-right' : ''}>
-                        <h3 className="text-text-primary font-semibold text-sm md:text-base">
-                          {t(`experience.certs.${cert.key}.title`)}
-                        </h3>
-                        <p className="text-accent text-xs font-mono mt-1">
-                          {t(`experience.certs.${cert.key}.institution`)}
-                        </p>
-                      </div>
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
+                  <div>
+                    <h3 className="text-lg font-semibold text-text-primary">
+                      {t(`experience.roles.${key}.title`)}
+                    </h3>
+                    <div className="flex items-center gap-2 mt-1">
+                      {logo && (
+                        <img
+                          src={logo}
+                          alt=""
+                          className="w-6 h-6 rounded object-contain bg-surface-700/40 p-0.5"
+                          loading="lazy"
+                        />
+                      )}
+                      <p className="text-accent text-sm font-mono">
+                        {t(`experience.roles.${key}.company`)}
+                      </p>
                     </div>
-                    <p className="text-text-muted text-sm leading-relaxed mb-3">
-                      {t(`experience.certs.${cert.key}.description`)}
-                    </p>
-                    <span className="inline-block text-xs font-mono text-text-muted bg-surface-700/50 px-2 py-1 rounded">
-                      {t(`experience.certs.${cert.key}.date`)}
-                    </span>
                   </div>
+                  <span className="text-xs font-mono text-text-muted bg-surface-700/50 px-2 py-1 rounded self-start">
+                    {t(`experience.roles.${key}.date`)}
+                  </span>
                 </div>
-              </div>
-            ))}
-          </div>
+                <p className="text-text-muted text-sm mb-4">
+                  {t(`experience.roles.${key}.type`)}
+                </p>
+                <ul className="space-y-2">
+                  {bulletList.map((bullet, bulletIndex) => (
+                    <li key={bulletIndex} className="flex items-start gap-2 text-sm text-text-secondary">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 flex-shrink-0" />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            )
+          })}
         </div>
-
-        {/* Show more button - only on mobile */}
-        {isMobile && hasMoreCerts && (
-          <div className="mt-10 flex justify-center">
-            <button
-              onClick={() => setShowAll(!showAll)}
-              className="group flex items-center gap-2 px-6 py-3 text-sm font-medium text-accent border border-accent/30 rounded-lg hover:bg-accent/10 hover:border-accent/50 transition-all duration-300"
-            >
-              {showAll ? (
-                <>
-                  <span>{t('experience.showLess')}</span>
-                  <svg className="w-4 h-4 transition-transform group-hover:-translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
-                  </svg>
-                </>
-              ) : (
-                <>
-                  <span>{t('experience.showMore')} ({certifications.length - INITIAL_MOBILE_COUNT})</span>
-                  <svg className="w-4 h-4 transition-transform group-hover:translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </>
-              )}
-            </button>
-          </div>
-        )}
       </div>
     </section>
   )

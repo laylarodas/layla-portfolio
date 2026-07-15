@@ -3,20 +3,20 @@ import { useTranslation } from '../context/LanguageContext'
 
 const seoData = {
   en: {
-    title: 'Layla Rodas | Data & Backend Developer - SQL, Python, ERP',
-    description: 'Junior Data & Backend Developer based in Palma de Mallorca, Spain. Focused on business data, SQL, ERP integrations, automation and validation pipelines.',
-    keywords: 'Layla Rodas, data backend developer, SQL, Python, PHP, ERP integrations, business data, OCR, automation, data validation, portfolio, Palma de Mallorca, Spain',
-    ogTitle: 'Layla Rodas | Data & Backend Developer',
-    ogDescription: 'Business Data · SQL · ERP Integrations · Automation. Junior developer with practical ERP and data workflow experience.',
+    title: 'Layla Rodas | Backend Developer, Automation & ERP Integrations',
+    description: 'Backend developer working with Python, Java, APIs, ERP integrations, automation, OCR workflows and business data solutions.',
+    keywords: 'Layla Rodas, backend developer, Python, Java, APIs, ERP integrations, automation, OCR, Playwright, Power BI, Palma de Mallorca',
+    ogTitle: 'Layla Rodas | Backend Developer, Automation & ERP Integrations',
+    ogDescription: 'Backend developer working with Python, Java, APIs, ERP integrations, automation, OCR workflows and business data solutions.',
     locale: 'en_US',
     language: 'English',
   },
   es: {
-    title: 'Layla Rodas | Data & Backend Developer - SQL, Python, ERP',
-    description: 'Junior Data & Backend Developer en Palma de Mallorca, España. Enfocada en datos de negocio, SQL, integraciones ERP, automatización y pipelines de validación.',
-    keywords: 'Layla Rodas, desarrolladora data backend, SQL, Python, PHP, integraciones ERP, datos de negocio, OCR, automatización, validación de datos, portfolio, Palma de Mallorca, España',
-    ogTitle: 'Layla Rodas | Data & Backend Developer',
-    ogDescription: 'Business Data · SQL · ERP Integrations · Automation. Desarrolladora junior con experiencia práctica en ERP y flujos de datos.',
+    title: 'Layla Rodas | Backend Developer, Automation & ERP Integrations',
+    description: 'Desarrolladora backend con Python, Java, APIs, integraciones ERP, automatización, flujos OCR y soluciones de datos empresariales.',
+    keywords: 'Layla Rodas, desarrolladora backend, Python, Java, APIs, integraciones ERP, automatización, OCR, Playwright, Power BI, Palma de Mallorca',
+    ogTitle: 'Layla Rodas | Backend Developer, Automation & ERP Integrations',
+    ogDescription: 'Desarrolladora backend con Python, Java, APIs, integraciones ERP, automatización, flujos OCR y soluciones de datos empresariales.',
     locale: 'es_ES',
     language: 'Spanish',
   },
@@ -26,7 +26,7 @@ const baseUrl = 'https://layla-portfolio-zeta.vercel.app'
 
 function SEO() {
   const { language } = useTranslation()
-  const data = seoData[language] || seoData.es
+  const data = seoData[language] || seoData.en
   const altLang = language === 'es' ? 'en' : 'es'
   const altData = seoData[altLang]
 
@@ -58,7 +58,7 @@ function SEO() {
           name: 'Layla Rodas',
           url: baseUrl,
           image: `${baseUrl}/og-image.svg`,
-          jobTitle: 'Data & Backend Developer',
+          jobTitle: 'Backend Developer',
           description: data.description,
           address: {
             '@type': 'PostalAddress',
@@ -70,7 +70,7 @@ function SEO() {
             'https://github.com/laylarodas',
             'https://www.linkedin.com/in/laylarodas/',
           ],
-          knowsAbout: ['SQL', 'Python', 'PHP', 'ERP Integrations', 'Business Data', 'Data Validation', 'OCR', 'Automation', 'MySQL'],
+          knowsAbout: ['Python', 'Java', 'PHP', 'SQL', 'REST APIs', 'ERP Integrations', 'Automation', 'Playwright', 'Power BI', 'OCR'],
           alumniOf: {
             '@type': 'EducationalOrganization',
             name: 'DAM - Desarrollo de Aplicaciones Multiplataforma',

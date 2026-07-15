@@ -8,12 +8,12 @@
   <!-- Content -->
   <!-- Status -->
   <text x="100" y="200" font-family="ui-monospace, monospace" font-size="16" fill="#71717a">
-    DAM · Open to Opportunities
+    Palma de Mallorca, Spain
   </text>
   
   <!-- Role -->
-  <text x="100" y="260" font-family="system-ui, sans-serif" font-size="28" font-weight="500" fill="#8b7394">
-    Data &amp; Backend Developer
+  <text x="100" y="260" font-family="system-ui, sans-serif" font-size="24" font-weight="500" fill="#8b7394">
+    Backend Developer | Automation, APIs &amp; ERP
   </text>
   
   <!-- Name -->
@@ -23,7 +23,7 @@
   
   <!-- Description -->
   <text x="100" y="400" font-family="system-ui, sans-serif" font-size="20" fill="#a1a1aa">
-    Business Data · SQL · ERP Integrations · Automation
+    Python · Java · APIs · ERP Integrations · Automation
   </text>
   
   <!-- Location -->

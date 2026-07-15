@@ -5,10 +5,12 @@ import ScrollToTop from './components/ScrollToTop'
 import EasterEgg from './components/EasterEgg'
 import SEO from './components/SEO'
 import Hero from './sections/Hero'
-import Projects from './sections/Projects'
-import Skills from './sections/Skills'
-import Experience from './sections/Experience'
 import About from './sections/About'
+import Projects from './sections/Projects'
+import Experience from './sections/Experience'
+import Skills from './sections/Skills'
+import Certifications from './sections/Certifications'
+import Events from './sections/Events'
 import Contact from './sections/Contact'
 import NotFound from './pages/NotFound'
 
@@ -19,10 +21,12 @@ function HomePage() {
       <Navbar />
       <main>
         <Hero />
-        <Projects />
-        <Skills />
-        <Experience />
         <About />
+        <Projects />
+        <Experience />
+        <Skills />
+        <Certifications />
+        <Events />
         <Contact />
       </main>
       <Footer />

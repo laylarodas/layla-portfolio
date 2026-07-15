@@ -25,11 +25,9 @@ function About() {
 
   return (
     <section id="about" className="py-24 md:py-32 relative overflow-hidden" ref={sectionRef}>
-      {/* Background accent */}
       <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-accent/3 rounded-full blur-3xl pointer-events-none" />
-      
+
       <div className="section-container relative z-10">
-        {/* Section header */}
         <div className="mb-16 scroll-animate">
           <div className="flex items-center gap-3 mb-4">
             <span className="text-accent font-mono text-sm">{t('about.tag')}</span>
@@ -39,25 +37,14 @@ function About() {
             {t('about.title')}
           </h2>
         </div>
-        
-        {/* Content */}
+
         <div className="grid lg:grid-cols-5 gap-12">
-          {/* Text */}
           <div className="lg:col-span-3 space-y-6 scroll-animate" style={{ transitionDelay: '100ms' }}>
-            <p className="text-text-secondary text-lg leading-relaxed">
-              {t('about.p1').split('<location>')[0]}
-              <span className="text-text-primary">{t('about.locationValue')}</span>
-              {t('about.p1').split('</location>')[1]}
-            </p>
-            <p className="text-text-secondary leading-relaxed">
-              {t('about.p2')}
-            </p>
-            <p className="text-text-secondary leading-relaxed">
-              {t('about.p3')}
-            </p>
+            <p className="text-text-secondary text-lg leading-relaxed">{t('about.p1')}</p>
+            <p className="text-text-secondary leading-relaxed">{t('about.p2')}</p>
+            <p className="text-text-secondary leading-relaxed">{t('about.p3')}</p>
           </div>
-          
-          {/* Details card */}
+
           <div className="lg:col-span-2 scroll-animate" style={{ transitionDelay: '200ms' }}>
             <div className="card p-6 space-y-6">
               <div>
@@ -71,10 +58,6 @@ function About() {
               <div>
                 <p className="text-xs font-mono text-text-muted uppercase tracking-wider mb-2">{t('about.languages')}</p>
                 <p className="text-text-primary">{t('about.languagesValue')}</p>
-              </div>
-              <div>
-                <p className="text-xs font-mono text-text-muted uppercase tracking-wider mb-2">{t('about.status')}</p>
-                <p className="text-accent">{t('about.statusValue')}</p>
               </div>
             </div>
           </div>

@@ -1,131 +1,237 @@
 {
   "nav": {
-    "projects": "Proyectos",
-    "skills": "Skills",
-    "experience": "Cursos",
+    "home": "Inicio",
     "about": "Sobre mí",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "skills": "Skills",
+    "events": "Eventos",
     "contact": "Contacto",
-    "cv": "CV"
+    "resume": "CV"
   },
   "hero": {
-    "status": "Data & Backend Developer · Abierta a Oportunidades",
-    "role": "Data & Backend Developer",
     "name": "Layla Rodas",
-    "description": "Business Data · SQL · ERP Integrations · Automation",
-    "and": "y",
+    "role": "Backend Developer | Automation, APIs & ERP Integrations",
+    "lead": "Backend Developer especializada en automatización empresarial, integraciones ERP y sistemas backend fiables.",
+    "description": "Construyo sistemas backend y soluciones de automatización para flujos de negocio reales, incluyendo integraciones ERP, procesamiento documental, automatización web autenticada y aplicaciones orientadas a datos.",
     "viewProjects": "Ver Proyectos",
-    "github": "GitHub"
-  },
-  "projects": {
-    "tag": "<proyectos>",
-    "title": "Proyectos Destacados",
-    "viewMore": "Ver Más Proyectos",
-    "code": "Código",
-    "demo": "Demo",
-    "clientWork": "Trabajo de cliente",
-    "showLess": "Ver menos",
-    "groups": {
-      "erp": "Proyectos ERP Profesionales",
-      "dataAnalytics": "Datos & Análisis",
-      "additional": "Proyectos Adicionales"
-    }
-  },
-  "skills": {
-    "tag": "<skills>",
-    "title": "Tecnologías",
-    "learning": "Actualmente aprendiendo:",
-    "learningList": "Power BI, fundamentos de Snowflake, fundamentos de Denodo, Machine Learning, fundamentos de AWS",
-    "categories": {
-      "core": "Core",
-      "data": "Datos & ERP",
-      "tools": "Herramientas"
-    }
+    "downloadResume": "Descargar CV",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
   },
   "about": {
     "tag": "<sobre-mi>",
     "title": "Sobre Mí",
-    "p1": "Vivo en <location>Palma de Mallorca</location>, y cuento con el Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM).",
-    "p2": "Desarrollo integraciones ERP, herramientas de automatización y soluciones de datos, combinando backend con procesos de negocio reales. Mi experiencia incluye módulos ERP, flujos de trabajo con IA, SQL y pipelines de datos.",
-    "p3": "Me interesan especialmente el análisis de datos, la inteligencia de negocio y la automatización impulsada por IA, donde la ingeniería de software se conecta con necesidades reales de negocio.",
+    "p1": "Construyo software que conecta sistemas y automatiza el trabajo diario de negocio — desde el procesamiento de facturas y exportaciones contables hasta dashboards que los equipos usan de verdad.",
+    "p2": "La mayor parte de mi trabajo reciente está en la intersección entre backend e información operativa: integrar ERPs, validar datos de negocio y asegurar que la información circule de forma fiable entre herramientas.",
+    "p3": "Me importa escribir código claro y fiable para procesos reales, no demos. Python, Java, PHP, SQL y REST APIs son mi día a día; Power BI cuando el objetivo es obtener insight.",
     "location": "Ubicación",
     "locationValue": "Palma de Mallorca, España",
     "education": "Formación",
     "educationValue": "Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)\nGraduada · 2026",
     "languages": "Idiomas",
-    "languagesValue": "Español (nativo), Inglés (B2)",
-    "status": "Estado",
-    "statusValue": "Abierta a oportunidades"
+    "languagesValue": "Español (nativo), Inglés (B2)"
+  },
+  "projects": {
+    "tag": "<proyectos>",
+    "title": "Proyectos Destacados",
+    "subtitle": "Case studies seleccionados de automatización backend, integración ERP e inteligencia de negocio.",
+    "viewCaseStudy": "Ver Case Study",
+    "clientProject": "Proyecto Cliente",
+    "otherTitle": "Otros Proyectos",
+    "viewOnGitHub": "Ver en GitHub ↗",
+    "viewProject": "Ver Proyecto ↗",
+    "viewProjectDetails": "Ver Detalles del Proyecto",
+    "privateNote": "El código fuente de proyectos de cliente y empresa es privado. Los detalles de arquitectura e implementación se presentan a través de case studies anonimizados."
+  },
+  "projectsData": {
+    "ocrPipeline": {
+      "title": "OCR Supplier Invoice Pipeline",
+      "description": "Procesamiento automatizado de facturas de proveedores desde email con extracción OCR, validación JSON e integración ERP en borradores gobernados.",
+      "category": "Backend Automation · Document Processing"
+    },
+    "a3Integration": {
+      "title": "Dolibarr → A3 Accounting Integration",
+      "description": "Puente de datos contables entre Dolibarr ERP y A3 Asesor con validación, transformación, exportación de ancho fijo y conciliación Excel.",
+      "category": "ERP Integration · Backend Development"
+    },
+    "workflowAutomation": {
+      "title": "Authenticated Workflow Automation",
+      "description": "Automatización Python orientada a eventos para flujos web autenticados con Playwright, integración REST API, logging estructurado y recuperación de sesión.",
+      "category": "Python Automation · API Integration"
+    },
+    "aviationDashboard": {
+      "title": "Airline Commercial Analytics Dashboard",
+      "description": "Dashboard Power BI de ingresos, mercados, rutas, puntos de venta y emisión de tickets con definición de KPIs y visualizaciones comerciales.",
+      "category": "Power BI · Business Intelligence"
+    },
+    "springBootApi": {
+      "title": "Spring Boot REST API",
+      "description": "API REST pública construida con Java y Spring Boot usando arquitectura Controller–Service–Repository, MySQL, JPA/Hibernate, DTOs, validación y manejo global de excepciones.",
+      "category": "Backend Development · Java"
+    },
+    "rovedraWebsite": {
+      "title": "Rovedra Corporate Website",
+      "description": "Sitio web corporativo responsive desarrollado y mantenido con React, Vite y Tailwind CSS, con componentes reutilizables, flujos de contacto y despliegue en producción.",
+      "category": "Frontend Development · Business Website"
+    },
+    "aviationSustainability": {
+      "title": "Aviation Sustainability Analysis",
+      "description": "Análisis de aproximadamente 30.000 registros de operaciones aéreas con Python, SQL y Power BI, con indicadores por aerolínea, aeropuerto, ruta y periodo.",
+      "category": "Data Analysis · Power BI"
+    }
+  },
+  "experience": {
+    "tag": "<experiencia>",
+    "title": "Experiencia Profesional",
+    "roles": {
+      "ebal": {
+        "title": "Backend & ERP Integration Developer",
+        "company": "EBAL IT",
+        "date": "Mar 2026 – Jun 2026",
+        "type": "Prácticas profesionales",
+        "bullets": [
+          "Desarrollé una integración contable entre Dolibarr y A3 con validación de facturas, transformación, reglas fiscales y controles de duplicados.",
+          "Construí un pipeline de procesamiento de facturas de proveedores con Python, OCR, validación JSON, integración IMAP y reglas de negocio.",
+          "Trabajé con PHP, Python, SQL y flujos ERP."
+        ]
+      },
+      "upwork": {
+        "title": "Python Automation Developer",
+        "company": "Freelance / Upwork",
+        "date": "Jun 2026 – Actualidad",
+        "type": "Freelance",
+        "bullets": [
+          "Desarrollé automatización Python para flujos web autenticados usando Playwright.",
+          "Integré REST APIs, autenticación JWT, eventos en tiempo real, logging estructurado y controles de ejecución automatizada."
+        ]
+      },
+      "rovedra": {
+        "title": "Software Developer",
+        "company": "Rovedra SL",
+        "date": "Sep 2022 – Sep 2025",
+        "type": "Tiempo parcial",
+        "bullets": [
+          "Diseñé, desarrollé y mantuve el sitio web responsive de la empresa con React, Vite y Tailwind CSS.",
+          "Construí componentes reutilizables y traduje requisitos de negocio en funcionalidades digitales."
+        ]
+      }
+    }
+  },
+  "skills": {
+    "tag": "<skills>",
+    "title": "Competencias",
+    "learning": "Aprendizaje / Exposición:",
+    "learningList": "Snowflake, Denodo, Machine Learning",
+    "categories": {
+      "backend": "Backend",
+      "dataIntegration": "Datos & Integración",
+      "architecture": "Arquitectura & Seguridad",
+      "tools": "Herramientas"
+    }
+  },
+  "events": {
+    "tag": "<eventos>",
+    "title": "Eventos & Comunidad",
+    "intro": "Participo activamente en eventos de desarrollo, IA y open source para aprender de comunidades técnicas, intercambiar ideas y explorar oportunidades de colaboración.",
+    "viewLinkedIn": "Ver publicación en LinkedIn →",
+    "items": {
+      "cursor": {
+        "name": "Cursor Community Meetup",
+        "location": "Palma de Mallorca",
+        "date": "2026",
+        "description": "Presenté una charla breve sobre construir soluciones backend, IA y ERP desde Mallorca, conectando con la comunidad local de desarrollo."
+      },
+      "machina": {
+        "name": "MACHINA Summit",
+        "location": "París",
+        "date": "2026",
+        "description": "Asistí a sesiones sobre Physical AI y robótica, conociendo a ingenieros y startups de IA que trabajan en sistemas inteligentes del mundo real."
+      },
+      "osBreakfast": {
+        "name": "Open Source Breakfast",
+        "location": "París",
+        "date": "2026",
+        "description": "Participé en conversaciones con comunidades open source, incluyendo Mozilla y Hugging Face, durante la RAISE Week."
+      },
+      "aiSummit": {
+        "name": "Paris Open Source AI Summit",
+        "location": "París",
+        "date": "2026",
+        "description": "Asistí a sesiones de LINAGORA, NVIDIA y OpenRAG sobre LLMs open source, sistemas RAG e infraestructura de IA."
+      }
+    }
+  },
+  "certifications": {
+    "tag": "<certificaciones>",
+    "title": "Certificaciones y Formación",
+    "viewCredential": "Ver credencial ↗",
+    "status": {
+      "completed": "Completado",
+      "inProgress": "En curso"
+    },
+    "items": {
+      "java": {
+        "title": "Java Programming: Solving Problems with Software",
+        "provider": "Duke University / Coursera"
+      },
+      "supervisedMl": {
+        "title": "Supervised Machine Learning: Regression and Classification",
+        "provider": "DeepLearning.AI / Coursera"
+      },
+      "mlSpecialization": {
+        "title": "Machine Learning Specialization",
+        "provider": "DeepLearning.AI / Coursera"
+      },
+      "aws": {
+        "title": "AWS Developer Associate",
+        "provider": ""
+      }
+    }
+  },
+  "resume": {
+    "viewHtml": "Ver HTML",
+    "downloadPdf": "Descargar PDF",
+    "versions": {
+      "backendEn": "CV Backend — Inglés",
+      "backendEs": "CV Backend — Español",
+      "dataEn": "CV Data — Inglés",
+      "dataEs": "CV Data — Español"
+    }
   },
   "contact": {
     "tag": "<contacto>",
     "title": "Contacto",
-    "description": "Abierta a oportunidades como Junior Data & Backend Developer, especialmente en datos de negocio, integraciones ERP y automatización. Si quieres hablar sobre una oportunidad o simplemente conectar, escríbeme.",
+    "description": "¿Te interesa colaborar en proyectos de backend, automatización, integraciones ERP o datos? Puedes escribirme.",
+    "or": "O contáctame directamente:",
+    "links": {
+      "email": "Email",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "upwork": "Upwork"
+    },
     "form": {
       "name": "Nombre",
       "namePlaceholder": "Tu nombre",
       "email": "Email",
       "emailPlaceholder": "tu@email.com",
       "message": "Mensaje",
-      "messagePlaceholder": "Cuéntame sobre la oportunidad o el proyecto...",
+      "messagePlaceholder": "Cuéntame sobre tu proyecto...",
       "send": "Enviar mensaje",
       "sending": "Enviando...",
-      "success": "¡Mensaje enviado! Te responderé pronto.",
-      "error": "Hubo un error. Intenta de nuevo o escríbeme directamente.",
+      "success": "¡Mensaje enviado correctamente!",
+      "mailtoFallback": "Se abrirá tu cliente de correo con un mensaje pre-rellenado. Envíalo para completar tu consulta.",
+      "error": "Algo salió mal. Inténtalo de nuevo o escríbeme directamente.",
       "errors": {
-        "nameRequired": "Por favor, ingresa tu nombre",
-        "emailRequired": "Por favor, ingresa tu email",
-        "emailInvalid": "Por favor, ingresa un email válido",
-        "messageRequired": "Por favor, escribe un mensaje"
-      }
-    },
-    "or": "o escríbeme directamente a"
-  },
-  "experience": {
-    "tag": "<cursos>",
-    "title": "Cursos y Certificaciones",
-    "showMore": "Ver más cursos",
-    "showLess": "Ver menos",
-    "certs": {
-      "java": {
-        "title": "Java Programming: Solving Problems with Software",
-        "institution": "Duke University · Coursera",
-        "date": "Oct 2025",
-        "description": "Fundamentos de programación en Java, resolución de problemas y diseño de algoritmos."
-      },
-      "datascience": {
-        "title": "Introduction to Data Science",
-        "institution": "Cisco",
-        "date": "Oct 2024",
-        "description": "Conceptos fundamentales de ciencia de datos, análisis y visualización."
-      },
-      "ml": {
-        "title": "Supervised Machine Learning",
-        "institution": "DeepLearning.AI",
-        "date": "Oct 2025",
-        "description": "Regresión lineal, clasificación y fundamentos de aprendizaje automático supervisado."
-      },
-      "reactts": {
-        "title": "React and TypeScript",
-        "institution": "Udemy",
-        "date": "Mar 2024",
-        "description": "Desarrollo de aplicaciones React con tipado estático usando TypeScript."
-      },
-      "mern": {
-        "title": "Master ReactJS, Hooks, MERN, NodeJS",
-        "institution": "Udemy",
-        "date": "Ene 2024",
-        "description": "Stack MERN completo: MongoDB, Express, React y Node.js."
-      },
-      "responsive": {
-        "title": "Responsive Web Design",
-        "institution": "freeCodeCamp",
-        "date": "Mar 2021",
-        "description": "HTML, CSS y diseño web adaptable a diferentes dispositivos."
+        "nameRequired": "El nombre es obligatorio",
+        "emailRequired": "El email es obligatorio",
+        "emailInvalid": "Introduce un email válido",
+        "messageRequired": "El mensaje es obligatorio"
       }
     }
   },
   "footer": {
-    "role": "Data & Backend Developer"
+    "role": "Backend Developer"
   },
   "easterEgg": {
     "title": "¡Lo encontraste!",
@@ -136,87 +242,5 @@
     "subtitle": "Página no encontrada",
     "message": "Parece que esta ruta no existe. Quizás el código se fue de vacaciones.",
     "backHome": "Volver al inicio"
-  },
-  "projectsData": {
-    "supplierInvoiceOcr": {
-      "title": "Supplier Invoice OCR",
-      "description": "Pipeline de automatización OCR para facturas de proveedores — extracción de datos estructurados, validación, integración ERP y flujos de negocio con Python.",
-      "features": [
-        "Automatización OCR y extracción de datos estructurados de facturas",
-        "Validación JSON, integración ERP y handoffs de flujos de negocio"
-      ]
-    },
-    "a3Export": {
-      "title": "A3 Export",
-      "description": "Integración de datos contables entre Dolibarr ERP y A3 Asesor — transformación, validación, conciliación y exportación de datos financieros.",
-      "features": [
-        "Transformación de datos contables, validación y conciliación financiera",
-        "Exportación de archivos de ancho fijo y conciliación con Excel"
-      ]
-    },
-    "spotifyAnalysis": {
-      "title": "Spotify Data Analysis",
-      "description": "Proyecto de análisis de datos end-to-end con un dataset real de Spotify de 114K+ canciones, enfocado en limpieza, EDA, visualización, machine learning básico y dashboarding.",
-      "features": [
-        "EDA, limpieza de datos e insights visuales sobre 114K+ canciones",
-        "Dashboard interactivo con Streamlit y machine learning básico con scikit-learn"
-      ]
-    },
-    "eqControl": {
-      "title": "EqControl",
-      "description": "Módulo ERP para ciclo de vida de equipos y gestión de activos — seguimiento de datos operativos y flujos ERP.",
-      "features": [
-        "Ciclo de vida de equipos y gestión de activos en Dolibarr ERP",
-        "Seguimiento de datos operativos integrado con flujos ERP"
-      ]
-    },
-    "customerManagement": {
-      "title": "Customer Management",
-      "description": "Módulo ERP para gestionar información de clientes, asignaciones, contratos y flujos de negocio relacionados.",
-      "features": [
-        "Registros de clientes, asignaciones y gestión de contratos",
-        "Flujos de negocio integrados con procesos ERP"
-      ]
-    },
-    "commercialManagement": {
-      "title": "Commercial Management",
-      "description": "Módulo ERP para flujos comerciales, vistas de rentabilidad y operaciones de ventas.",
-      "features": [
-        "Flujos comerciales y operaciones de ventas",
-        "Vistas de rentabilidad para apoyo en decisiones de negocio"
-      ]
-    },
-    "rovedra": {
-      "title": "Rovedra S.L.",
-      "description": "Sitio corporativo en producción para una empresa de Mallorca, con diseño responsive y profesional.",
-      "features": [
-        "Diseño responsive y accesible",
-        "Componentes reutilizables con TypeScript"
-      ]
-    },
-    "portfolio": {
-      "title": "Portfolio Website",
-      "description": "Portfolio personal de desarrollo construido con React, Vite y Tailwind CSS.",
-      "features": [
-        "Interfaz bilingüe con modo oscuro",
-        "Diseño responsive y componentes accesibles"
-      ]
-    },
-    "mlNotebooks": {
-      "title": "ML Notebooks",
-      "description": "Experimentos de regresión y aprendizaje supervisado con notebooks de Python.",
-      "features": [
-        "Experimentos de regresión lineal y clasificación",
-        "Fundamentos de aprendizaje supervisado con scikit-learn"
-      ]
-    },
-    "odooSandbox": {
-      "title": "Odoo Sandbox",
-      "description": "Entorno local con Docker para explorar un segundo stack ERP y patrones de integración.",
-      "features": [
-        "Configuración de Odoo con Docker para exploración práctica",
-        "Experimentación con flujos ERP y módulos"
-      ]
-    }
   }
 }

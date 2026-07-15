@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Airline Commercial Analytics Dashboard — interactive Power BI analysis of revenue, markets, routes, sales channels, and ticket issuance activity.">
+  <title>Airline Commercial Analytics Dashboard — Case Study</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <div class="container">
+
+      <header class="hero">
+        <span class="hero-eyebrow">Case Study</span>
+        <h1>Airline Commercial Analytics Dashboard</h1>
+        <p class="hero-lead">Interactive Power BI dashboard for analyzing airline revenue, markets, routes, sales channels, and ticket issuance activity through business-oriented KPIs and visual insights.</p>
+      </header>
+
+      <hr class="section-rule">
+
+      <section class="section" id="challenge">
+        <span class="section-label">Challenge</span>
+        <h2 class="section-title">Commercial data was difficult to interpret across markets and routes</h2>
+        <div class="prose">
+          <p>The commercial team needed a clear and interactive view of sales performance across markets, routes, points of sale, and ticket issuance activity. The available data required transformation and business-oriented analysis before it could support decision-making.</p>
+        </div>
+      </section>
+
+      <hr class="section-rule">
+
+      <section class="section" id="solution">
+        <span class="section-label">Solution</span>
+        <h2 class="section-title">A business-focused Power BI dashboard for commercial analysis</h2>
+        <div class="prose">
+          <p>The project transformed raw airline commercial data into an interactive Power BI dashboard with KPIs, geographic analysis, route-level insights, and filters for exploring sales activity from different business perspectives.</p>
+        </div>
+      </section>
+
+      <hr class="section-rule">
+
+      <!--
+        Dashboard Preview — uncomment this block after adding PNGs to assets/
+
+        <section class="section" id="preview">
+          <span class="section-label">Dashboard Preview</span>
+          <h2 class="section-title">Visual overview</h2>
+
+          <figure style="margin: 0 0 1.5rem;">
+            <img src="assets/dashboard-overview.png" alt="Dashboard overview showing commercial KPIs and summary metrics" style="width: 100%; max-width: 44rem; border: 1px solid #e8e8e8; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 4px 16px rgba(0,0,0,.03);">
+            <figcaption class="flow-desc" style="margin-top: 0.5rem;">Overview — main dashboard page</figcaption>
+          </figure>
+
+          <figure style="margin: 0 0 1.5rem;">
+            <img src="assets/dashboard-commercial-focus.png" alt="Commercial focus page with market and route analysis" style="width: 100%; max-width: 44rem; border: 1px solid #e8e8e8; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 4px 16px rgba(0,0,0,.03);">
+            <figcaption class="flow-desc" style="margin-top: 0.5rem;">Commercial focus — markets and routes</figcaption>
+          </figure>
+
+          <figure style="margin: 0 0 1.5rem;">
+            <img src="assets/dashboard-kpis.png" alt="KPI and geographic analysis views" style="width: 100%; max-width: 44rem; border: 1px solid #e8e8e8; border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 4px 16px rgba(0,0,0,.03);">
+            <figcaption class="flow-desc" style="margin-top: 0.5rem;">KPIs and geographic distribution</figcaption>
+          </figure>
+        </section>
+
+        <hr class="section-rule">
+      -->
+
+      <section class="section" id="architecture">
+        <span class="section-label">Architecture</span>
+        <h2 class="section-title">Commercial data-to-dashboard flow</h2>
+        <div class="container--diagram">
+          <div class="flow" aria-label="System architecture">
+
+            <div class="flow-node">
+              <span class="flow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              </span>
+              <div class="flow-text">
+                <span class="flow-label">Raw Commercial Data</span>
+                <span class="flow-desc">Sales, routes, markets, and issuance records</span>
+              </div>
+            </div>
+
+            <div class="flow-connector" aria-hidden="true">
+              <div class="flow-connector-line"></div>
+              <span class="flow-connector-chevron"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></span>
+            </div>
+
+            <div class="flow-node">
+              <span class="flow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              </span>
+              <div class="flow-text">
+                <span class="flow-label">Data Preparation</span>
+                <span class="flow-desc">Cleaning, validation, and field preparation</span>
+              </div>
+            </div>
+
+            <div class="flow-connector" aria-hidden="true">
+              <div class="flow-connector-line"></div>
+              <span class="flow-connector-chevron"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></span>
+            </div>
+
+            <div class="flow-node">
+              <span class="flow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M12 22v-8.3a4 4 0 0 0-1.172-2.872L3 3"/><path d="M21 3l-7.828 7.828A4 4 0 0 0 12 13.7V22"/></svg>
+              </span>
+              <div class="flow-text">
+                <span class="flow-label">Data Modeling</span>
+                <span class="flow-desc">Relationships and analytical structure</span>
+              </div>
+            </div>
+
+            <div class="flow-connector" aria-hidden="true">
+              <div class="flow-connector-line"></div>
+              <span class="flow-connector-chevron"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></span>
+            </div>
+
+            <div class="flow-node">
+              <span class="flow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+              </span>
+              <div class="flow-text">
+                <span class="flow-label">Business KPIs</span>
+                <span class="flow-desc">Revenue, route activity, and commercial indicators</span>
+              </div>
+            </div>
+
+            <div class="flow-connector" aria-hidden="true">
+              <div class="flow-connector-line"></div>
+              <span class="flow-connector-chevron"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></span>
+            </div>
+
+            <div class="flow-node">
+              <span class="flow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              </span>
+              <div class="flow-text">
+                <span class="flow-label">Power BI</span>
+                <span class="flow-desc">Measures, filters, and visual analysis</span>
+              </div>
+            </div>
+
+            <div class="flow-connector" aria-hidden="true">
+              <div class="flow-connector-line"></div>
+              <span class="flow-connector-chevron"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></span>
+            </div>
+
+            <div class="flow-node">
+              <span class="flow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
+              </span>
+              <div class="flow-text">
+                <span class="flow-label">Interactive Dashboard</span>
+                <span class="flow-desc">Business views for markets, routes, and sales activity</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-rule">
+
+      <section class="section" id="technologies">
+        <span class="section-label">Technologies</span>
+        <h2 class="section-title">Technology Stack</h2>
+        <div class="badge-row">
+          <span class="badge">Power BI</span>
+          <span class="badge">Excel</span>
+          <span class="badge">Data Modeling</span>
+          <span class="badge">Data Visualization</span>
+          <span class="badge">Business Intelligence</span>
+        </div>
+      </section>
+
+      <hr class="section-rule">
+
+      <section class="section" id="features">
+        <span class="section-label">Key Features</span>
+        <h2 class="section-title">Key Features</h2>
+        <ul class="feature-list">
+          <li class="feature-item">
+            <span class="feature-marker" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            Revenue analysis by market and route
+          </li>
+          <li class="feature-item">
+            <span class="feature-marker" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            Geographic distribution of commercial activity
+          </li>
+          <li class="feature-item">
+            <span class="feature-marker" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            Route performance comparison
+          </li>
+          <li class="feature-item">
+            <span class="feature-marker" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            Point-of-sale analysis
+          </li>
+          <li class="feature-item">
+            <span class="feature-marker" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            Ticket issuance activity analysis
+          </li>
+          <li class="feature-item">
+            <span class="feature-marker" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            Interactive filters and drill-down views
+          </li>
+          <li class="feature-item">
+            <span class="feature-marker" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            Business-oriented KPI reporting
+          </li>
+        </ul>
+      </section>
+
+      <hr class="section-rule">
+
+      <section class="section" id="outcome">
+        <div class="outcome-card">
+          <span class="section-label">Outcome</span>
+          <h2 class="section-title">Business Insights</h2>
+          <p class="outcome-text">The dashboard provided a centralized view of commercial activity, making it easier to compare markets, routes, and sales channels and to identify relevant geographic and operational patterns in the data.</p>
+          <div class="outcome-highlights">
+            <div class="outcome-highlight">
+              <span class="outcome-highlight-label">Visibility</span>
+              <span class="outcome-highlight-value">Centralized commercial view</span>
+            </div>
+            <div class="outcome-highlight">
+              <span class="outcome-highlight-label">Analysis</span>
+              <span class="outcome-highlight-value">Markets and routes</span>
+            </div>
+            <div class="outcome-highlight">
+              <span class="outcome-highlight-label">Exploration</span>
+              <span class="outcome-highlight-value">Interactive business filters</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</body>
+</html>
